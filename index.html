@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jason Nutt — Software Developer & Creator of TruVINE</title>
+  <meta name="description" content="Jason Nutt is a software developer and the founder of TruVINE, a faith-based Christian community helping believers abide in Christ." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="images/truvine-emblem.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="TruVINE — back to top">
+        <img class="brand-logo-img" src="images/truvine-logo.png" alt="" />
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#truvine">TruVINE</a>
+        <a href="#story">Story</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-inner">
+        <p class="eyebrow reveal" id="hero-eyebrow"></p>
+        <h1 class="reveal" id="hero-title"></h1>
+        <p class="lede reveal" id="hero-sub"></p>
+        <div class="hero-ctas reveal" id="hero-ctas"></div>
+        <p class="whisper reveal" id="hero-whisper"></p>
+      </div>
+      <div class="glow glow-a" aria-hidden="true"></div>
+      <div class="glow glow-b" aria-hidden="true"></div>
+      <div class="glow glow-grow" aria-hidden="true"></div>
+      <svg class="hero-vine" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <path pathLength="1" style="animation-delay:.3s" d="M -30 640 C 150 600, 220 480, 210 360 C 200 240, 330 200, 430 230 C 530 260, 560 380, 670 400 C 740 412, 790 380, 830 340"/>
+        <path pathLength="1" style="animation-delay:1.8s" d="M 210 360 C 160 325, 115 325, 75 348"/>
+        <path pathLength="1" style="animation-delay:2.4s" d="M 430 230 C 470 182, 522 172, 572 192"/>
+        <path pathLength="1" class="leaf" style="animation-delay:2.8s" d="M 148 522 q 30 -28 64 -20 q -26 26 -64 20 Z"/>
+        <path pathLength="1" class="leaf" style="animation-delay:3.2s" d="M 208 382 q 34 -20 66 -8 q -30 20 -66 8 Z"/>
+        <path pathLength="1" class="leaf" style="animation-delay:3.6s" d="M 332 216 q 30 -26 64 -18 q -26 24 -64 18 Z"/>
+        <path pathLength="1" class="leaf" style="animation-delay:4s" d="M 522 262 q 34 -18 64 -6 q -28 18 -64 6 Z"/>
+        <path pathLength="1" class="leaf" style="animation-delay:4.4s" d="M 500 192 q 28 -24 60 -18 q -24 22 -60 18 Z"/>
+        <path pathLength="1" class="leaf" style="animation-delay:4.8s" d="M 642 396 q 30 -24 62 -16 q -26 22 -62 16 Z"/>
+        <path pathLength="1" class="tendril" style="animation-delay:5.2s" d="M 670 400 c 42 -6 62 20 52 46 c -8 20 -36 22 -43 3"/>
+      </svg>
+    </section>
+
+    <div class="wrap"><div class="vine-divider" aria-hidden="true">
+      <svg viewBox="0 0 400 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 12 C 60 4, 120 20, 200 12 S 340 4, 400 12" stroke="#2d5a3d" stroke-width="1.5"/><circle cx="200" cy="12" r="3" fill="#d9a441"/><path d="M196 12 q -6 -8 -14 -9 M204 12 q 6 -8 14 -9" stroke="#2d5a3d" stroke-width="1.5" fill="none"/></svg>
+    </div></div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <p class="eyebrow reveal">About</p>
+        <h2 class="reveal" id="about-title">Developer by craft.<br />Shepherd by calling.</h2>
+        <div class="about-grid">
+          <div class="about-photos">
+            <figure class="reveal">
+              <img class="about-photo" id="about-photo" alt="Jason Nutt" />
+              <figcaption>Professional headshot</figcaption>
+            </figure>
+            <figure class="reveal">
+              <img class="about-photo" id="about-photo-pixar" alt="Jason Nutt in Pixar animation style" />
+              <figcaption>Pixar-style — the animation look of my TruVINE Farm Family Parables series</figcaption>
+            </figure>
+          </div>
+          <div class="about-copy reveal" id="about-copy"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section-alt" id="skills" aria-labelledby="skills-title">
+      <div class="wrap">
+        <p class="eyebrow reveal">Skills</p>
+        <h2 class="reveal" id="skills-title">The toolbox</h2>
+        <p class="section-sub reveal" id="skills-sub"></p>
+        <div class="card-grid" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <p class="eyebrow reveal">Projects</p>
+        <h2 class="reveal" id="projects-title">Things I've built</h2>
+        <p class="section-sub reveal" id="projects-sub"></p>
+        <div class="card-grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============ TRUVINE ============ -->
+    <section class="section section-alt" id="truvine" aria-labelledby="truvine-title">
+      <div class="wrap">
+        <p class="eyebrow reveal">TruVINE — Creator</p>
+        <h2 class="reveal" id="truvine-title"><img class="truvine-logo" src="images/truvine-logo.png" alt="TruVINE" /></h2>
+        <p class="section-sub reveal" id="truvine-mission"></p>
+        <div class="truvine-panels">
+          <div class="panel reveal">
+            <h3>Series</h3>
+            <ul class="series-list" id="series-list"></ul>
+          </div>
+          <div class="panel reveal">
+            <h3>Channel</h3>
+            <dl class="stats" id="stats-list"></dl>
+            <div class="link-row" id="truvine-links"></div>
+          </div>
+        </div>
+        <div class="farm-soon">
+          <p class="eyebrow reveal">Watch now</p>
+          <h3 class="reveal" id="farm-title"></h3>
+          <p class="section-sub reveal" id="farm-sub"></p>
+          <div class="farm-grid" id="farm-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STORY ============ -->
+    <section class="section" id="story" aria-labelledby="story-title">
+      <div class="wrap narrow">
+        <p class="eyebrow reveal">My story</p>
+        <h2 class="reveal" id="story-title">Set free.</h2>
+        <div class="story-copy reveal" id="story-copy"></div>
+        <p class="whisper reveal" id="story-verse"></p>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section-alt" id="contact" aria-labelledby="contact-title">
+      <div class="wrap narrow center">
+        <p class="eyebrow reveal">Contact</p>
+        <h2 class="reveal" id="contact-title"></h2>
+        <p class="section-sub reveal" id="contact-sub"></p>
+        <div class="hero-ctas reveal" id="contact-ctas" style="justify-content:center"></div>
+        <div class="link-row reveal" id="contact-socials" style="justify-content:center"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p class="footer-verse" id="footer-verse"></p>
+      <p class="footer-copy" id="footer-copy"></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
