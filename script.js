@@ -7,7 +7,7 @@
     // ---- Identity ----
     name: "Jason Nutt",
     photo: "images/jason.jpg", // polished headshot
-    photoPixar: "images/jason-pixar.jpg", // Pixar-style portrait
+    photoPixar: "images/jason-pixar-portfolio-image.jpeg", // Pixar-style portrait
   
     // ---- Contact & links (replace every TODO: with your real URL) ----
     email: "jnutt367@gmail.com",
