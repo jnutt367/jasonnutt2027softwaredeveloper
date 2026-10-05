@@ -220,6 +220,19 @@
   
   /* ---- Brand assets (TruVINE logo, headshot) ---- */
   .brand-mark-img { width: 38px; height: 38px; object-fit: contain; display: block; }
+  /* Nav wordmark — "Jason Nutt" set to match the TruVINE logo lettering:
+     rounded geometric sans, blue-to-green gradient. */
+  .brand-wordmark {
+    font-family: var(--font-quicksand, "Quicksand"), "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    background: linear-gradient(90deg, #1d4da1 0%, #3f8f5c 55%, #82c23f 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
   .brand-logo-img { display: block; height: 34px; width: auto; }
   .about-grid { display: grid; gap: 2.5rem; margin-top: 2rem; align-items: start; }
   @media (min-width: 768px) { .about-grid { grid-template-columns: 280px 1fr; } }
@@ -270,12 +283,12 @@
     .hero-vine path { animation: none; stroke-dashoffset: 0; }
   }
   
-  /* ---- Hero grow-light: golden light blooming as the vine draws ---- */
+  /* ---- Hero grow-light: sunlight blooming before the vine draws ---- */
   .glow-grow {
-    width: 520px; height: 520px; bottom: -140px; right: -60px;
-    background: radial-gradient(circle, rgba(217,164,65,0.75), transparent 70%);
+    width: 520px; height: 520px; top: -180px; right: -40px;
+    background: radial-gradient(circle, rgba(217,164,65,0.9), transparent 70%);
     opacity: 0;
-    animation: grow-light 8s ease-out 1.5s forwards, light-breathe 7s ease-in-out 9.5s infinite;
+    animation: grow-light 3s ease-out 0s forwards, light-breathe 7s ease-in-out 3s infinite;
   }
   @keyframes grow-light { to { opacity: 1; } }
   @keyframes light-breathe { 0%, 100% { opacity: 0.85; } 50% { opacity: 1; } }
@@ -296,7 +309,8 @@
     }
     .glow-grow {
       width: 340px; height: 340px;
-      bottom: -110px; right: -70px;
+      top: -120px; right: -50px;
     }
   }
+  
   
