@@ -71,7 +71,7 @@
         desc: "A faith-focused web app centered on the Word of God — live and growing.",
         tags: ["Web App", "Faith"],
         linkLabel: "Visit site",
-        linkUrl: "https://wordofgod.vercel.app/",
+        linkUrl: "https://word-of-god-risen.vercel.app/",
       },
       {
         title: "Abide — Daily Rhythm Tracker",
