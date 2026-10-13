@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jasonnutt2027softwaredeveloper.vercel.app/sitemap.xml
