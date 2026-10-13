@@ -335,6 +335,24 @@ function initReveal() {
   els.forEach((el) => io.observe(el));
 }
 
+/* ---------- Living Vine: bind the committed stats.json ----------
+   stats.json is the single source of truth (refreshed by
+   scripts/refresh-stats.mjs + verified stamps). The HTML already
+   carries the same verified values, so the page is true with no JS;
+   this fetch simply keeps it in lockstep with the committed file. */
+async function initStats() {
+  try {
+    const r = await fetch("stats.json", { cache: "no-cache" });
+    if (!r.ok) return;
+    const s = await r.json();
+    (s.data || []).forEach((d) => {
+      document.querySelectorAll(`[data-stat="${d.id}"]`).forEach((el) => (el.textContent = d.display));
+      document.querySelectorAll(`[data-stat-fresh="${d.id}"]`).forEach((el) => (el.textContent = `${d.freshness_label} · ${d.source_label}`));
+    });
+  } catch (e) { /* seeded values stand — never blank, never a guess */ }
+}
+
 render();
+initStats();
 initNav();
 initReveal();
