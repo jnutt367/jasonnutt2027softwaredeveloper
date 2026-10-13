@@ -363,7 +363,7 @@
       {
         "date": "2026-10-13",
         "display_date": "Oct 13, 2026",
-        "text": "Study plan opened. JavaScript Developer trailmix chosen as the active climb (46% banked); next unit: Create User Interfaces with Semantic Markup. Ranger gap measured: 6,325 points."
+        "text": "Study plan opened. JavaScript Developer trailmix chosen as the active climb (46% banked); next unit: Coding for Web Accessibility. Ranger gap measured: 6,325 points."
       },
       {
         "date": "2026-10-13",
@@ -375,7 +375,7 @@
     "trailmix": {
       "earnable_remaining": 5800,
       "name": "JavaScript Developer",
-      "next_unit": "Create User Interfaces with Semantic Markup",
+      "next_unit": "Coding for Web Accessibility",
       "percent": 46,
       "remaining_units": [
         {
