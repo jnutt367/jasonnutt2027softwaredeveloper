@@ -43,6 +43,10 @@ const SITE = {
   openTo:
     "Open to support & solutions engineering, QA/testing, and internal tools & web content roles.",
 
+  // ---- Working standard ----
+  workingStandard:
+    "My standing ask of every colleague and assistant, on projects massive and small alike: if it matters, it's instrumented — measured, source-labeled, and verified before it's reported.",
+
   // ---- Skills (edit freely — add/remove cards here) ----
   skillsSub: "The tools I reach for — and the disciplines behind them.",
   skills: [
@@ -228,7 +232,7 @@ function render() {
   // About
   $("#about-photo").src = SITE.photo;
   $("#about-photo-pixar").src = SITE.photoPixar;
-  $("#about-copy").innerHTML = SITE.aboutParagraphs.map((p) => `<p>${esc(p)}</p>`).join("") + (SITE.openTo ? `<p><strong>${esc(SITE.openTo)}</strong></p>` : "");
+  $("#about-copy").innerHTML = SITE.aboutParagraphs.map((p) => `<p>${esc(p)}</p>`).join("") + (SITE.openTo ? `<p><strong>${esc(SITE.openTo)}</strong></p>` : "") + (SITE.workingStandard ? `<p>${esc(SITE.workingStandard)}</p>` : "");
 
   // Skills
   $("#skills-sub").textContent = SITE.skillsSub;
