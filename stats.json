@@ -295,14 +295,13 @@
       },
       {
         "fact": "IBM Enterprise Design Thinking Practitioner — Feb 2024",
-        "freshness": "static",
-        "freshness_label": "Static record · 2024",
-        "hidden_reason": "Slot built; ships dark until Jason supplies his Credly badge/profile URL. Never fabricate a link.",
-        "href": null,
+        "freshness": "verified",
+        "freshness_label": "Verified Oct 13, 2026",
+        "href": "https://www.credly.com/badges/27934353-683c-49ac-a95e-9d61f9257ad2/public_url",
         "id": "credly_ibm",
         "link_label": "Verify on Credly",
         "platform": "Credly",
-        "visible": false
+        "visible": true
       },
       {
         "fact": "Front End Web Development Techdegree — 2020",
