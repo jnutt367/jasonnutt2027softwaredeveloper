@@ -7,7 +7,7 @@ const SITE = {
   // ---- Identity ----
   name: "Jason Nutt",
   photo: "images/jason.jpg", // polished headshot
-  photoPixar: "images/jason-pixar.jpg?v=3", // Pixar-style portrait (v=2 forces browsers to fetch the new file)
+  photoPixar: "images/jason-pixar.jpg?v=4", // Pixar-style portrait (v=4 forces browsers to fetch the new file)
 
   // ---- Contact & links (replace every TODO: with your real URL) ----
   email: "jnutt367@gmail.com",
