@@ -19,8 +19,8 @@ const SITE = {
   truvineAppUrl: "https://jesus-love-revealed.vercel.app/", // live — formerly "Jesus Love Revealed"
   printifyReferralUrl: "https://try.printify.com/2um7i8o278pi", // referral — disclosed inline in the TruVINE section
 
-  // ---- Channel stats (pulled live 2026-10-12; refresh on request) ----
-  subscriberCount: "840",
+  // ---- Channel stats (verified 2026-10-14; matches stats.json — refresh job updates stats.json only) ----
+  subscriberCount: "841",
   videoCount: "375",
 
   // ---- Hero ----
@@ -85,7 +85,7 @@ const SITE = {
       title: "TruVINE — Channel & Content Operations",
       desc: "I run a faith-based YouTube channel end to end — production, metadata standards, release QA, and Python tooling against the YouTube Data API — plus a print-on-demand store tied to the content calendar.",
       role: "Creator, producer & tooling developer",
-      metrics: ["840 subscribers · 153,837 views · 375 videos", "Python SEO & audit automation (YouTube Data API)", "Printify store operations & product QA"],
+      metrics: ["841 subscribers · 154,398 views · 375 videos", "Python SEO & audit automation (YouTube Data API)", "Printify store operations & product QA"],
       tags: ["Python", "YouTube Data API", "Content Operations"],
       linkLabel: "Watch TruVINE",
       linkUrl: "YOUTUBE",
