@@ -38,6 +38,7 @@ const SITE = {
     "By day, I'm a Tier 1 customer service representative at Federal Student Aid, where I help borrowers understand their federal student loans — patience and clarity are the whole job. But building is my craft: I'm a software developer working with JavaScript, React, and Next.js, and I care about clean code, honest work, and software that actually serves people.",
     "Outside of work I founded TruVINE — my YouTube channel, formerly called \u201cJesus Love Revealed\u201d — a faith-based community that is an extension of my faith in Jesus. Through Scripture Shorts, chapter-by-chapter readings, and my own testimony, I get to encourage believers to abide in Christ. Code by craft, faith by calling — that's the whole story.",
     "Built while working full-time in federal student aid support.",
+    "Accessibility is personal in my house. As a dad and stepdad in a neurodivergent family — and an advocate for my autistic stepson — I don't treat it as a checklist at the end of a build. My standard starts there: alt text on every image, visible focus, sane contrast, calm and uncluttered layouts, resumable flows, audio-first options. That goes into every build.",
   ],
 
   // ---- Open to (target roles) ----
