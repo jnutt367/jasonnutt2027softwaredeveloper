@@ -97,7 +97,7 @@
       "id": "wogr_books",
       "label": "Books in the app",
       "source_label": "Word of God Risen · data/books.ts",
-      "updated_at": "2026-10-13",
+      "updated_at": "2026-10-14",
       "value": 78
     },
     {
@@ -109,7 +109,7 @@
       "id": "wogr_crossrefs",
       "label": "Cross-references",
       "source_label": "Word of God Risen · data/cross-refs.json (10,000 verse keys)",
-      "updated_at": "2026-10-13",
+      "updated_at": "2026-10-14",
       "value": 96177
     },
     {
@@ -133,7 +133,7 @@
       "id": "wogr_covers",
       "label": "Designed book covers",
       "source_label": "Word of God Risen · one Pixar-style cover per book",
-      "updated_at": "2026-10-13",
+      "updated_at": "2026-10-14",
       "value": 78
     },
     {
@@ -150,15 +150,15 @@
     },
     {
       "branch": "code",
-      "display": "152",
+      "display": "153",
       "freshness": "compute",
       "freshness_label": "Computed from the repo",
       "href": "https://github.com/jnutt367/word-of-god-risen",
       "id": "wogr_commits",
       "label": "Commits on the flagship repo",
       "source_label": "github.com/jnutt367/word-of-god-risen",
-      "updated_at": "2026-10-13",
-      "value": 152
+      "updated_at": "2026-10-14",
+      "value": 153
     },
     {
       "branch": "code",
@@ -169,7 +169,7 @@
       "id": "gh_repos",
       "label": "Public repositories",
       "source_label": "GitHub · @jnutt367, building since 2020",
-      "updated_at": "2026-10-13",
+      "updated_at": "2026-10-14",
       "value": 276
     },
     {
@@ -181,7 +181,7 @@
       "id": "gh_followers",
       "label": "GitHub followers",
       "source_label": "GitHub · @jnutt367",
-      "updated_at": "2026-10-13",
+      "updated_at": "2026-10-14",
       "value": 22
     },
     {
@@ -193,7 +193,7 @@
       "id": "gh_activity",
       "label": "Latest code push",
       "source_label": "GitHub · @jnutt367",
-      "updated_at": "2026-10-13",
+      "updated_at": "2026-10-14",
       "value": "2026-10-13"
     },
     {
@@ -253,7 +253,7 @@
       "id": "automations",
       "label": "Automated watchers running",
       "source_label": "Channel spike watch · Shorts thumbnail guard · weekly site check",
-      "updated_at": "2026-10-13",
+      "updated_at": "2026-10-14",
       "value": 3
     },
     {
@@ -265,7 +265,7 @@
       "id": "portfolio_deploy",
       "label": "This portfolio last deployed",
       "source_label": "GitHub · this site's repo",
-      "updated_at": "2026-10-13",
+      "updated_at": "2026-10-14",
       "value": "2026-10-13"
     },
     {
