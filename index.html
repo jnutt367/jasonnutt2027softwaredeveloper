@@ -103,16 +103,36 @@
       <div class="glow glow-b" aria-hidden="true"></div>
       <div class="glow glow-grow" aria-hidden="true"></div>
       <svg class="hero-vine" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-        <path pathLength="1" style="animation-delay:.3s" d="M -30 640 C 150 600, 220 480, 210 360 C 200 240, 330 200, 430 230 C 530 260, 560 380, 670 400 C 740 412, 790 380, 830 340"/>
-        <path pathLength="1" style="animation-delay:1.8s" d="M 210 360 C 160 325, 115 325, 75 348"/>
-        <path pathLength="1" style="animation-delay:2.4s" d="M 430 230 C 470 182, 522 172, 572 192"/>
-        <path pathLength="1" class="leaf" style="animation-delay:2.8s" d="M 148 522 q 30 -28 64 -20 q -26 26 -64 20 Z"/>
-        <path pathLength="1" class="leaf" style="animation-delay:3.2s" d="M 208 382 q 34 -20 66 -8 q -30 20 -66 8 Z"/>
-        <path pathLength="1" class="leaf" style="animation-delay:3.6s" d="M 332 216 q 30 -26 64 -18 q -26 24 -64 18 Z"/>
-        <path pathLength="1" class="leaf" style="animation-delay:4s" d="M 522 262 q 34 -18 64 -6 q -28 18 -64 6 Z"/>
-        <path pathLength="1" class="leaf" style="animation-delay:4.4s" d="M 500 192 q 28 -24 60 -18 q -24 22 -60 18 Z"/>
-        <path pathLength="1" class="leaf" style="animation-delay:4.8s" d="M 642 396 q 30 -24 62 -16 q -26 22 -62 16 Z"/>
-        <path pathLength="1" class="tendril" style="animation-delay:5.2s" d="M 670 400 c 42 -6 62 20 52 46 c -8 20 -36 22 -43 3"/>
+        <g class="hero-vine-stems">
+          <path pathLength="1" style="animation-delay:.3s" d="M -30 640 C 150 600, 220 480, 210 360 C 200 240, 330 200, 430 230 C 530 260, 560 380, 670 400 C 740 412, 790 380, 830 340"/>
+          <path pathLength="1" style="animation-delay:1.8s" d="M 210 360 C 160 325, 115 325, 75 348"/>
+          <path pathLength="1" style="animation-delay:2.4s" d="M 430 230 C 470 182, 522 172, 572 192"/>
+          <path pathLength="1" class="leaf" style="animation-delay:2.8s" d="M 148 522 q 30 -28 64 -20 q -26 26 -64 20 Z"/>
+          <path pathLength="1" class="leaf" style="animation-delay:3.2s" d="M 208 382 q 34 -20 66 -8 q -30 20 -66 8 Z"/>
+          <path pathLength="1" class="leaf" style="animation-delay:3.6s" d="M 332 216 q 30 -26 64 -18 q -26 24 -64 18 Z"/>
+          <path pathLength="1" class="leaf" style="animation-delay:4s" d="M 522 262 q 34 -18 64 -6 q -28 18 -64 6 Z"/>
+          <path pathLength="1" class="leaf" style="animation-delay:4.4s" d="M 500 192 q 28 -24 60 -18 q -24 22 -60 18 Z"/>
+          <path pathLength="1" class="leaf" style="animation-delay:4.8s" d="M 642 396 q 30 -24 62 -16 q -26 22 -62 16 Z"/>
+          <path pathLength="1" class="tendril" style="animation-delay:5.2s" d="M 670 400 c 42 -6 62 20 52 46 c -8 20 -36 22 -43 3"/>
+        </g>
+        <!-- Fruit: real numbers, bound by script.js to the same stats.json
+             that feeds the Living Vine grid below (data-stat sweep). The
+             seeded text matches stats.json, so the hero is true with no JS. -->
+        <g class="hero-fruit" style="animation-delay:1.6s">
+          <circle cx="212" cy="352" r="29"/>
+          <text class="hero-fruit-num" x="212" y="359" data-stat="yt_subs">841</text>
+          <text class="hero-fruit-cap" x="212" y="406">Subscribers</text>
+        </g>
+        <g class="hero-fruit" style="animation-delay:2.9s">
+          <circle cx="432" cy="222" r="29"/>
+          <text class="hero-fruit-num" x="432" y="229" data-stat="wogr_chapters">1,503</text>
+          <text class="hero-fruit-cap" x="432" y="276">Chapters narrated</text>
+        </g>
+        <g class="hero-fruit" style="animation-delay:4.1s">
+          <circle cx="596" cy="328" r="29"/>
+          <text class="hero-fruit-num" x="596" y="335" data-stat="wogr_books">78</text>
+          <text class="hero-fruit-cap" x="596" y="382">Books in the app</text>
+        </g>
       </svg>
     </section>
 
@@ -440,6 +460,17 @@
         <p class="reveal" style="margin-top:1.5rem">
           <a class="btn" href="/story/">The Build Story — what I shipped with my AI assistant →</a>
         </p>
+      </div>
+    </section>
+
+    <!-- ============ BENEDICTION — THE WORKING STANDARD ============ -->
+    <section class="benediction" aria-labelledby="standard-title">
+      <div class="benediction-bg" role="img" aria-label="Three crosses on a hill above a vineyard at dawn"></div>
+      <div class="wrap narrow benediction-inner">
+        <p class="eyebrow reveal" id="standard-title">The Working Standard</p>
+        <blockquote class="benediction-quote reveal">
+          <p>&ldquo;If it matters, it&rsquo;s instrumented — measured, source-labeled, and verified before it&rsquo;s reported.&rdquo;</p>
+        </blockquote>
       </div>
     </section>
 
