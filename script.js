@@ -353,6 +353,25 @@ async function initStats() {
       document.querySelectorAll(`[data-stat="${d.id}"]`).forEach((el) => (el.textContent = d.display));
       document.querySelectorAll(`[data-stat-fresh="${d.id}"]`).forEach((el) => (el.textContent = `${d.freshness_label} · ${d.source_label}`));
     });
+    const milestoneList = document.querySelector("[data-ministry-milestones]");
+    const milestones = s.ministry_milestones?.entries;
+    if (milestoneList && Array.isArray(milestones)) {
+      milestoneList.replaceChildren();
+      milestones.forEach((entry) => {
+        const item = document.createElement("li");
+        const date = document.createElement("time");
+        date.dateTime = entry.date;
+        date.textContent = entry.date_display;
+        const title = document.createElement("strong");
+        title.textContent = entry.title;
+        const detail = document.createElement("span");
+        detail.textContent = entry.detail;
+        const source = document.createElement("em");
+        source.textContent = entry.source_label;
+        item.append(date, title, detail, source);
+        milestoneList.append(item);
+      });
+    }
   } catch (e) { /* seeded values stand — never blank, never a guess */ }
 }
 

@@ -360,6 +360,26 @@ a { color: var(--gold-soft); }
 .vine-facts strong { font-family: var(--font-display); font-size: 1.15rem; color: var(--cream); text-align: right; }
 .vine-facts em { flex: 1 1 100%; font-style: normal; font-size: 0.78rem; color: var(--sage); opacity: 0.85; }
 
+/* ---- Ministry history branch ---- */
+.ministry-history { margin-top: 2.5rem; border-top: 1px solid rgba(45, 90, 61, 0.55); padding-top: 2rem; }
+.ministry-history h3 { font-family: var(--font-display); font-size: 1.55rem; color: var(--cream); margin-bottom: 0.45rem; }
+.ministry-history-note { color: var(--sage); max-width: 48rem; }
+.ministry-timeline { list-style: none; margin: 1.25rem 0 0; padding: 0; }
+.ministry-timeline li {
+  display: grid; grid-template-columns: 10.5rem 1fr; gap: 0.3rem 1.25rem;
+  padding: 0.9rem 0; border-bottom: 1px solid rgba(45, 90, 61, 0.45);
+}
+.ministry-timeline li:last-child { border-bottom: 0; }
+.ministry-timeline time { color: var(--gold-soft); font-weight: 600; white-space: nowrap; }
+.ministry-timeline strong { font-family: var(--font-display); font-size: 1.08rem; color: var(--cream); }
+.ministry-timeline span { grid-column: 2; color: var(--sage); }
+.ministry-timeline em { grid-column: 2; font-style: normal; font-size: 0.78rem; color: var(--sage); opacity: 0.85; }
+@media (max-width: 640px) {
+  .ministry-timeline li { grid-template-columns: 1fr; }
+  .ministry-timeline span, .ministry-timeline em { grid-column: 1; }
+  .ministry-timeline time { white-space: normal; }
+}
+
 /* ---- Salesforce tracker ---- */
 .tracker-top { display: grid; grid-template-columns: 220px 1fr; gap: 2rem; align-items: center; margin-top: 2.5rem; }
 @media (max-width: 700px) { .tracker-top { grid-template-columns: 1fr; justify-items: center; text-align: center; } }

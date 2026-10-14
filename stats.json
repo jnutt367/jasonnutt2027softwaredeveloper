@@ -54,27 +54,27 @@
   "data": [
     {
       "branch": "channel",
-      "display": "840",
+      "display": "841",
       "freshness": "daily",
       "freshness_label": "Updated daily",
       "href": "https://www.youtube.com/channel/UC1ryMv3ldYCOgshChVrqZNQ",
       "id": "yt_subs",
       "label": "YouTube subscribers",
       "source_label": "TruVINE channel · YouTube",
-      "updated_at": "2026-10-12",
-      "value": 840
+      "updated_at": "2026-10-14",
+      "value": 841
     },
     {
       "branch": "channel",
-      "display": "153,837",
+      "display": "154,398",
       "freshness": "daily",
       "freshness_label": "Updated daily",
       "href": "https://www.youtube.com/channel/UC1ryMv3ldYCOgshChVrqZNQ",
       "id": "yt_views",
       "label": "YouTube total views",
       "source_label": "TruVINE channel · YouTube",
-      "updated_at": "2026-10-12",
-      "value": 153837
+      "updated_at": "2026-10-14",
+      "value": 154398
     },
     {
       "branch": "channel",
@@ -85,7 +85,7 @@
       "id": "yt_videos",
       "label": "YouTube videos",
       "source_label": "TruVINE channel · YouTube",
-      "updated_at": "2026-10-12",
+      "updated_at": "2026-10-14",
       "value": 375
     },
     {
@@ -162,7 +162,7 @@
     },
     {
       "branch": "code",
-      "display": "276",
+      "display": "277",
       "freshness": "hourly",
       "freshness_label": "Updated hourly",
       "href": "https://github.com/jnutt367",
@@ -170,7 +170,7 @@
       "label": "Public repositories",
       "source_label": "GitHub · @jnutt367, building since 2020",
       "updated_at": "2026-10-14",
-      "value": 276
+      "value": 277
     },
     {
       "branch": "code",
@@ -194,7 +194,7 @@
       "label": "Latest code push",
       "source_label": "GitHub · @jnutt367",
       "updated_at": "2026-10-14",
-      "value": "2026-10-13"
+      "value": "2026-10-14"
     },
     {
       "branch": "films",
@@ -266,7 +266,7 @@
       "label": "This portfolio last deployed",
       "source_label": "GitHub · this site's repo",
       "updated_at": "2026-10-14",
-      "value": "2026-10-13"
+      "value": "2026-10-14"
     },
     {
       "branch": "code",
@@ -317,10 +317,10 @@
       },
       {
         "detail": "Seven earned Jul–Sep 2026: Canva Essentials, Teacher Essentials, Graphic Design Essentials, Marketing with Canva, AI Essentials 2026, AI Skills for Students, Scale Creative Campaigns — plus Meet Canva's Visual Suite (Oct 2025). All eight verification URLs on file in the career record.",
-        "fact": "8 verified certificates — 2025–2026",
+        "fact": "8 verified certificates",
         "freshness": "verified",
         "freshness_label": "Verified Oct 13, 2026",
-        "href": "https://canva.com/design-school/certification-award/6bd7d1ef-1bb7-4109-a791-2efc6b3634ba",
+        "href": "https://canva.com/design-school/certification-award/bec4b190-36cb-40b3-ba78-52941451321f",
         "id": "canva",
         "link_label": "Verify on Canva",
         "platform": "Canva Design School",
@@ -345,6 +345,52 @@
     "last_full_verify": "2026-10-13",
     "note": "Single source of truth for the Living Vine. Every value carries a freshness class and a stamp. On any source failure the refresh job keeps the last verified value — never a zero, never a blank, never a guess.",
     "schema": 1
+  },
+  "ministry_milestones": {
+    "entries": [
+      {
+        "date": "2026-10-06",
+        "date_display": "Oct 6, 2026",
+        "date_precision": "exact",
+        "detail": "Word of God Risen reached 78 books in canonical order — every book with a Pixar-style cover telling its story.",
+        "source_label": "Production log · Oct 6, 2026",
+        "title": "78-book library complete"
+      },
+      {
+        "date": "2026-10-08",
+        "date_display": "Oct 8, 2026",
+        "date_precision": "exact",
+        "detail": "The whole Bible, the lost books, and the parables live in Grandpa Teddy's voice; all 1,519 tracks are volume-normalized.",
+        "source_label": "Production records · Oct 8, 2026",
+        "title": "Audio Bible complete — 1,503 chapters"
+      },
+      {
+        "date": "2026-10-09",
+        "date_display": "Oct 9, 2026",
+        "date_precision": "exact",
+        "detail": "TruVINE passed 800 subscribers, up from about 750 earlier that same day.",
+        "source_label": "Channel report · daily log, Oct 9, 2026",
+        "title": "800 subscribers"
+      },
+      {
+        "date": "2026-10-11",
+        "date_display": "Oct 11, 2026",
+        "date_precision": "exact",
+        "detail": "Jason greenlit the animated Gospel of Mark pilot — Teddy narrates the Scripture word for word, leading the Mark → John → Genesis sequence.",
+        "source_label": "Production record · Oct 11, 2026",
+        "title": "Mark animated film greenlit"
+      },
+      {
+        "date": "2026-10-12",
+        "date_display": "By Oct 12, 2026",
+        "date_precision": "by",
+        "detail": "The channel was verified at 153,627 total views on Oct 12; the exact crossing was not witnessed, so this milestone is stamped 'by' that date.",
+        "source_label": "Channel stats pull · Oct 12, 2026",
+        "title": "150,000 total views"
+      }
+    ],
+    "heading": "Ministry milestones",
+    "note": "Dates are exact where a dated record witnessed the milestone. A threshold first verified already crossed is stamped 'by' the observation date — never backdated."
   },
   "trailhead": {
     "agentblazer": "Champion '25 (Level 1)",
