@@ -311,38 +311,14 @@ a { color: var(--gold-soft); }
 .hero-vine path.tendril { stroke: #d9a441; stroke-width: 1.5; opacity: 0.75; }
 @keyframes vine-draw { to { stroke-dashoffset: 0; } }
 
-/* ---- Hero fruit: real stats that bloom as the vine reaches them ----
-   Same idiom as .vine-fruit in the Living Vine graphic below: gold
-   fruit, dark number, sage caption. Values bind via data-stat to the
-   same stats.json (see script.js initStats). */
-.hero-vine .hero-fruit {
-  opacity: 0;
-  transform-box: fill-box; transform-origin: center;
-  animation: hero-fruit-in 0.7s ease-out forwards;
-}
-.hero-vine .hero-fruit circle { fill: #d9a441; stroke: #e8c476; stroke-width: 1.5; }
-.hero-vine .hero-fruit-num {
-  fill: #0c1f16; font-family: var(--font-body); font-weight: 700;
-  font-size: 20px; text-anchor: middle;
-}
-.hero-vine .hero-fruit-cap {
-  fill: #a8b5a0; font-family: var(--font-body); font-weight: 600;
-  font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase;
-  text-anchor: middle;
-}
-@keyframes hero-fruit-in {
-  from { opacity: 0; transform: scale(0.3); }
-  to { opacity: 1; transform: scale(1); }
-}
 @media (prefers-reduced-motion: reduce) {
   .hero-vine path { animation: none; stroke-dashoffset: 0; }
-  .hero-vine .hero-fruit { animation: none; opacity: 1; transform: none; }
 }
 
 /* ---- Hero grow-light: sunlight blooming before the vine draws ---- */
 .glow-grow {
   width: 520px; height: 520px; top: -180px; right: -40px;
-  background: radial-gradient(circle, rgba(217,164,65,0.9), transparent 70%);
+  background: radial-gradient(circle, rgba(247,233,205,0.9), transparent 70%);
   opacity: 0;
   animation: grow-light 3s ease-out 0s forwards, light-breathe 7s ease-in-out 3s infinite;
 }
