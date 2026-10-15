@@ -63,6 +63,7 @@ a { color: var(--gold-soft); }
 .section { padding: 5rem 0; }
 .section-alt { background: var(--bg-2); border-top: 1px solid rgba(45, 90, 61, 0.5); border-bottom: 1px solid rgba(45, 90, 61, 0.5); }
 .section-sub { color: var(--sage); max-width: 640px; }
+.contact-line { font-family: var(--font-display); font-style: italic; color: var(--gold-soft); font-size: 1.2rem; margin-top: 1.25rem; }
 
 /* ---------- Nav ---------- */
 .nav {

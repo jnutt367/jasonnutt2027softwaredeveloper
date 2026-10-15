@@ -174,6 +174,7 @@ const SITE = {
   contactSub:
     "A project, a collaboration, or just a conversation about faith and code — my inbox is open.",
   contactCtaLabel: "Send me an email",
+  contactLine: "I know you\u2019re looking at this \u2014 go ahead and send me an offer.",
 
   // ---- Footer ----
   footerVerse: "Abide in Him. — John 15:5",
@@ -296,6 +297,7 @@ function render() {
   // Contact
   $("#contact-title").textContent = SITE.contactTitle;
   $("#contact-sub").textContent = SITE.contactSub;
+  $("#contact-line").textContent = SITE.contactLine;
   $("#contact-ctas").innerHTML = isTodo(SITE.email)
     ? `<a class="btn is-todo" href="#" title="TODO: add your email in the SITE config" style="opacity:.75">${esc(SITE.contactCtaLabel)} <span class="todo-flag">TODO</span></a>`
     : `<a class="btn" href="mailto:${esc(SITE.email)}">${esc(SITE.contactCtaLabel)}</a>`;
