@@ -19,9 +19,9 @@ const SITE = {
   truvineAppUrl: "https://jesus-love-revealed.vercel.app/", // live — formerly "Jesus Love Revealed"
   printifyReferralUrl: "https://try.printify.com/2um7i8o278pi", // referral — disclosed inline in the TruVINE section
 
-  // ---- Channel stats (verified 2026-10-14; matches stats.json — refresh job updates stats.json only) ----
+  // ---- Channel stats (verified 2026-10-15; matches stats.json — refresh job updates stats.json only) ----
   subscriberCount: "841",
-  videoCount: "375",
+  videoCount: "376",
 
   // ---- Hero ----
   heroEyebrow: "Jason Nutt — Software Developer & Creator",
@@ -54,7 +54,7 @@ const SITE = {
   skills: [
     { name: "React · Next.js · TypeScript", blurb: "My production stack — App Router, server rendering, and typed components, shipped live and in daily use." },
     { name: "JavaScript & Node.js", blurb: "Modern ES6+ — the language I think in. Pure, testable logic and server-side tooling." },
-    { name: "Salesforce CRM — Trailhead Expeditioner", blurb: "Tier 1 borrower support inside Salesforce by day; Expeditioner rank, 162 badges, earned on my own time." },
+    { name: "Salesforce CRM — Trailhead Expeditioner", blurb: "Tier 1 borrower support inside Salesforce by day; Expeditioner rank, 163 badges, earned on my own time." },
     { name: "QA & Release Methodology", blurb: "Author of an 8-gate release QA standard — acceptance criteria, regression guards, postmortem-driven fixes." },
     { name: "Accessibility — Section 508 Aware", blurb: "Alt text, aria-labels, visible focus, sane contrast — practiced on every site I ship, not bolted on." },
     { name: "Design Thinking & Data", blurb: "IBM Enterprise Design Thinking Practitioner (2024); MongoDB University coursework for data modeling." },
@@ -67,7 +67,7 @@ const SITE = {
       title: "Word of God Risen",
       desc: "A production Bible reader and study app — my flagship, built solo and live on the web. Verse-level reading in two translations, a complete narrated audio Bible, reading plans, progress that sticks, and an Ask Teddy guide.",
       role: "Solo designer, developer & operator",
-      metrics: ["78 books · WEB + KJV translations", "1,503-chapter audio Bible — complete", "~96,000 cross-references across 10,000 verses", "150 commits · live on Vercel"],
+      metrics: ["78 books · WEB + KJV translations", "1,503-chapter audio Bible — complete", "~96,000 cross-references across 10,000 verses", "153 commits · live on Vercel"],
       image: "images/wogr-hero.jpg",
       imageAlt: "Three crosses over a vineyard at dawn — the Word of God Risen home page art",
       tags: ["Next.js", "React", "TypeScript"],
@@ -87,10 +87,19 @@ const SITE = {
       title: "TruVINE — Channel & Content Operations",
       desc: "I run a faith-based YouTube channel end to end — production, metadata standards, release QA, and Python tooling against the YouTube Data API — plus a print-on-demand store tied to the content calendar.",
       role: "Creator, producer & tooling developer",
-      metrics: ["841 subscribers · 154,398 views · 375 videos", "Python SEO & audit automation (YouTube Data API)", "Printify store operations & product QA"],
+      metrics: ["841 subscribers · 154,544 views · 376 videos", "Python SEO & audit automation (YouTube Data API)", "Printify store operations & product QA"],
       tags: ["Python", "YouTube Data API", "Content Operations"],
       linkLabel: "Watch TruVINE",
       linkUrl: "YOUTUBE",
+    },
+    {
+      title: "The Citygraph — a year of building, raised as a city",
+      desc: "Every day of my last year on GitHub stands as a building — taller where more was built that day, quiet days resting as bare ground. Press “Play the Year” and the skyline plays itself. It lives in the TruVINE Field Report, counted the same honest way as everything there: heights true to GitHub's own per-day counts, nothing smoothed, nothing skipped.",
+      role: "Designer & developer",
+      metrics: ["369 days — Oct 12, 2025 to Oct 15, 2026", "Building heights true to the counts", "Play the Year — the skyline, sonified"],
+      tags: ["JavaScript", "Data Visualization", "GitHub API"],
+      linkLabel: "Walk the Citygraph",
+      linkUrl: "https://jnutt367.github.io/truvine/citygraph/",
     },
     {
       title: "This Portfolio",
@@ -174,7 +183,7 @@ const SITE = {
   contactSub:
     "A project, a collaboration, or just a conversation about faith and code — my inbox is open.",
   contactCtaLabel: "Send me an email",
-  contactLine: "I know you\u2019re looking at this \u2014 go ahead and send me an offer.",
+  contactLine: "I\u2019ll be building regardless \u2014 could it be for your team?",
 
   // ---- Footer ----
   footerVerse: "Abide in Him. — John 15:5",
