@@ -485,3 +485,44 @@ a { color: var(--gold-soft); }
 .cred-timeline li { padding: 0.6rem 0; border-bottom: 1px solid rgba(45, 90, 61, 0.45); color: var(--sage); }
 .cred-timeline li:last-child { border-bottom: 0; }
 .cred-timeline strong { color: var(--gold-soft); font-family: var(--font-display); margin-right: 0.7rem; }
+
+/* ---------- Field Report living card (hero, added Oct 14, 2026) ----------
+   A small square of the field on the front door: a calm animated
+   vine, three headline numbers (bound to stats.json — the numbers
+   refresh on the heartbeat; the baked-in values are verified, so
+   the card is true even with no JS), and the way into the full
+   Field Report. Honors prefers-reduced-motion below. */
+.fr-card {
+  max-width: 340px; margin: 2.25rem auto 0; background: var(--card);
+  border: 1px solid var(--vine); border-radius: var(--radius);
+  padding: 1.1rem 1.25rem 1.2rem; text-align: center;
+}
+.fr-vine { width: 132px; height: auto; display: block; margin: 0 auto; }
+.fr-vine .fr-stem { fill: none; stroke: #74c184; stroke-width: 2.4; stroke-linecap: round; }
+.fr-vine .fr-leaf { fill: none; stroke: #74c184; stroke-width: 1.8; }
+.fr-vine .fr-dot { fill: var(--gold); }
+.fr-vine-sway { transform-origin: 8px 76px; animation: fr-sway 7s ease-in-out infinite alternate; }
+@keyframes fr-sway { from { transform: rotate(-0.7deg); } to { transform: rotate(1.1deg); } }
+.fr-card-kicker {
+  font-family: var(--font-display); font-size: 1.05rem; color: var(--cream);
+  margin: 0.55rem 0 0.6rem; letter-spacing: 0.02em;
+}
+.fr-stats {
+  list-style: none; display: flex; justify-content: center; gap: 1.15rem;
+  margin: 0 0 0.55rem; padding: 0;
+}
+.fr-stats li { display: flex; flex-direction: column; }
+.fr-stats strong { font-size: 1.28rem; color: var(--gold-soft); font-weight: 700; line-height: 1.1; }
+.fr-stats span {
+  font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sage);
+}
+.fr-stamp { font-size: 0.78rem; color: var(--sage); margin: 0 0 0.7rem; }
+.fr-link {
+  color: var(--gold-soft); font-weight: 600; font-size: 0.92rem; text-decoration: none;
+  border-bottom: 1px solid var(--vine); padding-bottom: 2px;
+}
+.fr-link:hover { color: var(--gold); border-color: var(--gold); }
+.fr-link:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+@media (prefers-reduced-motion: reduce) {
+  .fr-vine-sway { animation: none; }
+}

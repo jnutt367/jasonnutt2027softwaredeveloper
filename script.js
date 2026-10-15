@@ -355,6 +355,20 @@ async function initStats() {
       document.querySelectorAll(`[data-stat="${d.id}"]`).forEach((el) => (el.textContent = d.display));
       document.querySelectorAll(`[data-stat-fresh="${d.id}"]`).forEach((el) => (el.textContent = `${d.freshness_label} · ${d.source_label}`));
     });
+    /* Field Report card: honest as-of stamp from the freshest of
+       its three numbers (views / subscribers / projects). */
+    const frStamp = document.querySelector("[data-fr-stamp]");
+    if (frStamp) {
+      const dates = ["yt_views", "yt_subs", "gh_repos"]
+        .map((id) => (s.data || []).find((d) => d.id === id)?.updated_at)
+        .filter(Boolean)
+        .sort();
+      if (dates.length) {
+        frStamp.textContent = new Date(dates[dates.length - 1] + "T12:00:00").toLocaleDateString("en-US", {
+          month: "short", day: "numeric", year: "numeric",
+        });
+      }
+    }
     const milestoneList = document.querySelector("[data-ministry-milestones]");
     const milestones = s.ministry_milestones?.entries;
     if (milestoneList && Array.isArray(milestones)) {
