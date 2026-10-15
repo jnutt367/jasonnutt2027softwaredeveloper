@@ -61,7 +61,7 @@
       "id": "yt_subs",
       "label": "YouTube subscribers",
       "source_label": "TruVINE channel · YouTube",
-      "updated_at": "2026-10-14",
+      "updated_at": "2026-10-15",
       "value": 841
     },
     {
@@ -73,20 +73,20 @@
       "id": "yt_views",
       "label": "YouTube total views",
       "source_label": "TruVINE channel · YouTube",
-      "updated_at": "2026-10-14",
+      "updated_at": "2026-10-15",
       "value": 154421
     },
     {
       "branch": "channel",
-      "display": "375",
+      "display": "376",
       "freshness": "daily",
       "freshness_label": "Updated daily",
       "href": "https://www.youtube.com/channel/UC1ryMv3ldYCOgshChVrqZNQ",
       "id": "yt_videos",
       "label": "YouTube videos",
       "source_label": "TruVINE channel · YouTube",
-      "updated_at": "2026-10-14",
-      "value": 375
+      "updated_at": "2026-10-15",
+      "value": 376
     },
     {
       "branch": "app",
@@ -97,7 +97,7 @@
       "id": "wogr_books",
       "label": "Books in the app",
       "source_label": "Word of God Risen · data/books.ts",
-      "updated_at": "2026-10-14",
+      "updated_at": "2026-10-15",
       "value": 78
     },
     {
@@ -109,7 +109,7 @@
       "id": "wogr_crossrefs",
       "label": "Cross-references",
       "source_label": "Word of God Risen · data/cross-refs.json (10,000 verse keys)",
-      "updated_at": "2026-10-14",
+      "updated_at": "2026-10-15",
       "value": 96177
     },
     {
@@ -133,7 +133,7 @@
       "id": "wogr_covers",
       "label": "Designed book covers",
       "source_label": "Word of God Risen · one Pixar-style cover per book",
-      "updated_at": "2026-10-14",
+      "updated_at": "2026-10-15",
       "value": 78
     },
     {
@@ -157,7 +157,7 @@
       "id": "wogr_commits",
       "label": "Commits on the flagship repo",
       "source_label": "github.com/jnutt367/word-of-god-risen",
-      "updated_at": "2026-10-14",
+      "updated_at": "2026-10-15",
       "value": 153
     },
     {
@@ -169,7 +169,7 @@
       "id": "gh_repos",
       "label": "Public repositories",
       "source_label": "GitHub · @jnutt367, building since 2020",
-      "updated_at": "2026-10-14",
+      "updated_at": "2026-10-15",
       "value": 277
     },
     {
@@ -181,20 +181,20 @@
       "id": "gh_followers",
       "label": "GitHub followers",
       "source_label": "GitHub · @jnutt367",
-      "updated_at": "2026-10-14",
+      "updated_at": "2026-10-15",
       "value": 22
     },
     {
       "branch": "code",
-      "display": "Oct 12, 2026",
+      "display": "Oct 14, 2026",
       "freshness": "hourly",
       "freshness_label": "Updated hourly",
       "href": "https://github.com/jnutt367",
       "id": "gh_activity",
       "label": "Latest code push",
       "source_label": "GitHub · @jnutt367",
-      "updated_at": "2026-10-14",
-      "value": "2026-10-13"
+      "updated_at": "2026-10-15",
+      "value": "2026-10-15"
     },
     {
       "branch": "films",
@@ -253,7 +253,7 @@
       "id": "automations",
       "label": "Automated watchers running",
       "source_label": "Channel spike watch · Shorts thumbnail guard · weekly site check",
-      "updated_at": "2026-10-14",
+      "updated_at": "2026-10-15",
       "value": 3
     },
     {
@@ -265,8 +265,8 @@
       "id": "portfolio_deploy",
       "label": "This portfolio last deployed",
       "source_label": "GitHub · this site's repo",
-      "updated_at": "2026-10-14",
-      "value": "2026-10-14"
+      "updated_at": "2026-10-15",
+      "value": "2026-10-15"
     },
     {
       "branch": "code",
