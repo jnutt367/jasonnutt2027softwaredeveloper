@@ -66,7 +66,7 @@
     },
     {
       "branch": "channel",
-      "display": "154,532",
+      "display": "154,544",
       "freshness": "daily",
       "freshness_label": "Updated daily",
       "href": "https://www.youtube.com/channel/UC1ryMv3ldYCOgshChVrqZNQ",
@@ -74,7 +74,7 @@
       "label": "YouTube total views",
       "source_label": "TruVINE channel · YouTube",
       "updated_at": "2026-10-15",
-      "value": 154532
+      "value": 154544
     },
     {
       "branch": "channel",
@@ -394,21 +394,21 @@
   },
   "trailhead": {
     "agentblazer": "Champion '25 (Level 1)",
-    "badges": 162,
+    "badges": 163,
     "badges_required": 100,
     "freshness": "verified",
     "freshness_label": "Verified Oct 13, 2026",
-    "points": 43675,
-    "points_display": "43,675",
+    "points": 43925,
+    "points_display": "43,925",
     "profile_url": "https://www.salesforce.com/trailblazer/jnutt367",
-    "ranger_gap": 6325,
-    "ranger_percent": 87,
+    "ranger_gap": 6075,
+    "ranger_percent": 88,
     "ranger_target": 50000,
     "rank": "Expeditioner",
     "road": [
       {
         "name": "Ranger rank",
-        "note": "6,325 points to go — badges already cleared",
+        "note": "6,075 points to go — badges already cleared",
         "state": "active"
       },
       {
@@ -437,6 +437,11 @@
         "date": "2026-10-13",
         "display_date": "Oct 13, 2026",
         "text": "Tracker baseline verified against the public Trailblazer profile: Expeditioner · 162 badges · 43,675 points · 20 trails · Agentblazer Champion '25."
+      },
+      {
+        "date": "2026-10-15",
+        "display_date": "Oct 15, 2026",
+        "text": "Session 1 (companion mode — Jason answered both checks himself): Coding for Web Accessibility, Unit 1 'Create User Interfaces with Semantic Markup' complete, quiz 2/2, +100 points shown earned in-session → 43,775. Module at 33%; Units 2–3 (200 points) remain."
       }
     ],
     "stamp_note": "Last verified Oct 13, 2026 · checked against the public Trailblazer profile. Trailhead publishes no public API for learner stats — these numbers are verified by hand and stamped, never scraped, never guessed.",
