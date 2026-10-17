@@ -75,6 +75,15 @@ const SITE = {
       linkUrl: "https://word-of-god-risen.vercel.app/",
     },
     {
+      title: "Word of God Risen — Accessibility Audit",
+      desc: "Accessibility is a standing rule on everything I build, so I put my flagship through a full audit of its own: every picture on the site inventoried for alt text, every button and form field checked for a spoken label, contrast measured across both reader themes, and keyboard focus confirmed end to end. What failed was fixed the same day — and the results are published on the site itself, where any reader can check them.",
+      role: "Accessibility auditor & developer",
+      metrics: ["Audited and passed — October 17, 2026", "Every rendered image inventoried — covers, portraits, card art, illustrations", "26 buttons + 9 form controls label-verified · ~100 contrast pairs measured", "Repairs verified live the same day"],
+      tags: ["Accessibility", "WCAG AA", "QA"],
+      linkLabel: "Read the accessibility statement",
+      linkUrl: "https://word-of-god-risen.vercel.app/accessibility",
+    },
+    {
       title: "Abide — Daily Rhythm Tracker",
       desc: "A daily rhythm tracker — habits, streaks, a week chart, and a verse of the day. The vanilla JavaScript build is finished and runs as-is; a Next.js port is a future step. Its architecture is documented decision by decision, including the date logic that keeps streaks honest.",
       role: "Solo designer & developer",
