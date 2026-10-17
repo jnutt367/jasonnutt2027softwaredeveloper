@@ -198,15 +198,15 @@
     },
     {
       "branch": "films",
-      "display": "Pilot complete (v9)",
+      "display": "Chapter 1 released Oct 17, 2026",
       "freshness": "verified",
-      "freshness_label": "Verified Oct 13, 2026",
-      "href": "https://www.youtube.com/channel/UC1ryMv3ldYCOgshChVrqZNQ",
+      "freshness_label": "Verified Oct 17, 2026",
+      "href": "https://www.youtube.com/watch?v=z9pwCVw7Rf0",
       "id": "film_mark",
-      "label": "The Gospel of Mark — animated pilot",
-      "source_label": "Production records · first of Mark → John → Genesis",
-      "updated_at": "2026-10-13",
-      "value": "v9"
+      "label": "The Gospel of Mark — animated film",
+      "source_label": "YouTube · first of Mark → John → Genesis",
+      "updated_at": "2026-10-17",
+      "value": "v11f"
     },
     {
       "branch": "films",
@@ -387,6 +387,14 @@
         "detail": "The channel was verified at 153,627 total views on Oct 12; the exact crossing was not witnessed, so this milestone is stamped 'by' that date.",
         "source_label": "Channel stats pull · Oct 12, 2026",
         "title": "150,000 total views"
+      },
+      {
+        "date": "2026-10-17",
+        "date_display": "Oct 17, 2026",
+        "date_precision": "exact",
+        "detail": "The first full animated Gospel chapter: Grandpa Teddy narrates Mark 1 word-for-word (WEB) over desk-animated Pixar scenes.",
+        "source_label": "Production record · Oct 17, 2026",
+        "title": "Mark Chapter 1 film released"
       }
     ],
     "heading": "Ministry milestones",
