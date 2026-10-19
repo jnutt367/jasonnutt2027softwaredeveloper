@@ -54,7 +54,7 @@ const SITE = {
   skills: [
     { name: "React · Next.js · TypeScript", blurb: "My production stack — App Router, server rendering, and typed components, shipped live and in daily use." },
     { name: "JavaScript & Node.js", blurb: "Modern ES6+ — the language I think in. Pure, testable logic and server-side tooling." },
-    { name: "Salesforce CRM — Trailhead Expeditioner", blurb: "Tier 1 borrower support inside Salesforce by day; Expeditioner rank, 163 badges, earned on my own time." },
+    { name: "Salesforce CRM — Trailhead Expeditioner", blurb: "Tier 1 borrower support inside Salesforce by day; Expeditioner rank, 163 badges, earned on my own time — plus org access & identity in my own dev orgs: Playground administration and Trailhead SSO launch flows." },
     { name: "QA & Release Methodology", blurb: "Author of an 8-gate release QA standard — acceptance criteria, regression guards, postmortem-driven fixes." },
     { name: "Accessibility — Section 508 Aware", blurb: "Alt text, aria-labels, visible focus, sane contrast — practiced on every site I ship, not bolted on." },
     { name: "Design Thinking & Data", blurb: "IBM Enterprise Design Thinking Practitioner (2024); MongoDB University coursework for data modeling." },
