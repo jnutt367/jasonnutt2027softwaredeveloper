@@ -54,7 +54,7 @@
   "data": [
     {
       "branch": "channel",
-      "display": "907",
+      "display": "909",
       "freshness": "daily",
       "freshness_label": "Updated daily",
       "href": "https://www.youtube.com/channel/UC1ryMv3ldYCOgshChVrqZNQ",
@@ -62,7 +62,7 @@
       "label": "YouTube subscribers",
       "source_label": "TruVINE channel · YouTube",
       "updated_at": "2026-10-19",
-      "value": 907
+      "value": 909
     },
     {
       "branch": "channel",
