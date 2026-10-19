@@ -280,6 +280,52 @@
     .tile-word{font-size:1.22rem;padding-top:.5rem;}
     .tl-text{font-size:.85rem;}
   }
+  /* -- Responsive card groups (wide-screen pass, Oct 19, 2026) --
+     Door and card groups flow into columns as the viewport widens:
+     two across from the tablet breakpoint, up to three on wide
+     screens. Column floors hold at each breakpoint (at 42rem the
+     measure is 44rem, so two columns land ~314px; at 75rem the
+     measure opens to 76rem, so three land ~381px). Header, the
+     Ranger bar, the ladder, the milestones timeline, and narrative
+     blocks keep the full measure at every width. */
+  @media (min-width:42rem){
+    section[aria-labelledby="study-h"],
+    section[aria-labelledby="build-h"],
+    section[aria-labelledby="career-h"],
+    section[aria-labelledby="how-h"]{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:.75rem;
+    }
+    section[aria-labelledby="study-h"]>h2,
+    section[aria-labelledby="build-h"]>h2,
+    section[aria-labelledby="career-h"]>h2,
+    section[aria-labelledby="how-h"]>h2{grid-column:1/-1;}
+    section[aria-labelledby="study-h"]>.door,
+    section[aria-labelledby="study-h"]>.card,
+    section[aria-labelledby="build-h"]>.door,
+    section[aria-labelledby="career-h"]>.door,
+    section[aria-labelledby="how-h"]>.card{margin-bottom:0;}
+  }
+  @media (min-width:75rem){
+    main{max-width:76rem;}
+    section[aria-labelledby="study-h"],
+    section[aria-labelledby="build-h"],
+    section[aria-labelledby="career-h"],
+    section[aria-labelledby="how-h"]{
+      grid-template-columns:repeat(3,minmax(0,1fr));
+    }
+    .trails{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(19rem,1fr));
+      gap:.75rem;
+    }
+    .trails li{
+      margin:0;background:var(--card);border:1px solid var(--line);
+      border-radius:.6rem;padding:.85rem 1rem;
+    }
+    .courses{display:grid;grid-template-columns:1fr 1fr;column-gap:2rem;}
+  }
   @media (prefers-reduced-motion: no-preference){
     .tile{animation:fr-rise .6s ease both;}
     .tile:nth-child(2){animation-delay:.08s;}
