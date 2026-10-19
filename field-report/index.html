@@ -228,6 +228,11 @@
   .rung-bar.b3{height:2.8rem;}
   .rung-bar.b4{height:3.7rem;}
   .rung.now .rung-bar{background:linear-gradient(180deg,#e9bc45,var(--gold));box-shadow:0 0 0 2px var(--gold-soft);}
+  .rung.done .rung-bar{background:#5b7a94;}
+  .rung.current .rung-bar{background:linear-gradient(180deg,#31597c,var(--navy));box-shadow:0 0 0 2px var(--gold);}
+  .rung-req{display:block;font-size:.78rem;color:var(--slate);margin-top:.15rem;line-height:1.3;}
+  .rung.done .rung-state{color:#33566f;font-weight:700;}
+  .rung.current .rung-state{color:var(--navy);font-weight:700;}
   .rung-no{
     display:block;font-size:.7rem;font-weight:700;letter-spacing:.12em;
     text-transform:uppercase;color:var(--slate);margin-top:.5rem;
@@ -288,6 +293,12 @@
     .rung:nth-child(2) .rung-bar{animation-delay:.1s;}
     .rung:nth-child(3) .rung-bar{animation-delay:.2s;}
     .rung:nth-child(4) .rung-bar{animation-delay:.3s;}
+    .rung:nth-child(5) .rung-bar{animation-delay:.4s;}
+    .rung:nth-child(6) .rung-bar{animation-delay:.5s;}
+    .rung:nth-child(7) .rung-bar{animation-delay:.6s;}
+    .rung:nth-child(8) .rung-bar{animation-delay:.7s;}
+    .rung:nth-child(9) .rung-bar{animation-delay:.8s;}
+    .rung:nth-child(10) .rung-bar{animation-delay:.9s;}
     @keyframes fr-step{from{transform:scaleY(0);}to{transform:scaleY(1);}}
     .timeline li{animation:fr-rise .6s ease both;}
     .timeline li:nth-child(2){animation-delay:.1s;}
@@ -362,26 +373,69 @@
 
     <h3 class="fr-sub">The ladder</h3>
     <ol class="ladder">
-      <li class="rung now">
+      <li class="rung done">
         <span class="rung-bar b1" aria-hidden="true"></span>
+        <span class="rung-no">Trailhead rank</span>
+        <span class="rung-name">Scout</span>
+        <span class="rung-state">&#10003; Completed</span>
+        <span class="rung-req">0 badges &middot; 0 points</span>
+      </li>
+      <li class="rung done">
+        <span class="rung-bar b2" aria-hidden="true"></span>
+        <span class="rung-no">Trailhead rank</span>
+        <span class="rung-name">Hiker</span>
+        <span class="rung-state">&#10003; Completed</span>
+        <span class="rung-req">1 badge &middot; 200 points</span>
+      </li>
+      <li class="rung done">
+        <span class="rung-bar b3" aria-hidden="true"></span>
+        <span class="rung-no">Trailhead rank</span>
+        <span class="rung-name">Explorer</span>
+        <span class="rung-state">&#10003; Completed</span>
+        <span class="rung-req">5 badges &middot; 3,000 points</span>
+      </li>
+      <li class="rung done">
+        <span class="rung-bar b4" aria-hidden="true"></span>
+        <span class="rung-no">Trailhead rank</span>
+        <span class="rung-name">Adventurer</span>
+        <span class="rung-state">&#10003; Completed</span>
+        <span class="rung-req">10 badges &middot; 9,000 points</span>
+      </li>
+      <li class="rung done">
+        <span class="rung-bar b1" aria-hidden="true"></span>
+        <span class="rung-no">Trailhead rank</span>
+        <span class="rung-name">Mountaineer</span>
+        <span class="rung-state">&#10003; Completed</span>
+        <span class="rung-req">25 badges &middot; 18,000 points</span>
+      </li>
+      <li class="rung current">
+        <span class="rung-bar b2" aria-hidden="true"></span>
+        <span class="rung-no">Trailhead rank</span>
+        <span class="rung-name">Expeditioner</span>
+        <span class="rung-state">Current rank</span>
+        <span class="rung-req">50 badges &middot; 35,000 points</span>
+      </li>
+      <li class="rung now">
+        <span class="rung-bar b3" aria-hidden="true"></span>
         <span class="rung-no">Rung 1</span>
         <span class="rung-name">Ranger</span>
         <span class="rung-state">In progress</span>
+        <span class="rung-req">100 badges &middot; 50,000 points</span>
       </li>
       <li class="rung">
-        <span class="rung-bar b2" aria-hidden="true"></span>
+        <span class="rung-bar b4" aria-hidden="true"></span>
         <span class="rung-no">Rung 2</span>
         <span class="rung-name">Administrator</span>
         <span class="rung-state">Ahead</span>
       </li>
       <li class="rung">
-        <span class="rung-bar b3" aria-hidden="true"></span>
+        <span class="rung-bar b1" aria-hidden="true"></span>
         <span class="rung-no">Rung 3</span>
         <span class="rung-name">Service Cloud</span>
         <span class="rung-state">Ahead</span>
       </li>
       <li class="rung">
-        <span class="rung-bar b4" aria-hidden="true"></span>
+        <span class="rung-bar b2" aria-hidden="true"></span>
         <span class="rung-no">Rung 4</span>
         <span class="rung-name">Agentforce</span>
         <span class="rung-state">Ahead</span>
