@@ -119,6 +119,14 @@ const SITE = {
       linkUrl: null,
     },
     {
+      title: "The Study Keychain",
+      desc: "My study system, kept on the record: Trailhead and W3Schools standing, the road to Ranger, the trails in motion, and how I study — every figure hand-verified against the public record and stamped with its date.",
+      role: "Designer, developer & keeper of the record",
+      tags: ["Salesforce", "Trailhead", "Study System"],
+      linkLabel: "Open the Study Keychain",
+      linkUrl: "https://jasonnutt2027softwaredeveloper.vercel.app/field-report/",
+    },
+    {
       title: "TruVine App",
       desc: "The earlier community app for the TruVINE audience — formerly “Jesus Love Revealed” — with Testimonials, Trivia, and a Timeline of the journey. Still live; Word of God Risen is its bigger successor.",
       tags: ["React", "Next.js"],

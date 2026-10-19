@@ -246,7 +246,7 @@ a { color: var(--gold-soft); }
 }
 
 /* ---- Brand assets (TruVINE logo, headshot) ---- */
-.brand-mark-img { width: 38px; height: 38px; object-fit: contain; display: block; }
+.brand-mark-img { width: 44px; height: 38px; object-fit: contain; display: block; }
 /* Nav wordmark — "Jason Nutt" set to match the TruVINE logo lettering:
    rounded geometric sans, blue-to-green gradient. */
 .brand-wordmark {
