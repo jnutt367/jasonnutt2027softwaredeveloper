@@ -1,0 +1,17 @@
+{
+  "name": "Jason Nutt — Developer Field Report",
+  "short_name": "Field Report",
+  "description": "Field Report — Jason Nutt, Software & Web Development. Trailhead standing on the road to Ranger, the certification ladder, and coursework across platforms. Counted, not estimated.",
+  "id": "/field-report/",
+  "start_url": "/field-report/",
+  "scope": "/field-report/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0e2233",
+  "theme_color": "#0e2233",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
