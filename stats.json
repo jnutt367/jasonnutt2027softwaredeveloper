@@ -54,7 +54,7 @@
   "data": [
     {
       "branch": "channel",
-      "display": "914",
+      "display": "916",
       "freshness": "daily",
       "freshness_label": "Updated daily",
       "href": "https://www.youtube.com/channel/UC1ryMv3ldYCOgshChVrqZNQ",
@@ -62,11 +62,11 @@
       "label": "YouTube subscribers",
       "source_label": "TruVINE channel · YouTube",
       "updated_at": "2026-10-21",
-      "value": 914
+      "value": 916
     },
     {
       "branch": "channel",
-      "display": "157,961",
+      "display": "158,078",
       "freshness": "daily",
       "freshness_label": "Updated daily",
       "href": "https://www.youtube.com/channel/UC1ryMv3ldYCOgshChVrqZNQ",
@@ -74,7 +74,7 @@
       "label": "YouTube total views",
       "source_label": "TruVINE channel · YouTube",
       "updated_at": "2026-10-21",
-      "value": 157961
+      "value": 158078
     },
     {
       "branch": "channel",
@@ -258,7 +258,7 @@
     },
     {
       "branch": "code",
-      "display": "Oct 20, 2026",
+      "display": "Oct 21, 2026",
       "freshness": "hourly",
       "freshness_label": "Updated hourly",
       "href": "https://github.com/jnutt367/jasonnutt2027softwaredeveloper",
@@ -266,7 +266,7 @@
       "label": "This portfolio last deployed",
       "source_label": "GitHub · this site's repo",
       "updated_at": "2026-10-21",
-      "value": "2026-10-20"
+      "value": "2026-10-21"
     },
     {
       "branch": "code",
