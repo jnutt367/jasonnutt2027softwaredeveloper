@@ -19,9 +19,9 @@ const SITE = {
   truvineAppUrl: "https://jesus-love-revealed.vercel.app/", // live — formerly "Jesus Love Revealed"
   printifyReferralUrl: "https://try.printify.com/2um7i8o278pi", // referral — disclosed inline in the TruVINE section
 
-  // ---- Channel stats (verified 2026-10-15; matches stats.json — refresh job updates stats.json only) ----
-  subscriberCount: "841",
-  videoCount: "376",
+  // ---- Channel stats (seed verified 2026-10-21; the live layer at the bottom refreshes these at load) ----
+  subscriberCount: "916",
+  videoCount: "383",
 
   // ---- Hero ----
   heroEyebrow: "Jason Nutt — Software Developer & Creator",
@@ -54,7 +54,7 @@ const SITE = {
   skills: [
     { name: "React · Next.js · TypeScript", blurb: "My production stack — App Router, server rendering, and typed components, shipped live and in daily use." },
     { name: "JavaScript & Node.js", blurb: "Modern ES6+ — the language I think in. Pure, testable logic and server-side tooling." },
-    { name: "Salesforce CRM — Trailhead Expeditioner", blurb: "Tier 1 borrower support inside Salesforce by day; Expeditioner rank, 163 badges, earned on my own time — plus org access & identity in my own dev orgs: Playground administration and Trailhead SSO launch flows." },
+    { name: "Salesforce CRM — Trailhead Expeditioner", blurb: "Tier 1 borrower support inside Salesforce by day; Expeditioner rank, 167 badges, earned on my own time — plus org access & identity in my own dev orgs: Playground administration and Trailhead SSO launch flows." },
     { name: "QA & Release Methodology", blurb: "Author of an 8-gate release QA standard — acceptance criteria, regression guards, postmortem-driven fixes." },
     { name: "Accessibility — Section 508 Aware", blurb: "Alt text, aria-labels, visible focus, sane contrast — practiced on every site I ship, not bolted on." },
     { name: "Design Thinking & Data", blurb: "IBM Enterprise Design Thinking Practitioner (2024); MongoDB University coursework for data modeling." },
@@ -67,7 +67,7 @@ const SITE = {
       title: "Word of God Risen",
       desc: "A production Bible reader and study app — my flagship, built solo and live on the web. Verse-level reading in two translations, a complete narrated audio Bible, reading plans, progress that sticks, and an Ask Teddy guide.",
       role: "Solo designer, developer & operator",
-      metrics: ["78 books · WEB + KJV translations", "1,503-chapter audio Bible — complete", "~96,000 cross-references across 10,000 verses", "153 commits · live on Vercel"],
+      metrics: ["78 books · WEB + KJV translations", "1,503-chapter audio Bible — complete", "~96,000 cross-references across 10,000 verses", "191 commits · live on Vercel"],
       image: "images/wogr-hero.jpg",
       imageAlt: "Three crosses over a vineyard at dawn — the Word of God Risen home page art",
       tags: ["Next.js", "React", "TypeScript"],
@@ -96,7 +96,7 @@ const SITE = {
       title: "TruVINE — Channel & Content Operations",
       desc: "I run a faith-based YouTube channel end to end — production, metadata standards, release QA, and Python tooling against the YouTube Data API — plus a print-on-demand store tied to the content calendar.",
       role: "Creator, producer & tooling developer",
-      metrics: ["841 subscribers · 154,544 views · 376 videos", "Python SEO & audit automation (YouTube Data API)", "Printify store operations & product QA"],
+      metrics: ["916 subscribers · 158,078 views · 383 videos", "Python SEO & audit automation (YouTube Data API)", "Printify store operations & product QA"],
       tags: ["Python", "YouTube Data API", "Content Operations"],
       linkLabel: "Watch TruVINE",
       linkUrl: "YOUTUBE",
@@ -306,8 +306,8 @@ function render() {
     .map((s) => `<li>${esc(s.name)}${s.note ? `<span class="series-note">${esc(s.note)}</span>` : ""}</li>`)
     .join("");
   $("#stats-list").innerHTML =
-    `<div class="stat"><dt>Subscribers</dt><dd>${esc(SITE.subscriberCount)}</dd></div>` +
-    `<div class="stat"><dt>Videos</dt><dd>${esc(SITE.videoCount)}</dd></div>`;
+    `<div class="stat"><dt>Subscribers</dt><dd data-live="yt_subs">${esc(SITE.subscriberCount)}</dd></div>` +
+    `<div class="stat"><dt>Videos</dt><dd data-live="yt_videos">${esc(SITE.videoCount)}</dd></div>`;
   $("#truvine-links").innerHTML =
     chip("YouTube", SITE.youtubeUrl, "youtube") +
     chip("Facebook", SITE.facebookUrl, "facebook") +
@@ -419,7 +419,116 @@ async function initStats() {
   } catch (e) { /* seeded values stand — never blank, never a guess */ }
 }
 
+/* ---------- Live stats layer ----------
+   The committed stats.json + the verified values seeded in the HTML
+   are the floor: never a blank, never a guess. At load, this layer
+   refreshes every stat that has a reachable public source:
+   - YouTube, the store count, and the study standing (Trailhead +
+     W3Schools) ride the ministry Field Report's published data
+     block — refreshed three times daily by the heartbeat engine;
+     GitHub Pages serves it CORS-open.
+   - GitHub counts, flagship commits, latest push, and this site's
+     deploy date come straight from GitHub's public API (CORS-open).
+   Trailhead's own API sends no CORS headers and wants an internal
+   ID, so Trailhead figures arrive via the Field Report block —
+   hand-verified, with the as-of date shown beside them. */
+async function initLiveStats() {
+  const fmt = (n) => (+n).toLocaleString("en-US");
+  const nice = (iso) => { try { return new Date(iso + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }); } catch (e) { return iso; } };
+  const niceET = (ts) => new Date(ts).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "America/New_York" });
+  const setVal = (id, text) => document.querySelectorAll(`[data-live="${id}"], [data-stat="${id}"]`).forEach((el) => (el.textContent = text));
+  const setFresh = (id, text) => document.querySelectorAll(`[data-stat-fresh="${id}"]`).forEach((el) => (el.textContent = text));
+  const getJSON = async (url) => { const r = await fetch(url, { cache: "no-cache" }); if (!r.ok) throw new Error(url); return r.json(); };
+  const leafFix = (re, make) => document.querySelectorAll("body *").forEach((el) => { if (el.children.length === 0 && re.test(el.textContent.trim())) el.textContent = make(); });
+
+  try {
+    const r = await fetch("https://jnutt367.github.io/truvine/field-report/", { cache: "no-cache" });
+    if (r.ok) {
+      const doc = new DOMParser().parseFromString(await r.text(), "text/html");
+      const raw = doc.querySelector("#fr-refresh-data")?.textContent;
+      const fr = raw ? JSON.parse(raw) : null;
+      if (fr) {
+        if (fr.youtube) {
+          setVal("yt_subs", fmt(fr.youtube.subs));
+          setVal("yt_views", fmt(fr.youtube.views));
+          setVal("yt_videos", fmt(fr.youtube.videos));
+          const stamp = `Live · YouTube · Field Report · ${nice(fr.asOf?.youtube || fr.asOf?.run)}`;
+          ["yt_subs", "yt_views", "yt_videos"].forEach((id) => setFresh(id, stamp));
+          leafFix(/^[\d,]+ subscribers · [\d,]+ views · [\d,]+ videos$/, () => `${fmt(fr.youtube.subs)} subscribers · ${fmt(fr.youtube.views)} views · ${fmt(fr.youtube.videos)} videos`);
+        }
+        if (fr.store && fr.store.products != null) {
+          setVal("store_products", fmt(fr.store.products));
+          setFresh("store_products", `Live · Printify via Field Report · ${nice(fr.store.asOf)}`);
+        }
+        const st = fr.study;
+        if (st && st.badges != null && st.rangerPoints != null) {
+          const pts = st.rangerPoints, goal = st.rangerGoal || 50000;
+          const gap = st.pointsToRanger != null ? st.pointsToRanger : goal - pts;
+          const pct = Math.round((pts / goal) * 100) + "%";
+          const stamp = `Verified ${nice(st.asOf)}`;
+          document.querySelectorAll('[data-th="points"]').forEach((el) => (el.textContent = fmt(pts)));
+          document.querySelectorAll('[data-th="gap"]').forEach((el) => (el.textContent = fmt(gap)));
+          document.querySelectorAll('[data-th="gapline"]').forEach((el) => (el.textContent = `${fmt(gap)} points`));
+          document.querySelectorAll('[data-th="gapnote"]').forEach((el) => (el.textContent = `${pct} there — full tracker below`));
+          document.querySelectorAll('[data-th="badges"]').forEach((el) => (el.textContent = fmt(st.badges)));
+          document.querySelectorAll('[data-th="percent"]').forEach((el) => (el.textContent = pct));
+          document.querySelectorAll('[data-th="rank"]').forEach((el) => (el.textContent = st.rank || el.textContent));
+          document.querySelectorAll('[data-th="stampdate"]').forEach((el) => (el.textContent = nice(st.asOf)));
+          document.querySelectorAll("[data-th-fresh]").forEach((el) => (el.textContent = `${stamp} · Trailblazer profile`));
+          const bar = document.querySelector('[data-progress="ranger"]');
+          if (bar) {
+            bar.setAttribute("aria-valuenow", String(pts));
+            bar.setAttribute("aria-label", `Trailhead points toward Ranger: ${fmt(pts)} of ${fmt(goal)} points — ${pct.replace("%", "")} percent, ${fmt(gap)} to go`);
+            const fill = bar.querySelector(".progress-fill");
+            if (fill) fill.style.width = pct;
+          }
+          if (st.w3schools) {
+            const w = st.w3schools;
+            document.querySelectorAll('[data-w3="line"]').forEach((el) => (el.textContent = `${fmt(w.xp)} XP · ${fmt(w.lessons)} lessons · ${fmt(w.exercises)} exercises`));
+            document.querySelectorAll('[data-w3="stamp"]').forEach((el) => (el.textContent = stamp));
+          }
+        }
+      }
+    }
+  } catch (e) { /* verified seeds stand */ }
+
+  try {
+    const u = await getJSON("https://api.github.com/users/jnutt367");
+    if (u) {
+      setVal("gh_repos", fmt(u.public_repos));
+      setFresh("gh_repos", "Live · GitHub · @jnutt367, building since 2020");
+      setVal("gh_followers", fmt(u.followers));
+      setFresh("gh_followers", "Live · GitHub · @jnutt367");
+    }
+  } catch (e) { /* verified seeds stand */ }
+  try {
+    const r = await fetch("https://api.github.com/repos/jnutt367/word-of-god-risen/commits?per_page=1", { cache: "no-cache" });
+    const m = (r.headers.get("Link") || "").match(/[?&]page=(\d+)>;\s*rel="last"/);
+    if (m) {
+      setVal("wogr_commits", fmt(+m[1]));
+      setFresh("wogr_commits", "Live · GitHub · word-of-god-risen");
+      leafFix(/^[\d,]+ commits · live on Vercel$/, () => `${fmt(+m[1])} commits · live on Vercel`);
+    }
+  } catch (e) { /* verified seeds stand */ }
+  try {
+    const ev = await getJSON("https://api.github.com/users/jnutt367/events/public?per_page=30");
+    const push = Array.isArray(ev) && ev.find((e) => e.type === "PushEvent");
+    if (push) {
+      setVal("gh_activity", niceET(push.created_at));
+      setFresh("gh_activity", "Live · GitHub · @jnutt367");
+    }
+  } catch (e) { /* verified seeds stand */ }
+  try {
+    const p = await getJSON("https://api.github.com/repos/jnutt367/jasonnutt2027softwaredeveloper");
+    if (p && p.pushed_at) {
+      setVal("portfolio_deploy", niceET(p.pushed_at));
+      setFresh("portfolio_deploy", "Live · GitHub · this site's repo");
+    }
+  } catch (e) { /* verified seeds stand */ }
+}
+
+
 render();
-initStats();
+initStats().then(() => initLiveStats());
 initNav();
 initReveal();

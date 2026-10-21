@@ -438,6 +438,7 @@ a { color: var(--gold-soft); }
 .unit-state.next { background: var(--gold); color: var(--bg); }
 .unit-state.doing { background: rgba(217,164,65,0.18); color: var(--gold-soft); border: 1px solid rgba(217,164,65,0.45); }
 .unit-state.todo { background: rgba(45,90,61,0.3); color: var(--sage); border: 1px solid rgba(45,90,61,0.7); }
+.unit-state.done { background: rgba(45,90,61,0.55); color: #cfe3d2; border: 1px solid rgba(45,90,61,0.9); }
 .unit-pts { margin-left: auto; color: var(--sage); font-size: 0.88rem; white-space: nowrap; }
 .road-rail { list-style: none; margin: 0 0 1.5rem; padding: 0; counter-reset: road; }
 .road-rail li { position: relative; padding: 0.7rem 0 0.7rem 2.2rem; border-bottom: 1px solid rgba(45, 90, 61, 0.45); }

@@ -164,7 +164,7 @@
       "branch": "code",
       "display": "277",
       "freshness": "hourly",
-      "freshness_label": "Updated hourly",
+      "freshness_label": "Updated daily",
       "href": "https://github.com/jnutt367",
       "id": "gh_repos",
       "label": "Public repositories",
@@ -176,7 +176,7 @@
       "branch": "code",
       "display": "22",
       "freshness": "hourly",
-      "freshness_label": "Updated hourly",
+      "freshness_label": "Updated daily",
       "href": "https://github.com/jnutt367",
       "id": "gh_followers",
       "label": "GitHub followers",
@@ -188,7 +188,7 @@
       "branch": "code",
       "display": "Oct 19, 2026",
       "freshness": "hourly",
-      "freshness_label": "Updated hourly",
+      "freshness_label": "Updated daily",
       "href": "https://github.com/jnutt367",
       "id": "gh_activity",
       "label": "Latest code push",
@@ -234,15 +234,15 @@
     },
     {
       "branch": "store",
-      "display": "8",
+      "display": "47",
       "freshness": "daily",
       "freshness_label": "Updated daily",
       "href": "https://truvine.printify.me",
       "id": "store_products",
       "label": "Products live in the TruVINE store",
       "source_label": "Printify store · product count only",
-      "updated_at": "2026-10-13",
-      "value": 8
+      "updated_at": "2026-10-21",
+      "value": 47
     },
     {
       "branch": "ministry",
@@ -260,7 +260,7 @@
       "branch": "code",
       "display": "Oct 21, 2026",
       "freshness": "hourly",
-      "freshness_label": "Updated hourly",
+      "freshness_label": "Updated daily",
       "href": "https://github.com/jnutt367/jasonnutt2027softwaredeveloper",
       "id": "portfolio_deploy",
       "label": "This portfolio last deployed",
@@ -285,9 +285,9 @@
     "chips": [
       {
         "detail": "Tracks complete: Bootstrap 3 (100%), Bootstrap 5 (100%), MongoDB (100%). In progress: HTML 66%, React 65%, JavaScript 59%. Progress record only — no certificates claimed.",
-        "fact": "38,790 XP · 955 lessons · 720 exercises",
+        "fact": "39,130 XP · 961 lessons · 720 exercises",
         "freshness": "verified",
-        "freshness_label": "Verified Oct 13, 2026",
+        "freshness_label": "Verified Oct 19, 2026",
         "href": "https://www.w3profile.com/jason-nutt",
         "id": "w3schools",
         "link_label": "Public profile",
@@ -402,26 +402,26 @@
   },
   "trailhead": {
     "agentblazer": "Champion '25 (Level 1)",
-    "badges": 163,
+    "badges": 167,
     "badges_required": 100,
     "freshness": "verified",
-    "freshness_label": "Verified Oct 15, 2026",
-    "points": 43925,
-    "points_display": "43,925",
+    "freshness_label": "Verified Oct 19, 2026",
+    "points": 44800,
+    "points_display": "44,800",
     "profile_url": "https://www.salesforce.com/trailblazer/jnutt367",
-    "ranger_gap": 6075,
-    "ranger_percent": 88,
+    "ranger_gap": 5200,
+    "ranger_percent": 90,
     "ranger_target": 50000,
     "rank": "Expeditioner",
     "road": [
       {
         "name": "Ranger rank",
-        "note": "6,075 points to go — badges already cleared",
+        "note": "5,200 points to go — badges already cleared",
         "state": "active"
       },
       {
         "name": "JavaScript Developer trailmix — complete",
-        "note": "46% banked · 5,800 points still earnable",
+        "note": "62% banked",
         "state": "active"
       },
       {
