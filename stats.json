@@ -66,7 +66,7 @@
     },
     {
       "branch": "channel",
-      "display": "158,371",
+      "display": "158,417",
       "freshness": "daily",
       "freshness_label": "Updated daily",
       "href": "https://www.youtube.com/channel/UC1ryMv3ldYCOgshChVrqZNQ",
@@ -74,7 +74,7 @@
       "label": "YouTube total views",
       "source_label": "TruVINE channel · YouTube",
       "updated_at": "2026-10-22",
-      "value": 158371
+      "value": 158417
     },
     {
       "branch": "channel",
@@ -186,7 +186,7 @@
     },
     {
       "branch": "code",
-      "display": "Oct 20, 2026",
+      "display": "Oct 22, 2026",
       "freshness": "hourly",
       "freshness_label": "Updated daily",
       "href": "https://github.com/jnutt367",
@@ -194,7 +194,7 @@
       "label": "Latest code push",
       "source_label": "GitHub · @jnutt367",
       "updated_at": "2026-10-22",
-      "value": "2026-10-20"
+      "value": "2026-10-22"
     },
     {
       "branch": "films",
