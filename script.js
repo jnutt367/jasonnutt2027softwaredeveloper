@@ -75,6 +75,15 @@ const SITE = {
       linkUrl: "https://word-of-god-risen.vercel.app/",
     },
     {
+      title: "FSA Desk Reference",
+      desc: "By day I help borrowers through three Federal Student Aid programs — Public Service Loan Forgiveness, Borrower Defense, and Total & Permanent Disability discharge. The rules live scattered across the official site, so I built the desk reference I needed: every common question as its own searchable card, answered plainly, quoted short from the official page, and linked to its source. A personal, unofficial job aid — public information only — designed, built, and kept current on my own time.",
+      role: "Designer, developer & keeper of the record",
+      metrics: ["Three program areas — PSLF · Borrower Defense · TPD", "Every card sourced to its official page, verified and date-stamped", "Data-driven build — one source file regenerates the whole reference", "Weekly source watch — the cards are re-checked against the official pages"],
+      tags: ["Python", "HTML/CSS", "Knowledge Systems"],
+      linkLabel: "Open the Desk Reference",
+      linkUrl: "https://jasonnutt2027softwaredeveloper.vercel.app/fsa-desk/",
+    },
+    {
       title: "Word of God Risen — Accessibility Audit",
       desc: "Accessibility is a standing rule on everything I build, so I put my flagship through a full audit of its own: every picture on the site inventoried for alt text, every button and form field checked for a spoken label, contrast measured across both reader themes, and keyboard focus confirmed end to end. What failed was fixed the same day — and the results are published on the site itself, where any reader can check them.",
       role: "Accessibility auditor & developer",
