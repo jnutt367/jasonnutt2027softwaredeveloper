@@ -64,7 +64,9 @@ footer .mark img{height:28px;width:auto}
 .result:hover{border-color:var(--gold)}
 .result b{color:var(--navy)}
 .hidden{display:none}
-@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}}
+@media (min-width:900px){.cards,.depts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.cards .card,.depts .dept{margin:0}}
+@media (min-width:1400px){.wrap{max-width:1460px}.cards,.depts{grid-template-columns:repeat(3,1fr)}}
+@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}.cards,.depts{display:block}.cards .card,.depts .dept{margin:14px 0}}
 </style>
 </head>
 <body><header><div class="wrap">
@@ -79,6 +81,7 @@ footer .mark img{height:28px;width:auto}
 <div class="strip"><h2>Official resources</h2><ul><li><a href="https://studentaid.gov/articles/plus-loans-denied-adverse-credit/">PLUS Loans: denied based on adverse credit</a></li><li><a href="https://studentaid.gov/help-center/answers/article/how-to-document-extenuating-circumstances-for-adverse-credit-decision-plus-app">Documenting extenuating circumstances (Help Center)</a></li><li><a href="https://studentaid.gov/appeal-credit">Appeal a Credit Decision — the demo</a></li><li><a href="https://studentaid.gov/plus-loan-credit-counseling/">PLUS Loan Credit Counseling</a></li><li><a href="https://studentaid.gov/endorser-addendum/">Endorse a PLUS Loan</a></li></ul><p>Appeals by phone if you can't file online: 1-800-433-3243 (as printed in the article)</p></div>
 <div class="search"><label for="filter" class="hidden">Filter this page</label>
 <input id="filter" type="search" placeholder="Filter this page — try ‘signature’, ‘monitoring’, ‘refund’…" autocomplete="off"></div>
+<div class="cards">
 <article class="card" id="denial-options">
 <h3>“I was denied a PLUS loan for adverse credit — what are ALL my options?”</h3>
 <p class="a">The article names four: ① get an endorser (plus PLUS Credit Counseling), ② file an appeal ★ — online, from your account, ③ if you&#x27;re a parent, your child may be able to get additional Direct Unsubsidized Loan funds, and ④ talk to the school&#x27;s financial aid office about other options.</p>
@@ -139,6 +142,7 @@ footer .mark img{height:28px;width:auto}
 <blockquote>“you can appeal the credit decision”<span class="who">— the site’s own words, <a href="https://studentaid.gov/help-center/answers/article/how-to-document-extenuating-circumstances-for-adverse-credit-decision-plus-app">source page</a></span></blockquote>
 <a class="src" href="https://studentaid.gov/help-center/answers/article/how-to-document-extenuating-circumstances-for-adverse-credit-decision-plus-app">Open the source on StudentAid.gov ↗</a>
 </article>
+</div>
 <p><a href="../">← Back to the desk home</a></p>
 </main>
 <div class="wrap"><footer>

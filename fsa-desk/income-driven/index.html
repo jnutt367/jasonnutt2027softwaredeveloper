@@ -64,7 +64,9 @@ footer .mark img{height:28px;width:auto}
 .result:hover{border-color:var(--gold)}
 .result b{color:var(--navy)}
 .hidden{display:none}
-@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}}
+@media (min-width:900px){.cards,.depts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.cards .card,.depts .dept{margin:0}}
+@media (min-width:1400px){.wrap{max-width:1460px}.cards,.depts{grid-template-columns:repeat(3,1fr)}}
+@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}.cards,.depts{display:block}.cards .card,.depts .dept{margin:14px 0}}
 </style>
 </head>
 <body><header><div class="wrap">
@@ -79,6 +81,7 @@ footer .mark img{height:28px;width:auto}
 <div class="strip"><h2>Official resources</h2><ul><li><a href="https://studentaid.gov/manage-loans/repayment/plans/income-driven">Income-Driven Repayment Plans</a></li><li><a href="https://studentaid.gov/idr">Apply for IDR / recertify</a></li></ul><p>IDR application help: 1-800-433-3243 · Plan itself runs through your loan servicer</p></div>
 <div class="search"><label for="filter" class="hidden">Filter this page</label>
 <input id="filter" type="search" placeholder="Filter this page — try ‘signature’, ‘monitoring’, ‘refund’…" autocomplete="off"></div>
+<div class="cards">
 <article class="card" id="apply-options">
 <h3>“How do I apply for an income-driven plan — all my options?”</h3>
 <p class="a">★ EASIEST: apply online at StudentAid.gov/idr — the page says most people complete it in 10 minutes or less, and you can save and finish later. You can also submit a paper form. Either way, if your loans sit with more than one servicer, you must submit a separate request to EACH servicer. You&#x27;ll need a verified FSA ID, financial and personal information, and your spouse&#x27;s information if applicable. The same /idr page is also where you recertify.</p>
@@ -139,6 +142,7 @@ footer .mark img{height:28px;width:auto}
 <p class="a">THE SITE DOESN&#x27;T SAY — on the pages this area is built from. The SAVE plan is not named anywhere on the IDR hub or the IDR application page (both read in full, October 22, 2026): no status, no terms, no route. Don&#x27;t quote a SAVE status at the desk from these pages; the caller&#x27;s servicer and the site&#x27;s announcements govern. Gaps on the same pages: the RAP 1%–10% income-tier brackets and the definition of “discretionary income” are not stated.</p>
 <a class="src" href="https://studentaid.gov/manage-loans/repayment/plans/income-driven">Open the source on StudentAid.gov ↗</a>
 </article>
+</div>
 <p><a href="../">← Back to the desk home</a></p>
 </main>
 <div class="wrap"><footer>

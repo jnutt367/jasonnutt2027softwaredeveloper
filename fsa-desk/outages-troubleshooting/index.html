@@ -64,7 +64,9 @@ footer .mark img{height:28px;width:auto}
 .result:hover{border-color:var(--gold)}
 .result b{color:var(--navy)}
 .hidden{display:none}
-@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}}
+@media (min-width:900px){.cards,.depts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.cards .card,.depts .dept{margin:0}}
+@media (min-width:1400px){.wrap{max-width:1460px}.cards,.depts{grid-template-columns:repeat(3,1fr)}}
+@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}.cards,.depts{display:block}.cards .card,.depts .dept{margin:14px 0}}
 </style>
 </head>
 <body><header><div class="wrap">
@@ -79,6 +81,7 @@ footer .mark img{height:28px;width:auto}
 <div class="strip"><h2>Official resources</h2><ul><li><a href="https://studentaid.gov/notices">Notices (incl. maintenance window)</a></li><li><a href="https://studentaid.gov/notices/site-requirements">Site requirements</a></li><li><a href="https://studentaid.gov/help-center/answers/article/what-if-get-unknown-error-message">Unknown error — what to do</a></li><li><a href="https://studentaid.gov/help-center/answers/landing">Help Center</a></li></ul><p>Still stuck after the playbook: 1-800-433-3243</p></div>
 <div class="search"><label for="filter" class="hidden">Filter this page</label>
 <input id="filter" type="search" placeholder="Filter this page — try ‘signature’, ‘monitoring’, ‘refund’…" autocomplete="off"></div>
+<div class="cards">
 <article class="card" id="sunday-maintenance">
 <h3>“The site won&#x27;t let me log in — is it down?”</h3>
 <p class="a">Check the clock first: StudentAid.gov has regularly scheduled maintenance on Sundays from 3 a.m. to 11 a.m. Eastern time. During that window you can view website pages, but you cannot create an account or log in. Most “the site is down” calls on a Sunday morning are this window, not an outage.</p>
@@ -115,6 +118,7 @@ footer .mark img{height:28px;width:auto}
 <p class="a">THE SITE DOESN&#x27;T SAY: no channel for unplanned-outage notifications is published, no consolidated error-code list exists (only individual error-message articles), and the “Application Unavailable” article&#x27;s full text wasn&#x27;t read for this aid. During an unplanned problem, the desk answer is the Help Center + 1-800-433-3243 — not a status page that doesn&#x27;t exist.</p>
 <a class="src" href="https://studentaid.gov/notices">Open the source on StudentAid.gov ↗</a>
 </article>
+</div>
 <p><a href="../">← Back to the desk home</a></p>
 </main>
 <div class="wrap"><footer>

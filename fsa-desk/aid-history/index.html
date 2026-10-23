@@ -64,7 +64,9 @@ footer .mark img{height:28px;width:auto}
 .result:hover{border-color:var(--gold)}
 .result b{color:var(--navy)}
 .hidden{display:none}
-@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}}
+@media (min-width:900px){.cards,.depts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.cards .card,.depts .dept{margin:0}}
+@media (min-width:1400px){.wrap{max-width:1460px}.cards,.depts{grid-template-columns:repeat(3,1fr)}}
+@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}.cards,.depts{display:block}.cards .card,.depts .dept{margin:14px 0}}
 </style>
 </head>
 <body><header><div class="wrap">
@@ -79,6 +81,7 @@ footer .mark img{height:28px;width:auto}
 <div class="strip"><h2>Official resources</h2><ul><li><a href="https://studentaid.gov/help-center/answers/article/what-is-aid-summary">What is “My Aid”?</a></li></ul><p>Aid history lives behind the borrower's own login · General help: 1-800-433-3243</p></div>
 <div class="search"><label for="filter" class="hidden">Filter this page</label>
 <input id="filter" type="search" placeholder="Filter this page — try ‘signature’, ‘monitoring’, ‘refund’…" autocomplete="off"></div>
+<div class="cards">
 <article class="card" id="what-is-myaid">
 <h3>“Where do I see everything I&#x27;ve ever gotten?”</h3>
 <p class="a">In My Aid — part of your StudentAid.gov account, reached by logging in. It holds the detailed information about your loan and grant aid. (There is no public, logged-out view of anyone&#x27;s aid — it lives behind the borrower&#x27;s own account, by design.)</p>
@@ -103,6 +106,7 @@ footer .mark img{height:28px;width:auto}
 <p class="a">THE ARTICLE DOESN&#x27;T SAY: how far back the history reaches, whether discharged, defaulted, or paid-in-full loans appear, whether a parent can view a dependent student&#x27;s history, or how quickly new disbursements show up. Don&#x27;t guess at the desk — the borrower&#x27;s own My Aid view is the answer they can check.</p>
 <a class="src" href="https://studentaid.gov/help-center/answers/article/what-is-aid-summary">Open the source on StudentAid.gov ↗</a>
 </article>
+</div>
 <p><a href="../">← Back to the desk home</a></p>
 </main>
 <div class="wrap"><footer>

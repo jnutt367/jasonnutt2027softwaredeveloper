@@ -64,7 +64,9 @@ footer .mark img{height:28px;width:auto}
 .result:hover{border-color:var(--gold)}
 .result b{color:var(--navy)}
 .hidden{display:none}
-@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}}
+@media (min-width:900px){.cards,.depts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.cards .card,.depts .dept{margin:0}}
+@media (min-width:1400px){.wrap{max-width:1460px}.cards,.depts{grid-template-columns:repeat(3,1fr)}}
+@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}.cards,.depts{display:block}.cards .card,.depts .dept{margin:14px 0}}
 </style>
 </head>
 <body><header><div class="wrap">
@@ -79,6 +81,7 @@ footer .mark img{height:28px;width:auto}
 <div class="strip"><h2>Official resources</h2><ul><li><a href="https://studentaid.gov/exit-counseling">Exit Counseling — start or demo</a></li></ul><p>Help: your school's financial aid office · General: 1-800-433-3243</p></div>
 <div class="search"><label for="filter" class="hidden">Filter this page</label>
 <input id="filter" type="search" placeholder="Filter this page — try ‘signature’, ‘monitoring’, ‘refund’…" autocomplete="off"></div>
+<div class="cards">
 <article class="card" id="do-it">
 <h3>“How do I complete exit counseling?”</h3>
 <p class="a">★ Log in at StudentAid.gov/exit-counseling (“Log In To Start”) with a verified StudentAid.gov account — a “View Demo” preview sits on the same page. It takes about 30 minutes and must be finished IN ONE SESSION: you cannot save and return to an incomplete session, and sessions time out after 15 minutes of inactivity. Have ready: your verified account, your school name(s), and updated contact information.</p>
@@ -115,6 +118,7 @@ footer .mark img{height:28px;width:auto}
 <p class="a">THE SITE DOESN&#x27;T SAY — on this page. It states no deadline for completing exit counseling, no consequence (hold, penalty, or block) for never completing it, and nothing about completing it retroactively or what proof of completion a borrower receives. Don&#x27;t improvise consequences at the desk; the school&#x27;s financial aid office governs its own requirements.</p>
 <a class="src" href="https://studentaid.gov/exit-counseling">Open the source on StudentAid.gov ↗</a>
 </article>
+</div>
 <p><a href="../">← Back to the desk home</a></p>
 </main>
 <div class="wrap"><footer>

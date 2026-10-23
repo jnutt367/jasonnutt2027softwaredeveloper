@@ -64,7 +64,9 @@ footer .mark img{height:28px;width:auto}
 .result:hover{border-color:var(--gold)}
 .result b{color:var(--navy)}
 .hidden{display:none}
-@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}}
+@media (min-width:900px){.cards,.depts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.cards .card,.depts .dept{margin:0}}
+@media (min-width:1400px){.wrap{max-width:1460px}.cards,.depts{grid-template-columns:repeat(3,1fr)}}
+@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}.cards,.depts{display:block}.cards .card,.depts .dept{margin:14px 0}}
 </style>
 </head>
 <body><header><div class="wrap">
@@ -79,6 +81,7 @@ footer .mark img{height:28px;width:auto}
 <div class="strip"><h2>Official resources</h2><ul><li><a href="https://studentaid.gov/help/fill-out-fafsa-each-year">Will I need to fill out the FAFSA form each year?</a></li><li><a href="https://studentaid.gov/h/apply-for-aid/fafsa">FAFSA hub</a></li></ul><p>Renewal questions (FSAIC): 1-800-433-3243</p></div>
 <div class="search"><label for="filter" class="hidden">Filter this page</label>
 <input id="filter" type="search" placeholder="Filter this page — try ‘signature’, ‘monitoring’, ‘refund’…" autocomplete="off"></div>
+<div class="cards">
 <article class="card" id="every-year">
 <h3>“Do I have to fill out the FAFSA every year?”</h3>
 <p class="a">Yes — file a FAFSA for each award year you&#x27;re a student. Eligibility for federal student aid does not carry over from one award year to the next.</p>
@@ -97,6 +100,7 @@ footer .mark img{height:28px;width:auto}
 <blockquote>“Your eligibility for federal student aid can differ from year to year for various reasons”<span class="who">— the site’s own words, <a href="https://studentaid.gov/help/fill-out-fafsa-each-year">source page</a></span></blockquote>
 <a class="src" href="https://studentaid.gov/help/fill-out-fafsa-each-year">Open the source on StudentAid.gov ↗</a>
 </article>
+</div>
 <p><a href="../">← Back to the desk home</a></p>
 </main>
 <div class="wrap"><footer>

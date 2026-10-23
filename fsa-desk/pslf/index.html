@@ -64,7 +64,9 @@ footer .mark img{height:28px;width:auto}
 .result:hover{border-color:var(--gold)}
 .result b{color:var(--navy)}
 .hidden{display:none}
-@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}}
+@media (min-width:900px){.cards,.depts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.cards .card,.depts .dept{margin:0}}
+@media (min-width:1400px){.wrap{max-width:1460px}.cards,.depts{grid-template-columns:repeat(3,1fr)}}
+@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}.cards,.depts{display:block}.cards .card,.depts .dept{margin:14px 0}}
 </style>
 </head>
 <body><header><div class="wrap">
@@ -79,6 +81,7 @@ footer .mark img{height:28px;width:auto}
 <div class="strip"><h2>Official resources</h2><ul><li><a href="https://studentaid.gov/pslf/">PSLF Help Tool</a></li><li><a href="https://studentaid.gov/pslf/">PSLF Employer Search</a></li><li><a href="https://studentaid.gov/sites/default/files/public-service-application-for-forgiveness.pdf">The PSLF form (PDF)</a></li><li><a href="https://studentaid.gov/manage-loans/forgiveness-cancellation/public-service/public-service-loan-forgiveness-buyback">PSLF Buyback</a></li><li><a href="https://studentaid.gov/manage-loans/pslf-reconsideration">Submit a PSLF Reconsideration Request</a></li></ul><p>PSLF form help line: 1-888-303-7818 (printed on the official form)</p></div>
 <div class="search"><label for="filter" class="hidden">Filter this page</label>
 <input id="filter" type="search" placeholder="Filter this page — try ‘signature’, ‘monitoring’, ‘refund’…" autocomplete="off"></div>
+<div class="cards">
 <article class="card" id="core-rule">
 <h3>“What&#x27;s the basic deal with PSLF?”</h3>
 <p class="a">The remaining balance is forgiven after 120 qualifying monthly payments on Direct Loans, made under an accepted repayment plan while working full-time for an eligible employer.</p>
@@ -247,6 +250,7 @@ footer .mark img{height:28px;width:auto}
 <p class="a">Different tools for different problems. RECONSIDERATION: the count itself is wrong — payments or months were miscounted — and you want the determination re-reviewed. No money changes hands, and letter counts carry a 90-day deadline. BUYBACK: the count is right, but months in a deferment or forbearance didn&#x27;t count, and you already have 120 months of qualifying employment — you pay what you would have paid in those months to make them count and reach forgiveness. The connection worth knowing: a buyback is requested THROUGH the PSLF Reconsideration door, choosing ‘PSLF Buyback’ as the reconsideration type.</p>
 <a class="src" href="https://studentaid.gov/manage-loans/forgiveness-cancellation/public-service">Open the source on StudentAid.gov ↗</a>
 </article>
+</div>
 <p><a href="../">← Back to the desk home</a></p>
 </main>
 <div class="wrap"><footer>

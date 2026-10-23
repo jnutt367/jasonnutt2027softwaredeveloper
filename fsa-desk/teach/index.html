@@ -64,7 +64,9 @@ footer .mark img{height:28px;width:auto}
 .result:hover{border-color:var(--gold)}
 .result b{color:var(--navy)}
 .hidden{display:none}
-@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}}
+@media (min-width:900px){.cards,.depts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.cards .card,.depts .dept{margin:0}}
+@media (min-width:1400px){.wrap{max-width:1460px}.cards,.depts{grid-template-columns:repeat(3,1fr)}}
+@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}.cards,.depts{display:block}.cards .card,.depts .dept{margin:14px 0}}
 </style>
 </head>
 <body><header><div class="wrap">
@@ -79,6 +81,7 @@ footer .mark img{height:28px;width:auto}
 <div class="strip"><h2>Official resources</h2><ul><li><a href="https://studentaid.gov/understand-aid/types/grants/teach">TEACH Grants</a></li><li><a href="https://studentaid.gov/teach-grant-program">TEACH Grant page — counseling &amp; Agreement</a></li><li><a href="https://studentaid.gov/teach-certification">TEACH certification forms</a></li></ul><p>TEACH certification & conversion questions: 1-888-303-7818</p></div>
 <div class="search"><label for="filter" class="hidden">Filter this page</label>
 <input id="filter" type="search" placeholder="Filter this page — try ‘signature’, ‘monitoring’, ‘refund’…" autocomplete="off"></div>
+<div class="cards">
 <article class="card" id="yearly-steps">
 <h3>“I&#x27;m getting a TEACH Grant this year — what must I do, in what order?”</h3>
 <p class="a">Every year you receive a TEACH Grant, in this specific order, BEFORE that year&#x27;s grant: ① complete TEACH Grant Initial and Subsequent Counseling, then ② sign an Agreement to Serve or Repay (Agreement) — both on the TEACH Grant page (StudentAid.gov/teach-grant-program) after logging in. You can check your counseling and Agreement completion by award year on the same page.</p>
@@ -133,6 +136,7 @@ footer .mark img{height:28px;width:auto}
 <p class="a">THE PAGES DON&#x27;T STATE: a deadline for submitting each annual certification form, or a deadline for requesting reconsideration after a conversion, or how a recipient is warned before conversion happens. The certification form itself is OMB No. 1845-0158 and the Agreement is OMB No. 1845-0083 if a caller is reading numbers off their paperwork.</p>
 <a class="src" href="https://studentaid.gov/understand-aid/types/grants/teach">Open the source on StudentAid.gov ↗</a>
 </article>
+</div>
 <p><a href="../">← Back to the desk home</a></p>
 </main>
 <div class="wrap"><footer>

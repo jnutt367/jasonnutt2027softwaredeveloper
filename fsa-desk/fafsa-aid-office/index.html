@@ -64,7 +64,9 @@ footer .mark img{height:28px;width:auto}
 .result:hover{border-color:var(--gold)}
 .result b{color:var(--navy)}
 .hidden{display:none}
-@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}}
+@media (min-width:900px){.cards,.depts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.cards .card,.depts .dept{margin:0}}
+@media (min-width:1400px){.wrap{max-width:1460px}.cards,.depts{grid-template-columns:repeat(3,1fr)}}
+@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}.cards,.depts{display:block}.cards .card,.depts .dept{margin:14px 0}}
 </style>
 </head>
 <body><header><div class="wrap">
@@ -79,6 +81,7 @@ footer .mark img{height:28px;width:auto}
 <div class="strip"><h2>Official resources</h2><ul><li><a href="https://studentaid.gov/apply-for-aid/fafsa/filling-out">Filling Out the FAFSA Form</a></li><li><a href="https://studentaid.gov/apply-for-aid/fafsa/filling-out/parent-info">Reporting Parent Information</a></li><li><a href="https://studentaid.gov/apply-for-aid/fafsa/review-and-correct">Review and Correct Your FAFSA Form</a></li><li><a href="https://studentaid.gov/help-center/contact">Contact Us — your school&#x27;s financial aid office</a></li></ul><p>The caller's own school's financial aid office — the site lists no school-specific numbers</p></div>
 <div class="search"><label for="filter" class="hidden">Filter this page</label>
 <input id="filter" type="search" placeholder="Filter this page — try ‘signature’, ‘monitoring’, ‘refund’…" autocomplete="off"></div>
+<div class="cards">
 <article class="card" id="income-dropped">
 <h3>“My income dropped a lot since the tax year on my FAFSA — who do I tell?”</h3>
 <p class="a">Your school&#x27;s financial aid office. If your finances have changed significantly, contact the office at the school you plan to attend — the financial aid administrator may adjust your FAFSA information.</p>
@@ -109,6 +112,7 @@ footer .mark img{height:28px;width:auto}
 <p class="a">THE SITE DOESN&#x27;T SAY: any specific school&#x27;s office hours or contact details (callers go through their own school), or how long a school takes to review special or unusual circumstances. This aid lists no school&#x27;s number — it doesn&#x27;t have them.</p>
 <a class="src" href="https://studentaid.gov/apply-for-aid/fafsa/filling-out">Open the source on StudentAid.gov ↗</a>
 </article>
+</div>
 <p><a href="../">← Back to the desk home</a></p>
 </main>
 <div class="wrap"><footer>

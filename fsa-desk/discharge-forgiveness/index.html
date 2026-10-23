@@ -64,7 +64,9 @@ footer .mark img{height:28px;width:auto}
 .result:hover{border-color:var(--gold)}
 .result b{color:var(--navy)}
 .hidden{display:none}
-@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}}
+@media (min-width:900px){.cards,.depts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.cards .card,.depts .dept{margin:0}}
+@media (min-width:1400px){.wrap{max-width:1460px}.cards,.depts{grid-template-columns:repeat(3,1fr)}}
+@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}.cards,.depts{display:block}.cards .card,.depts .dept{margin:14px 0}}
 </style>
 </head>
 <body><header><div class="wrap">
@@ -79,6 +81,7 @@ footer .mark img{height:28px;width:auto}
 <div class="strip"><h2>Official resources</h2><ul><li><a href="https://studentaid.gov/manage-loans/forgiveness-cancellation">The hub — all discharge &amp; forgiveness programs</a></li><li><a href="https://studentaid.gov/manage-loans/forgiveness-cancellation/teacher">Teacher Loan Forgiveness</a></li><li><a href="https://studentaid.gov/manage-loans/forgiveness-cancellation/false-certification">False Certification Discharge</a></li><li><a href="https://studentaid.gov/manage-loans/forgiveness-cancellation/unpaid-refund">Unpaid Refund Discharge</a></li><li><a href="https://studentaid.gov/manage-loans/forgiveness-cancellation/death">Discharge Due to Death</a></li><li><a href="https://studentaid.gov/manage-loans/forgiveness-cancellation/bankruptcy">Discharge in Bankruptcy</a></li></ul><p>Most of these programs run through your loan servicer · Teacher Loan Forgiveness form help: 1-888-303-7818</p></div>
 <div class="search"><label for="filter" class="hidden">Filter this page</label>
 <input id="filter" type="search" placeholder="Filter this page — try ‘signature’, ‘monitoring’, ‘refund’…" autocomplete="off"></div>
+<div class="cards">
 <article class="card" id="hub-map">
 <h3>“What are ALL the ways a federal loan can be discharged, canceled, or forgiven?”</h3>
 <p class="a">The hub names: Total and Permanent Disability Discharge · Public Service Loan Forgiveness · Military Service Benefits · Federal Perkins Loan Teacher Cancellation · Teacher Loan Forgiveness · Closed School Loan Discharge · Borrower Defense Loan Discharge · False Certification Discharge · Unpaid Refund Discharge · Discharge Due to Death · Forgery Discharge. PSLF, Borrower Defense, TPD, and Closed School each have their own area in this aid; the rest are carded on this page. The standing rule behind all of them: if you don&#x27;t qualify for loan discharge, cancellation, or forgiveness, you must repay your loan — whether or not you completed your education, found a related job, are happy with the education, or were a minor when you signed the promissory note.</p>
@@ -140,6 +143,7 @@ footer .mark img{height:28px;width:auto}
 <blockquote>“You may be eligible to have all or a portion of your Perkins Loan canceled or discharged”<span class="who">— the site’s own words, <a href="https://studentaid.gov/manage-loans/forgiveness-cancellation">source page</a></span></blockquote>
 <a class="src" href="https://studentaid.gov/manage-loans/forgiveness-cancellation">Open the source on StudentAid.gov ↗</a>
 </article>
+</div>
 <p><a href="../">← Back to the desk home</a></p>
 </main>
 <div class="wrap"><footer>

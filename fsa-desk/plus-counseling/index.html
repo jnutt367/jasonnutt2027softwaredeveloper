@@ -64,7 +64,9 @@ footer .mark img{height:28px;width:auto}
 .result:hover{border-color:var(--gold)}
 .result b{color:var(--navy)}
 .hidden{display:none}
-@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}}
+@media (min-width:900px){.cards,.depts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.cards .card,.depts .dept{margin:0}}
+@media (min-width:1400px){.wrap{max-width:1460px}.cards,.depts{grid-template-columns:repeat(3,1fr)}}
+@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}.cards,.depts{display:block}.cards .card,.depts .dept{margin:14px 0}}
 </style>
 </head>
 <body><header><div class="wrap">
@@ -79,6 +81,7 @@ footer .mark img{height:28px;width:auto}
 <div class="strip"><h2>Official resources</h2><ul><li><a href="https://studentaid.gov/plus-loan-credit-counseling/">PLUS Loan Credit Counseling — log in to start</a></li><li><a href="https://studentaid.gov/plus-app/">PLUS Loan Application</a></li><li><a href="https://studentaid.gov/endorser-addendum/">Endorse a PLUS Loan</a></li><li><a href="https://studentaid.gov/articles/plus-loans-denied-adverse-credit/">PLUS Loans: denied based on adverse credit</a></li></ul><p>Federal Student Aid help: 1-800-433-3243</p></div>
 <div class="search"><label for="filter" class="hidden">Filter this page</label>
 <input id="filter" type="search" placeholder="Filter this page — try ‘signature’, ‘monitoring’, ‘refund’…" autocomplete="off"></div>
+<div class="cards">
 <article class="card" id="apply-options">
 <h3>“What are all my options for applying for a PLUS loan?”</h3>
 <p class="a">★ Easiest: apply online on the PLUS Loan Application page — pick your door: “I am a Parent of a Student” or “I am a Graduate or Professional Student.” The application also lets you change a requested amount, authorize how the school uses the funds, designate who receives a credit balance, and (parents) request deferment while the student is in school. Denied on credit? The doors are an endorser, a credit appeal — and PLUS credit counseling, in this area.</p>
@@ -157,6 +160,7 @@ footer .mark img{height:28px;width:auto}
 <p class="a">THE SITE DOESN&#x27;T SAY — the PLUS Loan Application page states no time estimate. (The counseling step that can follow it is timed on its own page: about 20–30 minutes, single session.)</p>
 <a class="src" href="https://studentaid.gov/plus-app/">Open the source on StudentAid.gov ↗</a>
 </article>
+</div>
 <p><a href="../">← Back to the desk home</a></p>
 </main>
 <div class="wrap"><footer>

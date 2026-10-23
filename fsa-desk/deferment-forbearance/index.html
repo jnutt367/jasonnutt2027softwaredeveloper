@@ -64,7 +64,9 @@ footer .mark img{height:28px;width:auto}
 .result:hover{border-color:var(--gold)}
 .result b{color:var(--navy)}
 .hidden{display:none}
-@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}}
+@media (min-width:900px){.cards,.depts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.cards .card,.depts .dept{margin:0}}
+@media (min-width:1400px){.wrap{max-width:1460px}.cards,.depts{grid-template-columns:repeat(3,1fr)}}
+@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}.cards,.depts{display:block}.cards .card,.depts .dept{margin:14px 0}}
 </style>
 </head>
 <body><header><div class="wrap">
@@ -79,6 +81,7 @@ footer .mark img{height:28px;width:auto}
 <div class="strip"><h2>Official resources</h2><ul><li><a href="https://studentaid.gov/manage-loans/lower-payments/get-temporary-relief">Temporary relief hub</a></li><li><a href="https://studentaid.gov/manage-loans/lower-payments/get-temporary-relief/deferment">Deferments</a></li><li><a href="https://studentaid.gov/manage-loans/lower-payments/get-temporary-relief/forbearance">Forbearance</a></li></ul><p>Requests run through your loan servicer (their website, the type's form, or by phone for hardship)</p></div>
 <div class="search"><label for="filter" class="hidden">Filter this page</label>
 <input id="filter" type="search" placeholder="Filter this page — try ‘signature’, ‘monitoring’, ‘refund’…" autocomplete="off"></div>
+<div class="cards">
 <article class="card" id="request-routes">
 <h3>“How do I request a deferment or forbearance — all my options?”</h3>
 <p class="a">Three doors, all ending at your loan servicer: ① ONLINE — you may be able to apply for certain deferments and forbearances on your servicer&#x27;s website. ② FORM BY MAIL OR EMAIL — identify which type you&#x27;re requesting, fill out that type&#x27;s form, gather the documents that show you meet its requirements, and send both to your servicer. Each type has its own form (Cancer Treatment, Economic Hardship, Unemployment, General Forbearance, the Mandatory Forbearance forms, and more). ③ PHONE — contact your servicer if you&#x27;re experiencing financial hardship. Most types are NOT automatic — the in-school deferment is the big exception.</p>
@@ -139,6 +142,7 @@ footer .mark img{height:28px;width:auto}
 <blockquote>“you&#x27;ll stop making progress toward forgiveness until you resume repayment”<span class="who">— the site’s own words, <a href="https://studentaid.gov/manage-loans/lower-payments/get-temporary-relief">source page</a></span></blockquote>
 <a class="src" href="https://studentaid.gov/manage-loans/lower-payments/get-temporary-relief">Open the source on StudentAid.gov ↗</a>
 </article>
+</div>
 <p><a href="../">← Back to the desk home</a></p>
 </main>
 <div class="wrap"><footer>

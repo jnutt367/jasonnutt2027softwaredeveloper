@@ -64,7 +64,9 @@ footer .mark img{height:28px;width:auto}
 .result:hover{border-color:var(--gold)}
 .result b{color:var(--navy)}
 .hidden{display:none}
-@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}}
+@media (min-width:900px){.cards,.depts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.cards .card,.depts .dept{margin:0}}
+@media (min-width:1400px){.wrap{max-width:1460px}.cards,.depts{grid-template-columns:repeat(3,1fr)}}
+@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}.cards,.depts{display:block}.cards .card,.depts .dept{margin:14px 0}}
 </style>
 </head>
 <body><header><div class="wrap">
@@ -79,6 +81,7 @@ footer .mark img{height:28px;width:auto}
 <div class="strip"><h2>Official resources</h2><ul><li><a href="https://studentaid.gov/manage-loans/default/collections">Collections</a></li><li><a href="https://studentaid.gov/help-center/answers/article/how-to-contact-default-resolution-group">How to contact the Default Resolution Group (Help Center)</a></li><li><a href="https://studentaid.gov/articles/default/">Default &amp; Collections FAQs</a></li><li><a href="https://studentaid.gov/manage-loans/default/get-out">Getting Out of Default</a></li></ul><p>Default Resolution Group (defaulted loans): 1-800-621-3115 · TTY 1-877-825-9923</p></div>
 <div class="search"><label for="filter" class="hidden">Filter this page</label>
 <input id="filter" type="search" placeholder="Filter this page — try ‘signature’, ‘monitoring’, ‘refund’…" autocomplete="off"></div>
+<div class="cards">
 <article class="card" id="paused-status">
 <h3>“Is the government collecting on defaulted loans right now?”</h3>
 <p class="a">Per the site, Treasury offset and Administrative Wage Garnishment are currently PAUSED — there is no withholding at this time. The cards below describe how each tool works when it is active, and the notices and hearings that come with it; read them with the pause in mind.</p>
@@ -138,6 +141,7 @@ footer .mark img{height:28px;width:auto}
 <p class="a">The Default Resolution Group: 1-800-621-3115 · TTY 1-877-825-9923. Loan payments go to the National Payment Center, P.O. Box 790336, St. Louis, MO 63179-0336, and MyEdDebt (myeddebt.ed.gov) is the online account door for defaulted loans.</p>
 <a class="src" href="https://studentaid.gov/help-center/answers/article/how-to-contact-default-resolution-group">Open the source on StudentAid.gov ↗</a>
 </article>
+</div>
 <p><a href="../">← Back to the desk home</a></p>
 </main>
 <div class="wrap"><footer>

@@ -64,7 +64,9 @@ footer .mark img{height:28px;width:auto}
 .result:hover{border-color:var(--gold)}
 .result b{color:var(--navy)}
 .hidden{display:none}
-@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}}
+@media (min-width:900px){.cards,.depts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.cards .card,.depts .dept{margin:0}}
+@media (min-width:1400px){.wrap{max-width:1460px}.cards,.depts{grid-template-columns:repeat(3,1fr)}}
+@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}.cards,.depts{display:block}.cards .card,.depts .dept{margin:14px 0}}
 </style>
 </head>
 <body><header><div class="wrap">
@@ -79,6 +81,7 @@ footer .mark img{height:28px;width:auto}
 <div class="strip"><h2>Official resources</h2><ul><li><a href="https://studentaid.gov/h/apply-for-aid/fafsa">FAFSA hub — start, edit, accept an invitation</a></li><li><a href="https://studentaid.gov/apply-for-aid/fafsa/filling-out">Filling Out the FAFSA Form</a></li><li><a href="https://studentaid.gov/apply-for-aid/fafsa/filling-out/parent-info">Reporting Parent Information</a></li><li><a href="https://studentaid.gov/apply-for-aid/fafsa/fafsa-deadlines">FAFSA deadlines</a></li><li><a href="https://studentaid.gov/resources">Resources — the FAFSA PDFs</a></li></ul><p>FAFSA help (FSAIC): 1-800-433-3243</p></div>
 <div class="search"><label for="filter" class="hidden">Filter this page</label>
 <input id="filter" type="search" placeholder="Filter this page — try ‘signature’, ‘monitoring’, ‘refund’…" autocomplete="off"></div>
+<div class="cards">
 <article class="card" id="apply-options">
 <h3>“What are all my options for completing the FAFSA?”</h3>
 <p class="a">★ Easiest: online at StudentAid.gov — select “Start New Form.” Paper route: download and print the FAFSA PDF (Resources page, English or Spanish) and mail it to the address printed on the form. Free help while you fill: the in-form question-mark icon, the Aidan® virtual assistant, and the FAFSA Help articles. The 1-800 line helps with the form and process — the site states no way to file by phone.</p>
@@ -251,6 +254,7 @@ footer .mark img{height:28px;width:auto}
 <p class="a">THE SITE DOESN&#x27;T SAY: the contributor-invite steps aren&#x27;t walked on these pages (they live inside the form); no paper-form processing time is stated here (the Corrections area carries the site&#x27;s one timing: status roughly 7–10 days after mailing); and no wait time is published for SSA verification of an account. When the page offers no answer, this aid invents none.</p>
 <a class="src" href="https://studentaid.gov/h/apply-for-aid/fafsa">Open the source on StudentAid.gov ↗</a>
 </article>
+</div>
 <p><a href="../">← Back to the desk home</a></p>
 </main>
 <div class="wrap"><footer>

@@ -64,7 +64,9 @@ footer .mark img{height:28px;width:auto}
 .result:hover{border-color:var(--gold)}
 .result b{color:var(--navy)}
 .hidden{display:none}
-@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}}
+@media (min-width:900px){.cards,.depts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.cards .card,.depts .dept{margin:0}}
+@media (min-width:1400px){.wrap{max-width:1460px}.cards,.depts{grid-template-columns:repeat(3,1fr)}}
+@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}.cards,.depts{display:block}.cards .card,.depts .dept{margin:14px 0}}
 </style>
 </head>
 <body><header><div class="wrap">
@@ -79,6 +81,7 @@ footer .mark img{height:28px;width:auto}
 <div class="strip"><h2>Official resources</h2><ul><li><a href="https://studentaid.gov/manage-loans/forgiveness-cancellation/closed-school">Closed School Discharge</a></li><li><a href="https://studentaid.gov/manage-loans/forgiveness-cancellation">Forgiveness, Cancellation &amp; Discharge hub</a></li></ul><p>Applications go to your loan servicer — find them via My Aid or 1-800-433-3243</p></div>
 <div class="search"><label for="filter" class="hidden">Filter this page</label>
 <input id="filter" type="search" placeholder="Filter this page — try ‘signature’, ‘monitoring’, ‘refund’…" autocomplete="off"></div>
+<div class="cards">
 <article class="card" id="apply-send">
 <h3>“My school closed — how do I apply for the discharge? (all methods, one card)”</h3>
 <p class="a">Every route ends at your LOAN SERVICER — all completed applications are sent there. ① Your loan holder will send you an application if you appear to meet the requirements: complete it and return it to your servicer. ② Or complete the PDF Closed School Loan Discharge Application yourself and return it to your servicer. ③ Or contact your servicer directly about the application process. There is NO deadline to apply. ⚠ Keep making payments while the application is being processed — the page says so plainly. And if your school closed on or after July 1, 2023, you may not need to apply at all (see the automatic-discharge card).</p>
@@ -148,6 +151,7 @@ footer .mark img{height:28px;width:auto}
 <p class="a">The closed school pages never mention TEACH Grants — the site doesn&#x27;t say. (TEACH does appear in this aid where the official pages address it: in the TPD area, where a TPD discharge also relieves the TEACH Grant service obligation.)</p>
 <a class="src" href="https://studentaid.gov/manage-loans/forgiveness-cancellation/closed-school">Open the source on StudentAid.gov ↗</a>
 </article>
+</div>
 <p><a href="../">← Back to the desk home</a></p>
 </main>
 <div class="wrap"><footer>

@@ -64,7 +64,9 @@ footer .mark img{height:28px;width:auto}
 .result:hover{border-color:var(--gold)}
 .result b{color:var(--navy)}
 .hidden{display:none}
-@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}}
+@media (min-width:900px){.cards,.depts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.cards .card,.depts .dept{margin:0}}
+@media (min-width:1400px){.wrap{max-width:1460px}.cards,.depts{grid-template-columns:repeat(3,1fr)}}
+@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}.cards,.depts{display:block}.cards .card,.depts .dept{margin:14px 0}}
 </style>
 </head>
 <body><header><div class="wrap">
@@ -79,6 +81,7 @@ footer .mark img{height:28px;width:auto}
 <div class="strip"><h2>Official resources</h2><ul><li><a href="https://studentaid.gov/manage-loans/forgiveness-cancellation/disability-discharge">TPD discharge — how to qualify and apply</a></li></ul><p>TPD questions: 888-303-7818 (as printed on the page)</p></div>
 <div class="search"><label for="filter" class="hidden">Filter this page</label>
 <input id="filter" type="search" placeholder="Filter this page — try ‘signature’, ‘monitoring’, ‘refund’…" autocomplete="off"></div>
+<div class="cards">
 <article class="card" id="apply-send">
 <h3>“How do I apply for TPD — and how do I send everything in? (all methods, one card)”</h3>
 <p class="a">★ EASIEST — apply online (‘Apply for TPD Discharge’): complete the application online and upload your documents with it. A medical professional can certify electronically — give their email address and they sign through a DocuSign link; the site marks electronic signing ‘(Recommended)’. PAPER ROUTE: download the blank TPD Application, print it, complete and sign it (the medical professional signs the certification section on paper). Then a signed application — or any document for it — goes in through any of three doors: ① upload it after logging in to StudentAid.gov, at My Activity (the document upload tool) · ② mail to U.S. Department of Education, P.O. Box 300010, Greenville, TX 75403 · ③ fax to 540-212-2415. Already applied and something&#x27;s missing? The same three doors — the pages give no separate missing-item process (see the missing-document card). There is no phone application: 888-303-7818 answers questions about loan eligibility only, and your loan servicer plays no part in applying.</p>
@@ -206,6 +209,7 @@ footer .mark img{height:28px;width:auto}
 <blockquote>“Contact us at 888-303-7818 if you have questions about the eligibility of your loans.”<span class="who">— the site’s own words, <a href="https://studentaid.gov/manage-loans/forgiveness-cancellation/disability-discharge">source page</a></span></blockquote>
 <a class="src" href="https://studentaid.gov/manage-loans/forgiveness-cancellation/disability-discharge">Open the source on StudentAid.gov ↗</a>
 </article>
+</div>
 <p><a href="../">← Back to the desk home</a></p>
 </main>
 <div class="wrap"><footer>

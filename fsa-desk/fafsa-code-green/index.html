@@ -64,7 +64,9 @@ footer .mark img{height:28px;width:auto}
 .result:hover{border-color:var(--gold)}
 .result b{color:var(--navy)}
 .hidden{display:none}
-@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}}
+@media (min-width:900px){.cards,.depts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.cards .card,.depts .dept{margin:0}}
+@media (min-width:1400px){.wrap{max-width:1460px}.cards,.depts{grid-template-columns:repeat(3,1fr)}}
+@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}.cards,.depts{display:block}.cards .card,.depts .dept{margin:14px 0}}
 </style>
 </head>
 <body><header><div class="wrap">
@@ -79,12 +81,14 @@ footer .mark img{height:28px;width:auto}
 <div class="strip"><h2>Official resources</h2><ul><li><a href="https://studentaid.gov/h/apply-for-aid/fafsa">FAFSA hub</a></li></ul><p>For anything a caller describes, answer from the FAFSA areas above</p></div>
 <div class="search"><label for="filter" class="hidden">Filter this page</label>
 <input id="filter" type="search" placeholder="Filter this page — try ‘signature’, ‘monitoring’, ‘refund’…" autocomplete="off"></div>
+<div class="cards">
 <article class="card" id="no-public-page">
 <h3>“What is Code Green?”</h3>
 <span class="gap">THE SITE DOESN’T SAY — gap on the source page</span>
 <p class="a">THE SITE DOESN&#x27;T SAY — because the public site never uses the term: a search of StudentAid.gov for “Code Green” returns no results, and no public page states what it means. It&#x27;s an internal desk tile, not a public program. If a caller uses the term, ask what actually happened on their form and answer from the FAFSA areas above; never invent a public meaning for it.</p>
 <a class="src" href="https://studentaid.gov/h/apply-for-aid/fafsa">Open the source on StudentAid.gov ↗</a>
 </article>
+</div>
 <p><a href="../">← Back to the desk home</a></p>
 </main>
 <div class="wrap"><footer>

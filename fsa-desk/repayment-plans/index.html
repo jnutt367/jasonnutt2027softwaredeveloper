@@ -64,7 +64,9 @@ footer .mark img{height:28px;width:auto}
 .result:hover{border-color:var(--gold)}
 .result b{color:var(--navy)}
 .hidden{display:none}
-@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}}
+@media (min-width:900px){.cards,.depts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.cards .card,.depts .dept{margin:0}}
+@media (min-width:1400px){.wrap{max-width:1460px}.cards,.depts{grid-template-columns:repeat(3,1fr)}}
+@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}.cards,.depts{display:block}.cards .card,.depts .dept{margin:14px 0}}
 </style>
 </head>
 <body><header><div class="wrap">
@@ -79,6 +81,7 @@ footer .mark img{height:28px;width:auto}
 <div class="strip"><h2>Official resources</h2><ul><li><a href="https://studentaid.gov/manage-loans/repayment/plans">Repayment Plans hub</a></li><li><a href="https://studentaid.gov/manage-loans/repayment/plans/standard">Standard Repayment Plan</a></li><li><a href="https://studentaid.gov/manage-loans/repayment/plans/graduated">Graduated Repayment Plan</a></li><li><a href="https://studentaid.gov/manage-loans/repayment/plans/extended">Extended Repayment Plan</a></li></ul><p>Plan changes run through your loan servicer · General help: 1-800-433-3243</p></div>
 <div class="search"><label for="filter" class="hidden">Filter this page</label>
 <input id="filter" type="search" placeholder="Filter this page — try ‘signature’, ‘monitoring’, ‘refund’…" autocomplete="off"></div>
+<div class="cards">
 <article class="card" id="pick-or-change">
 <h3>“How do I pick a plan, or change the one I&#x27;m on?”</h3>
 <p class="a">For the fixed plans (Standard, Tiered Standard, Graduated, Extended): contact your loan servicer. For an income-driven plan, the application lives in this aid&#x27;s IDR area. You can also run the site&#x27;s Repayment Calculator first for an early look at which plans you may be eligible for.</p>
@@ -134,6 +137,7 @@ footer .mark img{height:28px;width:auto}
 <blockquote>“Perkins Loan repayment plan options are not the same as those for Direct Loan Program or FFEL Program loans”<span class="who">— the site’s own words, <a href="https://studentaid.gov/manage-loans/repayment/plans">source page</a></span></blockquote>
 <a class="src" href="https://studentaid.gov/manage-loans/repayment/plans">Open the source on StudentAid.gov ↗</a>
 </article>
+</div>
 <p><a href="../">← Back to the desk home</a></p>
 </main>
 <div class="wrap"><footer>

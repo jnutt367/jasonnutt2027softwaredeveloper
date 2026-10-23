@@ -64,7 +64,9 @@ footer .mark img{height:28px;width:auto}
 .result:hover{border-color:var(--gold)}
 .result b{color:var(--navy)}
 .hidden{display:none}
-@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}}
+@media (min-width:900px){.cards,.depts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.cards .card,.depts .dept{margin:0}}
+@media (min-width:1400px){.wrap{max-width:1460px}.cards,.depts{grid-template-columns:repeat(3,1fr)}}
+@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}.cards,.depts{display:block}.cards .card,.depts .dept{margin:14px 0}}
 </style>
 </head>
 <body><header><div class="wrap">
@@ -79,6 +81,7 @@ footer .mark img{height:28px;width:auto}
 <div class="strip"><h2>Official resources</h2><ul><li><a href="https://studentaid.gov/entrance-counseling/">Entrance Counseling — log in or view the demo</a></li><li><a href="https://studentaid.gov/mpn/">Master Promissory Note</a></li><li><a href="https://studentaid.gov/asla/">Annual Student Loan Acknowledgment</a></li></ul><p>Federal Student Aid help: 1-800-433-3243</p></div>
 <div class="search"><label for="filter" class="hidden">Filter this page</label>
 <input id="filter" type="search" placeholder="Filter this page — try ‘signature’, ‘monitoring’, ‘refund’…" autocomplete="off"></div>
+<div class="cards">
 <article class="card" id="apply-options">
 <h3>“What are all my options for completing entrance counseling?”</h3>
 <p class="a">★ Easiest: log in and complete it online — pick your door on the Entrance Counseling page: “I am an Undergraduate Student” or “I am a Graduate or Professional Student.” Each door also offers a View Demo so you can see it before starting. The page states no paper or phone route.</p>
@@ -121,6 +124,7 @@ footer .mark img{height:28px;width:auto}
 <blockquote>“a record of your completion will be sent to the schools you selected, and you can then receive your loan money.”<span class="who">— the site’s own words, <a href="https://studentaid.gov/entrance-counseling/">source page</a></span></blockquote>
 <a class="src" href="https://studentaid.gov/entrance-counseling/">Open the source on StudentAid.gov ↗</a>
 </article>
+</div>
 <p><a href="../">← Back to the desk home</a></p>
 </main>
 <div class="wrap"><footer>

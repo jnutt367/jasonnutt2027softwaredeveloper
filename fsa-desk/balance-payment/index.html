@@ -64,7 +64,9 @@ footer .mark img{height:28px;width:auto}
 .result:hover{border-color:var(--gold)}
 .result b{color:var(--navy)}
 .hidden{display:none}
-@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}}
+@media (min-width:900px){.cards,.depts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.cards .card,.depts .dept{margin:0}}
+@media (min-width:1400px){.wrap{max-width:1460px}.cards,.depts{grid-template-columns:repeat(3,1fr)}}
+@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}.cards,.depts{display:block}.cards .card,.depts .dept{margin:14px 0}}
 </style>
 </head>
 <body><header><div class="wrap">
@@ -79,6 +81,7 @@ footer .mark img{height:28px;width:auto}
 <div class="strip"><h2>Official resources</h2><ul><li><a href="https://studentaid.gov/manage-loans/repayment">How repayment works</a></li><li><a href="https://studentaid.gov/manage-loans/repayment/servicers">Loan servicers</a></li></ul><p>Payments go to your loan servicer — find them in My Aid after logging in</p></div>
 <div class="search"><label for="filter" class="hidden">Filter this page</label>
 <input id="filter" type="search" placeholder="Filter this page — try ‘signature’, ‘monitoring’, ‘refund’…" autocomplete="off"></div>
+<div class="cards">
 <article class="card" id="auto-debit">
 <h3>“What is auto debit / auto pay — is it worth it?”</h3>
 <p class="a">You schedule an automatic monthly electronic debit from your checking or savings account through your loan servicer, and Direct Loans get an interest-rate reduction: the standard reduction is 0.25%. TEMPORARY UPLIFT, in effect on the page now: starting July 1, 2026 the reduction is 1% — for borrowers with Direct Loans disbursed on or after July 1, 2012 — available through June 30, 2028 while you stay enrolled in auto pay and in repayment. Borrowers not yet enrolled have until 11:59 p.m. Eastern time on December 31, 2026 to enroll through their servicer.</p>
@@ -122,6 +125,7 @@ footer .mark img{height:28px;width:auto}
 <blockquote>“you can use our Repayment Calculator to get an early look at which plans you may be eligible for”<span class="who">— the site’s own words, <a href="https://studentaid.gov/manage-loans/repayment">source page</a></span></blockquote>
 <a class="src" href="https://studentaid.gov/manage-loans/repayment">Open the source on StudentAid.gov ↗</a>
 </article>
+</div>
 <p><a href="../">← Back to the desk home</a></p>
 </main>
 <div class="wrap"><footer>
