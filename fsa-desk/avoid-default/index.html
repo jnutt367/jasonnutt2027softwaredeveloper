@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Avoiding Default — FSA Desk Reference</title>
+<style>
+:root{--navy:#2d5a3d;--navy2:#0c1f16;--gold:#d9a441;--goldsoft:#f3ecdd;--ink:#1e2a22;--soft:#55665a;--line:#ccd6cc;--bg:#f5f7f2;--card:#fff;--shadow:0 1px 3px rgba(12,31,22,.08),0 4px 14px rgba(12,31,22,.05)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+::selection{background:rgba(217,164,65,.32)}
+body{margin:0;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);font-size:18px;line-height:1.55}
+header{background:linear-gradient(180deg,var(--navy) 0%,var(--navy2) 100%);color:#fff;padding:24px 20px 20px;border-bottom:4px solid var(--gold)}
+.wrap{max-width:940px;margin:0 auto;padding:0 18px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{height:48px;width:auto;order:2;margin-left:auto;flex:none}
+.brand h1{font-size:27px;margin:0;line-height:1.15;letter-spacing:.2px}
+.brand .sub{color:#cfdccf;font-size:14.5px;margin-top:3px}
+@media (max-width:640px){.brand{align-items:flex-start}}
+nav.areas{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 4px}
+nav.areas a{color:#fff;text-decoration:none;border:1.5px solid rgba(255,255,255,.45);background:rgba(255,255,255,.06);padding:8px 16px;border-radius:999px;font-size:16px}
+nav.areas a.on{background:var(--gold);border-color:var(--gold);font-weight:700}
+.search{margin:20px 0 6px}
+.search input{width:100%;font-size:19px;padding:13px 16px;border:2px solid var(--navy);border-radius:12px;background:#fff;box-shadow:var(--shadow)}
+.search input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(217,164,65,.35)}
+.door{display:block;background:var(--card);border:1px solid var(--line);border-left:6px solid var(--gold);border-radius:12px;padding:16px 18px;margin:14px 0;text-decoration:none;color:var(--ink)}
+.door h2{margin:0 0 4px;font-size:21px;color:var(--navy)}
+.door p{margin:2px 0;color:var(--soft);font-size:15.5px}
+.dept{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--gold);border-radius:12px;padding:16px 18px;margin:14px 0;box-shadow:var(--shadow)}
+.dept h2{margin:0 0 4px;font-size:21px;color:var(--navy)}
+.dept>p{margin:2px 0;color:var(--soft);font-size:15.5px}
+.dept .dept-link{display:block;padding:9px 12px;border:1px solid var(--line);border-radius:10px;margin:8px 0;text-decoration:none;color:var(--ink);background:#fcfdff;transition:border-color .15s ease}
+.dept .dept-link:hover{border-color:var(--gold)}
+.dept-head .count{display:flex;align-items:center;gap:10px}
+.dept-face{width:54px;height:54px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);flex:none}
+.dept-row{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}
+.dept-row>div{min-width:0}
+.welcome{margin:6px 0 4px}
+.welcome p{color:var(--soft);margin:0 0 12px}
+.faces{display:flex;gap:10px;flex-wrap:wrap}
+.faces img{width:76px;height:76px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);box-shadow:var(--shadow);animation:facein .7s ease both}
+.faces img:nth-child(2){animation-delay:.08s}.faces img:nth-child(3){animation-delay:.16s}.faces img:nth-child(4){animation-delay:.24s}.faces img:nth-child(5){animation-delay:.32s}.faces img:nth-child(6){animation-delay:.4s}
+@keyframes facein{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){.faces img{animation:none}}
+.dept .dept-link strong{color:var(--navy)}
+.dept .dept-link span{display:block;color:var(--soft);font-size:13.5px}
+.dept.soon{border-left-color:var(--line);opacity:.72;border-style:dashed;box-shadow:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:14px 0;box-shadow:var(--shadow)}
+.card:target{border-color:var(--gold);box-shadow:0 0 0 3px rgba(217,164,65,.35)}
+.card h3{margin:0 0 6px;font-size:18.5px;color:var(--navy)}
+.card .a{font-weight:600}
+.card blockquote{margin:10px 0;padding:10px 14px;background:var(--goldsoft);border-left:4px solid var(--gold);border-radius:6px;font-size:16.5px;color:var(--navy2)}
+.card blockquote .who{display:block;margin-top:6px;font-size:12.5px;color:var(--soft);text-transform:uppercase;letter-spacing:.4px}
+.card .more{margin:8px 0 0;padding-left:20px}
+.card .gap{display:inline-block;background:#fdf3e0;border:1px solid var(--gold);color:#7a5a12;border-radius:6px;padding:2px 8px;font-size:13.5px;font-weight:700}
+.src{display:inline-block;margin-top:10px;font-size:15px}
+.verified{color:var(--soft);font-size:14px}
+.strip{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:12px;padding:14px 18px;margin:14px 0;box-shadow:var(--shadow)}
+.strip h2{margin:0 0 6px;font-size:19px;color:var(--navy)}
+footer{color:var(--soft);font-size:14px;padding:26px 0 40px;border-top:2px solid var(--line);margin-top:26px}
+footer .mark{display:flex;align-items:center;gap:10px;margin-bottom:8px;color:var(--navy)}
+footer .mark img{height:28px;width:auto}
+.result{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 14px;margin:8px 0;text-decoration:none;color:var(--ink);box-shadow:var(--shadow)}
+.result:hover{border-color:var(--gold)}
+.result b{color:var(--navy)}
+.hidden{display:none}
+@media print{header,.search,nav.areas{display:none}.card,.door,.strip{break-inside:avoid}}
+</style>
+</head>
+<body><header><div class="wrap">
+<div class="brand"><div><h1>FSA Desk Reference</h1>
+<div class="sub">Public information from StudentAid.gov — the site’s words, quoted short and linked. Always confirm on the source page.</div></div><img src="../dev-mark.png" alt="Jason Nutt developer mark"></div>
+<nav class="areas" aria-label="Back to departments"><a href="../">Desk home</a></nav>
+</div></header>
+<main class="wrap">
+<p class="verified">Verified against the site October 23, 2026 · <a href="https://studentaid.gov/manage-loans/default/avoid">StudentAid.gov — Avoiding Default</a></p>
+<h2 style="color:var(--navy);margin:6px 0 2px">Avoiding Default</h2>
+<p style="color:var(--soft);margin:2px 0 4px">Missed payments, the 90-day credit line, and the doors that are only open before default</p>
+<div class="strip"><h2>Official resources</h2><ul><li><a href="https://studentaid.gov/manage-loans/default/avoid">Avoiding Default</a></li><li><a href="https://studentaid.gov/manage-loans/default">Delinquency &amp; Default — the hub</a></li><li><a href="https://studentaid.gov/manage-loans/default/get-out">Getting Out of Default</a></li></ul><p>Federal Student Aid help: 1-800-433-3243 · Default Resolution Group: 1-800-621-3115</p></div>
+<div class="search"><label for="filter" class="hidden">Filter this page</label>
+<input id="filter" type="search" placeholder="Filter this page — try ‘signature’, ‘monitoring’, ‘refund’…" autocomplete="off"></div>
+<article class="card" id="apply-options">
+<h3>“What are all my options for avoiding default?”</h3>
+<p class="a">★ Easiest first move: keep payments automatic — auto pay carries an interest-rate reduction (the next card). If a payment won&#x27;t fit, act while the pre-default doors are still open: a different repayment plan, deferment, or forbearance (carded in the Loan Management areas). Default takes those choices away — in default there is no deferment/forbearance or plan choice.</p>
+<blockquote>“no deferment/forbearance or plan choice”<span class="who">— the site’s own words, <a href="https://studentaid.gov/manage-loans/default/avoid">source page</a></span></blockquote>
+<a class="src" href="https://studentaid.gov/manage-loans/default/avoid">Open the source on StudentAid.gov ↗</a>
+</article>
+<article class="card" id="day-one">
+<h3>“I missed a payment yesterday — am I in default?”</h3>
+<p class="a">Not in default — but you are delinquent from day 1 after the missed payment, and the clock is running: default for Direct and FFEL loans is 270 days without a scheduled payment.</p>
+<blockquote>“Delinquent from day 1 after a missed payment”<span class="who">— the site’s own words, <a href="https://studentaid.gov/manage-loans/default/avoid">source page</a></span></blockquote>
+<a class="src" href="https://studentaid.gov/manage-loans/default/avoid">Open the source on StudentAid.gov ↗</a>
+</article>
+<article class="card" id="auto-pay">
+<h3>“Does auto pay actually save me anything?”</h3>
+<p class="a">Yes — on July 1, 2026 the auto-pay interest reduction went from 0.25% to 1%, and it&#x27;s temporary: it runs through June 30, 2028.</p>
+<blockquote>“the auto-pay interest reduction went 0.25% → 1%, temporary through Jun 30, 2028”<span class="who">— the site’s own words, <a href="https://studentaid.gov/manage-loans/default/avoid">source page</a></span></blockquote>
+<a class="src" href="https://studentaid.gov/manage-loans/default/avoid">Open the source on StudentAid.gov ↗</a>
+</article>
+<article class="card" id="ninety-days">
+<h3>“When do missed payments hit my credit?”</h3>
+<p class="a">At 90+ days delinquent, the delinquency is reported to the credit bureaus — long before the 270-day default line.</p>
+<blockquote>“reported to the credit bureaus”<span class="who">— the site’s own words, <a href="https://studentaid.gov/manage-loans/default/avoid">source page</a></span></blockquote>
+<a class="src" href="https://studentaid.gov/manage-loans/default/avoid">Open the source on StudentAid.gov ↗</a>
+</article>
+<article class="card" id="act-early">
+<h3>“Why fix this before default instead of after?”</h3>
+<p class="a">Because default removes the tools you&#x27;d fix it with: no deferment or forbearance, no plan choice, no eligibility for further federal aid — and the whole balance becomes due at once. Every one of those doors is open now and closed then.</p>
+<blockquote>“whole balance due”<span class="who">— the site’s own words, <a href="https://studentaid.gov/manage-loans/default">source page</a></span></blockquote>
+<a class="src" href="https://studentaid.gov/manage-loans/default">Open the source on StudentAid.gov ↗</a>
+</article>
+<article class="card" id="free-help">
+<h3>“Someone offered to keep me out of default for a fee — should I pay?”</h3>
+<p class="a">No — you never have to pay for help with your federal student aid. Your servicer and the official site are the free doors.</p>
+<blockquote>“you never have to pay for help with your federal student aid”<span class="who">— the site’s own words, <a href="https://studentaid.gov/manage-loans/default">source page</a></span></blockquote>
+<a class="src" href="https://studentaid.gov/manage-loans/default">Open the source on StudentAid.gov ↗</a>
+</article>
+<article class="card" id="support-doors">
+<h3>“Where do I go if I&#x27;m sliding toward default?”</h3>
+<p class="a">Start with your servicer and the Avoiding Default page. If a loan does land in default, the doors on that side are the Defaulted Loans Support Center and MyEdDebt (myeddebt.ed.gov) — and the Default Resolution Group at 1-800-621-3115.</p>
+<a class="src" href="https://studentaid.gov/default-support/">Open the source on StudentAid.gov ↗</a>
+</article>
+<p><a href="../">← Back to the desk home</a></p>
+</main>
+<div class="wrap"><footer>
+<div class="mark"><img src="../dev-mark.png" alt=""><span><strong>Built by Jason Nutt</strong> — FSA agent &amp; developer. A living job aid: when StudentAid.gov changes, this page is re-checked and updated.</span></div>
+<div style="margin-bottom:8px"><strong>Numbers:</strong> General FSA help (the front door — FAFSA, accounts, servicer lookup): <strong>1-800-433-3243</strong> · Discharge &amp; forgiveness support (PSLF, TPD): <strong>1-888-303-7818</strong> · Borrower Defense: <strong>1-855-279-6207</strong> · Defaulted loans: <strong>1-800-621-3115</strong>. The 800 number is the general line; the others ring the program team directly.</div>
+<div>Changelog — v1 · October 23, 2026: first build from the official PSLF, Borrower Defense, and TPD pages. v1.1 · October 23, 2026: Borrower Defense gains group-discharge cards — how group relief works, the Sweet Exhibit C list, and the ten announced school groups — drawn from the Sweet settlement page and the Borrower Defense updates page. v1.2 · October 23, 2026: PSLF gains Reconsideration and Buyback step-by-step cards, drawn from the official Reconsideration and Buyback pages; the Buyback placeholder gap is closed. v1.3 · October 23, 2026: Contacts strip completed — the general 1-800 line and the default line added alongside the program lines, with which-line-when. v1.4 · October 23, 2026: the phone numbers and the general-vs-program difference now ride in the footer of every page, reachable from anywhere in the aid. v1.5 · October 23, 2026: every area gains an ‘all my options for applying’ card — every route the official pages state, with the easiest flagged (and, for Borrower Defense paper forms, an honest marker that the page states no submission address). v1.6 · October 23, 2026: TPD gains a missing-document card (the upload doors, with an honest flag that the pages give no missing-item-specific instruction) and a denied → reevaluation card (new information, within 12 months — from the ‘After You Apply’ page). v1.7 · October 23, 2026: the full TPD scenario run-down — all 12 official TPD pages read; cards added for VA / SSA / medical proof, automatic data-match discharge, the single monitoring reinstatement trigger, borrowing again after discharge, taxes, representatives, signature law, and the Parent PLUS gap (flagged, not filled). v1.8 · October 23, 2026: TPD's apply + send routes consolidated into ONE clear card at the top of the page, and the whole aid reordered actionable-first — the apply cards now lead the PSLF and Borrower Defense pages too. v1.9 · October 23, 2026: the discharge column completed — Closed School Discharge (11 cards, incl. the automatic-discharge rules stated both ways the site states them) and the general Discharge, Cancellation & Forgiveness area (10 cards: the hub map, Teacher Loan Forgiveness, False Certification, Unpaid Refund, Death, Bankruptcy). v1.10 · October 23, 2026: the desk home reorganized into functional-area department cards mirroring the board — Loan Discharge, Cancellation & Forgiveness stands built with its five areas inside; the other five departments (Understanding FSA · Receiving Aid · Loan Management · FAFSA Form · Default & Collections) stand as placeholders in the same shape until each is built. v1.11 · October 23, 2026: redundancy cleanup — the flat row of area buttons at the top of every page is removed; the department cards are the one navigation, and area pages keep a single Desk home link back to them. v1.12 · October 23, 2026: header restyle — the developer-mark emblem moves to the top right, into the space the header text leaves; the title line stands on the left, and on mobile the emblem rises to align with the top of the title. v2.0 · October 23, 2026: the Loan Management department is built — seven areas (Repayment Plans · Income-Driven Repayment · Consolidation · Deferment & Forbearance · Exit Counseling · Balance & Payment · TEACH), 61 cards drawn from the official repayment, IDR, consolidation, temporary-relief, exit-counseling, servicer, and TEACH pages, read the same day; the home's Loan Management card is now a live department, and four placeholders remain. v2.1 · October 23, 2026: brand restyle — gradient header with a gold rule, soft card depth, the site's quoted words set on a gold-tinted plate, gold focus rings, dashed placeholders. v2.2 · October 23, 2026: brand correction at Jason's word — navy was never his brand; the aid now wears his true TruVINE-emblem palette (deep vine greens, gold, cream — the same colors as his portfolio and his mark), and the developer-mark emblem sits flat on the header at its true proportions, never tiled or stretched. v2.3 · October 23, 2026: the Understanding FSA department is built — five areas (Understanding FSA · Aid History · FSA ID · Program Info · Outages & Troubleshooting), 35 cards from the official how-aid-works, types/grants/loans/work-study, eligibility, account-creation, account-access, My Aid, notices, and site-requirements pages, read the same day; its home card is a live department, and three placeholders remain (Receiving Aid · FAFSA Form · Default & Collections). v2.4 · October 23, 2026: the desk is decorated — the home carries a welcome row of student faces from Jason's own Nations cast (cropped from their pack stills, gold-ringed, a gentle entrance that honors reduced-motion settings), and each built department card carries its own situational face; the working cards stay clean. Casting is provisional until Jason crowns it. v2.5 · October 23, 2026: the FAFSA Form department is built — six areas (Getting Started · FAFSA on the Phone · Corrections · Financial Aid Office · Original & Renewal · Code Green), 49 cards drawn from the official FAFSA hub, filling-out, parent-information, deadlines, review-and-correct, resources, each-year, and contact pages, read the same day; two tiles are carded honestly — the site states no phone-filing route, and no public page uses the term ‘Code Green.’ The department's face is the Ethiopian student from the Nations cast (provisional, like the others). Two placeholders remain (Receiving Aid · Default & Collections). v2.6 · October 23, 2026: the desk home gains a front door for a first-time reader — one plain line saying what this aid is, the four beats of how a card works, and one real card (Sunday maintenance) shown whole as the pattern. Nothing here replaces the source: the site is true. v2.7 · October 23, 2026: the Receiving Aid department is built — six areas (Entrance Counseling · Master Promissory Note · Annual Student Loan Acknowledgment · PLUS Loan & Credit Counseling · Endorser Addendum · Credit Appeals), 51 cards drawn from the official entrance-counseling, MPN, acknowledgment, PLUS credit-counseling, PLUS application, endorser, adverse-credit article, extenuating-circumstances, and credit-appeal demo pages, read the same day; the prep's dead PLUS-counseling address is corrected to the live page, and the Endorser Addendum and Credit Appeals stand on real public pages rather than honest-gap cards. One placeholder remains (Default & Collections). v2.8 · October 23, 2026: the Default & Collections department is built — four areas (Delinquency & Default · Avoiding Default · Getting Out of Default · Collections), 41 cards drawn from the official default hub, avoid, get-out, and collections pages, the Defaulted Loans Support Center, the Default and Rehabilitation FAQ articles, and the Default Resolution Group contact article, read the same day; the collections cards carry the site's current status — Treasury offset and wage garnishment are currently paused — and Fresh Start is carded as ended (Oct. 2, 2024), never as a door. With this build, all six departments of the desk stand complete and no placeholders remain.</div>
+</footer></div>
+<script>
+const inp=document.getElementById('filter');
+if(inp){inp.addEventListener('input',()=>{const q=inp.value.toLowerCase().trim();
+document.querySelectorAll('.card,.result-static').forEach(el=>{
+const t=el.textContent.toLowerCase();
+el.classList.toggle('hidden', q.length>1 && !t.includes(q));});});}
+</script>
+</body></html>
