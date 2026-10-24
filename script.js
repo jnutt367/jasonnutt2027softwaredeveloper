@@ -43,7 +43,7 @@ const SITE = {
 
   // ---- Open to (target roles) ----
   openTo:
-    "Open to support & solutions engineering, QA/testing, and internal tools & web content roles.",
+    "Open to support & solutions engineering, QA/testing, business systems analysis, and internal tools & web content roles.",
 
   // ---- Working standard ----
   workingStandard:
@@ -56,6 +56,7 @@ const SITE = {
     { name: "JavaScript & Node.js", blurb: "Modern ES6+ — the language I think in. Pure, testable logic and server-side tooling." },
     { name: "Salesforce CRM — Trailhead Expeditioner", blurb: "Tier 1 borrower support inside Salesforce by day; Expeditioner rank, 167 badges, earned on my own time — plus org access & identity in my own dev orgs: Playground administration and Trailhead SSO launch flows." },
     { name: "QA & Release Methodology", blurb: "Author of an 8-gate release QA standard — acceptance criteria, regression guards, postmortem-driven fixes." },
+    { name: "Systems Analysis & Production Operations", blurb: "Business systems analysis on my own live app: root-caused a production outage to a datastore quota, selected and implemented a replacement SaaS store (Upstash Redis), migrated and reconciled the live record with zero loss, and run automated word-for-word data-integrity QA with a listener-report escalation workflow." },
     { name: "Accessibility — Section 508 Aware", blurb: "Alt text, aria-labels, visible focus, sane contrast — practiced on every site I ship, not bolted on." },
     { name: "Design Thinking & Data", blurb: "IBM Enterprise Design Thinking Practitioner (2024); MongoDB University coursework for data modeling." },
   ],
@@ -65,9 +66,9 @@ const SITE = {
   projects: [
     {
       title: "Word of God Risen",
-      desc: "A production Bible reader and study app — my flagship, built solo and live on the web. Verse-level reading in two translations, a complete narrated audio Bible, reading plans, progress that sticks, and an Ask Teddy guide.",
+      desc: "A production Bible reader and study app — my flagship, built solo and live on the web. Verse-level reading in two translations, a complete narrated audio Bible, reading plans, progress that sticks, and an Ask Teddy guide. I operate it in production, too: systems analysis, incident management, datastore migration, and automated integrity checks.",
       role: "Solo designer, developer & operator",
-      metrics: ["78 books · WEB + KJV translations", "1,503-chapter audio Bible — complete", "~96,000 cross-references across 10,000 verses", "191 commits · live on Vercel"],
+      metrics: ["78 books · WEB + KJV translations", "1,503-chapter audio Bible — complete", "~96,000 cross-references across 10,000 verses", "191 commits · live on Vercel", "Production outage root-caused & migrated (Vercel Blob → Upstash Redis) — record reconciled, zero loss", "Automated word-for-word audio QA + listener-report workflow"],
       image: "images/wogr-hero.jpg",
       imageAlt: "Three crosses over a vineyard at dawn — the Word of God Risen home page art",
       tags: ["Next.js", "React", "TypeScript"],
