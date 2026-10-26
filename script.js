@@ -106,7 +106,7 @@ const SITE = {
       title: "TruVINE — Channel & Content Operations",
       desc: "I run a faith-based YouTube channel end to end — production, metadata standards, release QA, and Python tooling against the YouTube Data API — plus a print-on-demand store tied to the content calendar.",
       role: "Creator, producer & tooling developer",
-      metrics: ["916 subscribers · 158,078 views · 383 videos", "Python SEO & audit automation (YouTube Data API)", "Printify store operations & product QA"],
+      metrics: ["924 subscribers · 158,819 views · 385 videos", "Python SEO & audit automation (YouTube Data API)", "Printify store operations & product QA"],
       tags: ["Python", "YouTube Data API", "Content Operations"],
       linkLabel: "Watch TruVINE",
       linkUrl: "YOUTUBE",
