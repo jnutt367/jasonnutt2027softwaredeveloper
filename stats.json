@@ -66,7 +66,7 @@
     },
     {
       "branch": "channel",
-      "display": "158,819",
+      "display": "158,886",
       "freshness": "daily",
       "freshness_label": "Updated daily",
       "href": "https://www.youtube.com/channel/UC1ryMv3ldYCOgshChVrqZNQ",
@@ -74,7 +74,7 @@
       "label": "YouTube total views",
       "source_label": "TruVINE channel · YouTube",
       "updated_at": "2026-10-26",
-      "value": 158819
+      "value": 158886
     },
     {
       "branch": "channel",
@@ -150,7 +150,7 @@
     },
     {
       "branch": "code",
-      "display": "791",
+      "display": "792",
       "freshness": "compute",
       "freshness_label": "Computed from the repo",
       "href": "https://github.com/jnutt367/word-of-god-risen",
@@ -158,7 +158,7 @@
       "label": "Commits on the flagship repo",
       "source_label": "github.com/jnutt367/word-of-god-risen",
       "updated_at": "2026-10-26",
-      "value": 791
+      "value": 792
     },
     {
       "branch": "code",
@@ -186,7 +186,7 @@
     },
     {
       "branch": "code",
-      "display": "Oct 25, 2026",
+      "display": "Oct 26, 2026",
       "freshness": "hourly",
       "freshness_label": "Updated daily",
       "href": "https://github.com/jnutt367",
@@ -194,7 +194,7 @@
       "label": "Latest code push",
       "source_label": "GitHub · @jnutt367",
       "updated_at": "2026-10-26",
-      "value": "2026-10-25"
+      "value": "2026-10-26"
     },
     {
       "branch": "films",
