@@ -234,15 +234,15 @@
     },
     {
       "branch": "store",
-      "display": "47",
+      "display": "46",
       "freshness": "daily",
       "freshness_label": "Updated daily",
       "href": "https://truvine.printify.me",
       "id": "store_products",
       "label": "Products live in the TruVINE store",
       "source_label": "Printify store · product count only",
-      "updated_at": "2026-10-21",
-      "value": 47
+      "updated_at": "2026-10-26",
+      "value": 46
     },
     {
       "branch": "ministry",
