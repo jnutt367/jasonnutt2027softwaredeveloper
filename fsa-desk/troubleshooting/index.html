@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>FSA Desk Reference — Troubleshooting guide</title>
+<style>
+:root{--navy:#2d5a3d;--navy2:#0c1f16;--gold:#d9a441;--goldsoft:#f3ecdd;--ink:#1e2a22;--soft:#55665a;--line:#ccd6cc;--bg:#f5f7f2;--card:#fff;--shadow:0 1px 3px rgba(12,31,22,.08),0 4px 14px rgba(12,31,22,.05)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+::selection{background:rgba(217,164,65,.32)}
+body{margin:0;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);font-size:18px;line-height:1.55}
+header{background:linear-gradient(180deg,var(--navy) 0%,var(--navy2) 100%);color:#fff;padding:24px 20px 20px;border-bottom:4px solid var(--gold)}
+.wrap{max-width:940px;margin:0 auto;padding:0 18px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{height:48px;width:auto;order:2;margin-left:auto;flex:none}
+.brand h1{font-size:27px;margin:0;line-height:1.15;letter-spacing:.2px}
+.brand .sub{color:#cfdccf;font-size:14.5px;margin-top:3px}
+@media (max-width:640px){.brand{align-items:flex-start}}
+nav.areas{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 4px}
+nav.areas a{color:#fff;text-decoration:none;border:1.5px solid rgba(255,255,255,.45);background:rgba(255,255,255,.06);padding:8px 16px;border-radius:999px;font-size:16px}
+nav.areas a.on{background:var(--gold);border-color:var(--gold);font-weight:700}
+nav.tools{background:var(--goldsoft);border-bottom:1px solid var(--line)}
+nav.tools .wrap{display:flex;flex-wrap:wrap;gap:2px 16px;padding-top:7px;padding-bottom:7px}
+nav.tools a{color:var(--navy);font-size:15px;text-decoration:none;padding:2px 5px;border-radius:6px;white-space:nowrap}
+nav.tools a:hover{text-decoration:underline}
+nav.tools a:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
+nav.tools a[aria-current="page"]{font-weight:700;text-decoration:underline}
+.search{margin:20px 0 6px}
+.search input{width:100%;font-size:19px;padding:13px 16px;border:2px solid var(--navy);border-radius:12px;background:#fff;box-shadow:var(--shadow)}
+.search input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(217,164,65,.35)}
+.door{display:block;background:var(--card);border:1px solid var(--line);border-left:6px solid var(--gold);border-radius:12px;padding:16px 18px;margin:14px 0;text-decoration:none;color:var(--ink)}
+.door h2{margin:0 0 4px;font-size:21px;color:var(--navy)}
+.door p{margin:2px 0;color:var(--soft);font-size:15.5px}
+.dept{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--gold);border-radius:12px;padding:16px 18px;margin:14px 0;box-shadow:var(--shadow)}
+.dept h2{margin:0 0 4px;font-size:21px;color:var(--navy)}
+.dept>p{margin:2px 0;color:var(--soft);font-size:15.5px}
+.dept .dept-link{display:block;padding:9px 12px;border:1px solid var(--line);border-radius:10px;margin:8px 0;text-decoration:none;color:var(--ink);background:#fcfdff;transition:border-color .15s ease}
+.dept .dept-link:hover{border-color:var(--gold)}
+.dept-head .count{display:flex;align-items:center;gap:10px}
+.dept-face{width:54px;height:54px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);flex:none}
+.dept-row{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}
+.dept-row>div{min-width:0}
+.welcome{margin:6px 0 4px}
+.welcome p{color:var(--soft);margin:0 0 12px}
+.faces{display:flex;gap:10px;flex-wrap:wrap}
+.faces img{width:76px;height:76px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);box-shadow:var(--shadow);animation:facein .7s ease both}
+.faces img:nth-child(2){animation-delay:.08s}.faces img:nth-child(3){animation-delay:.16s}.faces img:nth-child(4){animation-delay:.24s}.faces img:nth-child(5){animation-delay:.32s}.faces img:nth-child(6){animation-delay:.4s}
+@keyframes facein{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){.faces img{animation:none}}
+.dept .dept-link strong{color:var(--navy)}
+.dept .dept-link span{display:block;color:var(--soft);font-size:13.5px}
+.dept.soon{border-left-color:var(--line);opacity:.72;border-style:dashed;box-shadow:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:14px 0;box-shadow:var(--shadow)}
+.card:target{border-color:var(--gold);box-shadow:0 0 0 3px rgba(217,164,65,.35)}
+.card h3{margin:0 0 6px;font-size:18.5px;color:var(--navy)}
+.card .a{font-weight:600}
+.card blockquote{margin:10px 0;padding:10px 14px;background:var(--goldsoft);border-left:4px solid var(--gold);border-radius:6px;font-size:16.5px;color:var(--navy2)}
+.card blockquote .who{display:block;margin-top:6px;font-size:12.5px;color:var(--soft);text-transform:uppercase;letter-spacing:.4px}
+.card .more{margin:8px 0 0;padding-left:20px}
+.card .gap{display:inline-block;background:#fdf3e0;border:1px solid var(--gold);color:#7a5a12;border-radius:6px;padding:2px 8px;font-size:13.5px;font-weight:700}
+.src{display:inline-block;margin-top:10px;font-size:15px}
+.verified{color:var(--soft);font-size:14px}
+.strip{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:12px;padding:14px 18px;margin:14px 0;box-shadow:var(--shadow)}
+.strip h2{margin:0 0 6px;font-size:19px;color:var(--navy)}
+footer{color:var(--soft);font-size:14px;padding:26px 0 40px;border-top:2px solid var(--line);margin-top:26px}
+footer .mark{display:flex;align-items:center;gap:10px;margin-bottom:8px;color:var(--navy)}
+footer .mark img{height:28px;width:auto}
+.result{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 14px;margin:8px 0;text-decoration:none;color:var(--ink);box-shadow:var(--shadow)}
+.result:hover{border-color:var(--gold)}
+.result b{color:var(--navy)}
+.hidden{display:none}
+@media (min-width:900px){.cards,.depts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.cards .card,.depts .dept{margin:0}}
+@media (min-width:1400px){.wrap{max-width:1460px}.cards,.depts{grid-template-columns:repeat(3,1fr)}}
+@media print{header,.search,nav.areas,nav.tools{display:none}.card,.door,.strip{break-inside:avoid}.cards,.depts{display:block}.cards .card,.depts .dept{margin:14px 0}}
+</style>
+</head>
+<body><header><div class="wrap">
+<div class="brand"><div><h1>FSA Desk Reference</h1>
+<div class="sub">Public information from StudentAid.gov — the site’s words, quoted short and linked. Always confirm on the source page.</div></div><img src="../dev-mark.png" alt="Jason Nutt developer mark"></div>
+<nav class="areas" aria-label="Back to departments"><a href="../">Desk home</a></nav>
+</div></header>
+<nav class="tools" aria-label="Desk tools"><div class="wrap"><a href="../glossary/" title="Everyday words for the site’s terms">Glossary</a><a href="../forms/" title="Which form, where it lives, who sends it">Forms</a><a href="../borrower-says/" title="Start from their words, land on the card" aria-label="Borrower says — find the card by what the caller says">Borrower says</a><a href="../calculators/" title="Dates figured from the site’s own rules">Calculators</a><a href="../myths/" title="What borrowers believe, answered by the site">Myths</a><a href="../say-it/" title="Spoken lines for the hard moments" aria-label="Say it this way — lines for the hard moments">Say it</a><a href="../changes/" title="The Monday watch’s record">Changes</a><a href="../troubleshooting/" title="Symptom first — checks, the site’s words, who owns the fix" aria-current="page">Troubleshoot</a></div></nav>
+<main class="wrap">
+<h1 style="color:var(--navy)">Troubleshooting guide</h1>
+<p style="color:var(--soft)">Start from the symptom — what the caller is seeing — not from the program. Each entry: the symptom in the borrower’s words, the quick checks in order, what the site says quoted short and linked, and who owns the fix. Every entry is drawn from a card already on this desk and links back to it.</p>
+<p class="verified">Built October 28, 2026 from this desk’s own cards, verified as their pages state. Two entries are honest gaps — where the site states no answer, the entry says so plainly and hands the caller to the official contact; nothing is invented to fill them.</p>
+<div class="search"><label for="filter" class="hidden">Filter the guide</label>
+<input id="filter" type="search" placeholder="Filter the guide — try ‘locked’, ‘upload’, ‘Sunday’…" autocomplete="off"></div>
+<h2 style="color:var(--navy);margin:22px 0 4px">Can’t log in — FSA ID trouble</h2>
+<section class="cards">
+<article class="card">
+<h3>“My account is locked.”</h3>
+<p style="margin:6px 0 0"><strong>Quick checks, in order:</strong></p><ol class="more"><li>Stop guessing at the password — the lock came from failed attempts, and more guessing fixes nothing.</li><li>Use one of the verification methods set up on the account: verified mobile phone or email, authenticator app, security key, or (if set up) challenge questions.</li><li>Provide the month and day of your birth, continue, and enter the secure code you receive.</li><li>Create a new password when prompted — that is the last step of unlocking.</li></ol>
+<p style="margin:10px 0 0"><strong>What the site says:</strong></p><blockquote>“Your account is locked after three unsuccessful log-in attempts”<span class="who">— the site’s own words, <a href="https://studentaid.gov/help-center/answers/article/help-accessing-account-fsa-id">StudentAid.gov Help Center — Help accessing your account</a></span></blockquote>
+<p style="margin:8px 0 0"><strong>Who owns the fix:</strong> The borrower, at the log-in page. If no verification method is reachable, that is a human: FSA at 1-800-433-3243.</p>
+<p style="margin:6px 0 0">The desk card that carries it: <a href="../fsa-id/#locked">FSA ID — account locked</a></p>
+</article>
+<article class="card">
+<h3>“I forgot my password.”</h3>
+<p style="margin:6px 0 0"><strong>Quick checks, in order:</strong></p><ol class="more"><li>Choose “Forgot Password?” on the log-in page.</li><li>Provide your date of birth and verify your account.</li><li>Set the new password — and don’t keep guessing in the meantime: multiple failed attempts can lock the account (the row above).</li></ol>
+<p style="margin:10px 0 0"><strong>What the site says:</strong></p><blockquote>“Reset your password by providing your date of birth and verifying your account”<span class="who">— the site’s own words, <a href="https://studentaid.gov/help-center/answers/article/help-accessing-account-fsa-id">StudentAid.gov Help Center — Help accessing your account</a></span></blockquote>
+<p style="margin:8px 0 0"><strong>Who owns the fix:</strong> The borrower, at the log-in page. If the verification can’t be completed, FSA at 1-800-433-3243.</p>
+<p style="margin:6px 0 0">The desk card that carries it: <a href="../fsa-id/#forgot-password">FSA ID — forgot password</a></p>
+</article>
+<article class="card">
+<h3>“I forgot my username — or which email I used.”</h3>
+<p style="margin:6px 0 0"><strong>Quick checks, in order:</strong></p><ol class="more"><li>Choose “Forgot email, phone, or username?” on the log-in page.</li><li>Provide your last name, date of birth, and SSN, then verify your account and receive a secure code.</li><li>Shortcut worth knowing first: you can log in with your email address or mobile phone number instead of the username.</li></ol>
+<p style="margin:10px 0 0"><strong>What the site says:</strong></p><blockquote>“Retrieve your email address, mobile phone number, or username by providing your personal information and verifying your account”<span class="who">— the site’s own words, <a href="https://studentaid.gov/help-center/answers/article/help-accessing-account-fsa-id">StudentAid.gov Help Center — Help accessing your account</a></span></blockquote>
+<p style="margin:8px 0 0"><strong>Who owns the fix:</strong> The borrower, at the log-in page. If the retrieval fails, FSA at 1-800-433-3243.</p>
+<p style="margin:6px 0 0">The desk card that carries it: <a href="../fsa-id/#forgot-username">FSA ID — forgot username</a></p>
+</article>
+<article class="card">
+<h3>“I can’t get my two-step code — my phone is gone.”</h3>
+<p style="margin:6px 0 0"><strong>Quick checks, in order:</strong></p><ol class="more"><li>Don’t create a new account — one person, one account.</li><li>Use the backup code instead: it was generated when the account was created or when two-step verification was enabled.</li><li>Enter the backup code where the two-step code is asked for.</li></ol>
+<p style="margin:10px 0 0"><strong>What the site says:</strong></p><blockquote>“If you logged in but don’t have access to your two-step verification method, use your backup code”<span class="who">— the site’s own words, <a href="https://studentaid.gov/help-center/answers/article/help-accessing-account-fsa-id">StudentAid.gov Help Center — Help accessing your account</a></span></blockquote>
+<p style="margin:8px 0 0"><strong>Who owns the fix:</strong> The borrower, with the backup code. If the backup code is lost too, that is the lost-everything row below — a human at FSA, 1-800-433-3243.</p>
+<p style="margin:6px 0 0">The desk card that carries it: <a href="../fsa-id/#backup-code">FSA ID — backup code</a></p>
+</article>
+<article class="card">
+<h3>“It says my email is already used — can my parent and I share one?”</h3>
+<p style="margin:6px 0 0"><strong>Quick checks, in order:</strong></p><ol class="more"><li>No sharing: the email address must be unique to one person’s account — a parent’s or spouse’s account can’t use it either.</li><li>Give the second person their own email address and their own account; each contributor signs with their own.</li><li>Tip from the card: the account email also carries two-step verification codes — use an inbox the person actually reads.</li></ol>
+<p style="margin:10px 0 0"><strong>What the site says:</strong></p><blockquote>“The email address you provide must be unique and can’t be used with anyone else’s StudentAid.gov account”<span class="who">— the site’s own words, <a href="https://studentaid.gov/resources/prepare-for-college/creating-your-account">StudentAid.gov — Creating Your Account</a></span></blockquote>
+<p style="margin:8px 0 0"><strong>Who owns the fix:</strong> The borrower (and the parent), each with their own email and account.</p>
+<p style="margin:6px 0 0">The desk card that carries it: <a href="../fsa-id/#email-rule">FSA ID — one email per account</a></p>
+</article>
+<article class="card">
+<h3>“My account verification just says ‘Pending.’”</h3>
+<p style="margin:6px 0 0"><strong>Quick checks, in order:</strong></p><ol class="more"><li>Check the clock before anything else: Social Security Administration verification usually happens right away, but a “Pending” status may take one to three days to resolve.</li><li>There is nothing to re-submit while it pends — the wait is the step.</li></ol>
+<p style="margin:10px 0 0"><strong>What the site says:</strong> The create-account page states that SSA verification usually happens right away and that “Pending” may take one to three days to resolve. It names no way to speed it up and no escalation for a longer wait.</p><a class="src" href="https://studentaid.gov/resources/prepare-for-college/creating-your-account">Open the source on StudentAid.gov ↗</a>
+<p style="margin:8px 0 0"><strong>Who owns the fix:</strong> Nobody to call while it pends — it resolves on its own. Past three days, the desk’s answer is a human: FSA at 1-800-433-3243.</p>
+<p style="margin:6px 0 0">The desk card that carries it: <a href="../fsa-id/#create-account">FSA ID — create your account</a></p>
+</article>
+<article class="card">
+<h3>“I lost EVERYTHING — my email, my phone, and my backup code.”</h3>
+<span class="gap">THE SITE DOESN’T SAY — honest gap, stated plainly</span>
+<p style="margin:6px 0 0"><strong>Quick checks, in order:</strong></p><ol class="more"><li>Confirm they truly have none of the three: no access to the account email, no phone for two-step codes, no backup code written down.</li><li>If any one of the three still works, use the rows above instead — they are faster than a call.</li></ol>
+<p style="margin:10px 0 0"><strong>What the site says:</strong> THE SITE DOESN’T SAY: the pages publish no recovery path for a caller who has lost their email, their phone, AND their backup code — and no password-complexity rules either. Do not improvise account-recovery steps the site doesn’t publish.</p><a class="src" href="https://studentaid.gov/resources/prepare-for-college/creating-your-account">Open the source on StudentAid.gov ↗</a>
+<p style="margin:8px 0 0"><strong>Who owns the fix:</strong> A human at FSA: 1-800-433-3243. That is the whole answer this row has, on purpose.</p>
+<p style="margin:6px 0 0">The desk card that carries it: <a href="../fsa-id/#gaps">FSA ID — what the pages don’t say</a></p>
+</article>
+</section>
+<h2 style="color:var(--navy);margin:22px 0 4px">The site itself — errors and outages</h2>
+<section class="cards">
+<article class="card">
+<h3>“The site won’t let me log in — is it down?” (on a Sunday morning)</h3>
+<p style="margin:6px 0 0"><strong>Quick checks, in order:</strong></p><ol class="more"><li>Check the clock first: regularly scheduled maintenance runs Sundays from 3 a.m. to 11 a.m. Eastern time.</li><li>During that window you can view website pages, but you cannot create an account or log in.</li><li>If it is inside the window, the fix is the end of the window — try again after 11 a.m. ET.</li></ol>
+<p style="margin:10px 0 0"><strong>What the site says:</strong></p><blockquote>“StudentAid.gov has regularly scheduled site maintenance on Sundays from 3 a.m. until 11 a.m. Eastern time”<span class="who">— the site’s own words, <a href="https://studentaid.gov/help-center/answers/article/what-if-get-unknown-error-message">StudentAid.gov Help Center — Unknown error</a></span></blockquote>
+<p style="margin:8px 0 0"><strong>Who owns the fix:</strong> Nobody — it is scheduled, not broken. Outside the window, an unplanned problem goes to the Help Center and FSA at 1-800-433-3243.</p>
+<p style="margin:6px 0 0">The desk card that carries it: <a href="../outages-troubleshooting/#sunday-maintenance">Outages — Sunday maintenance</a></p>
+</article>
+<article class="card">
+<h3>“I got an unknown error message.”</h3>
+<p style="margin:6px 0 0"><strong>Quick checks, in order:</strong></p><ol class="more"><li>Clear your browser history (your “cache”).</li><li>Close all browser windows.</li><li>Reopen your browser.</li><li>Try again — in that order; it is the site’s own playbook.</li></ol>
+<p style="margin:10px 0 0"><strong>What the site says:</strong></p><blockquote>“Clear your browser history (your “cache”)”<span class="who">— the site’s own words, <a href="https://studentaid.gov/help-center/answers/article/what-if-get-unknown-error-message">StudentAid.gov Help Center — Unknown error</a></span></blockquote>
+<p style="margin:8px 0 0"><strong>Who owns the fix:</strong> The borrower, in their browser. If the error survives the four steps, the page’s stated next step is the Federal Student Aid Information Center: 1-800-433-3243.</p>
+<p style="margin:6px 0 0">The desk card that carries it: <a href="../outages-troubleshooting/#unknown-error">Outages — unknown error</a></p>
+</article>
+<article class="card">
+<h3>“Is my browser the problem?”</h3>
+<p style="margin:6px 0 0"><strong>Quick checks, in order:</strong></p><ol class="more"><li>Use the latest release of a supported browser: Microsoft Edge, Google Chrome, Mozilla Firefox, or Apple Safari.</li><li>Cookies must be enabled, with 128-bit encryption.</li><li>PDFs need the free Adobe Acrobat Reader.</li></ol>
+<p style="margin:10px 0 0"><strong>What the site says:</strong></p><blockquote>“Supported browsers: The latest release for Microsoft Edge, Google Chrome, Mozilla Firefox, and Apple Safari”<span class="who">— the site’s own words, <a href="https://studentaid.gov/notices/site-requirements">StudentAid.gov — Site requirements</a></span></blockquote>
+<p style="margin:8px 0 0"><strong>Who owns the fix:</strong> The borrower, in their browser. On an unsupported browser the site warns that viewing and interacting may be significantly impaired.</p>
+<p style="margin:6px 0 0">The desk card that carries it: <a href="../outages-troubleshooting/#browsers">Outages — supported browsers</a></p>
+</article>
+<article class="card">
+<h3>“Where can I check whether the site is down?”</h3>
+<span class="gap">THE SITE DOESN’T SAY — honest gap, stated plainly</span>
+<p style="margin:6px 0 0"><strong>Quick checks, in order:</strong></p><ol class="more"><li>There is no page to check: no public real-time system-status page exists on StudentAid.gov (searched for this desk, October 22, 2026).</li><li>The Announcements page carries program updates, webinars, and events — not system status.</li><li>There is no consolidated error-code list either — only individual error-message articles.</li></ol>
+<p style="margin:10px 0 0"><strong>What the site says:</strong> THE SITE DOESN’T SAY: no channel for unplanned-outage notifications is published. During an unplanned problem, the stated channel is the Help Center and the 1-800 line — not a status page that doesn’t exist.</p><a class="src" href="https://studentaid.gov/notices">Open the source on StudentAid.gov ↗</a>
+<p style="margin:8px 0 0"><strong>Who owns the fix:</strong> FSA, through the Help Center and 1-800-433-3243.</p>
+<p style="margin:6px 0 0">The desk card that carries it: <a href="../outages-troubleshooting/#no-status-page">Outages — no status page</a> · <a href="../outages-troubleshooting/#gaps">Outages — what the pages don’t say</a></p>
+</article>
+</section>
+<h2 style="color:var(--navy);margin:22px 0 4px">“My payment didn’t post”</h2>
+<section class="cards">
+<article class="card">
+<h3>“I paid — but who did I actually pay?”</h3>
+<p style="margin:6px 0 0"><strong>Quick checks, in order:</strong></p><ol class="more"><li>Payments go to the loan servicer, not to FSA — a payment sent anywhere else hasn’t reached the loan.</li><li>Find the servicer: log in and visit My Aid / the account dashboard and choose “View loan servicer details.”</li><li>The billing statement states the amount due; match the payment against it.</li></ol>
+<p style="margin:10px 0 0"><strong>What the site says:</strong></p><blockquote>“Find your servicer by logging in below and visiting your My Aid page”<span class="who">— the site’s own words, <a href="https://studentaid.gov/manage-loans/repayment/servicers">StudentAid.gov — Loan servicers</a></span></blockquote>
+<p style="margin:8px 0 0"><strong>Who owns the fix:</strong> The loan servicer — they hold the payment and the balance. (For a defaulted loan, the Default Resolution Group: 1-800-621-3115.)</p>
+<p style="margin:6px 0 0">The desk card that carries it: <a href="../balance-payment/#who-you-pay">Balance & Payment — who you pay</a></p>
+</article>
+<article class="card">
+<h3>“My auto debit didn’t come out — how does auto debit work?”</h3>
+<p style="margin:6px 0 0"><strong>Quick checks, in order:</strong></p><ol class="more"><li>Auto debit is set up through the loan servicer, not on StudentAid.gov — questions about a scheduled debit start there.</li><li>The benefit, so the caller knows it is set up right: an automatic monthly electronic debit from a checking or savings account, with a 0.25% interest-rate reduction on Direct Loans (a temporary 1% reduction runs July 1, 2026 – June 30, 2028 for qualifying Direct Loans; enrollment by December 31, 2026).</li></ol>
+<p style="margin:10px 0 0"><strong>What the site says:</strong></p><blockquote>“you receive a 0.25% interest rate reduction on Direct Loans”<span class="who">— the site’s own words, <a href="https://studentaid.gov/manage-loans/repayment">StudentAid.gov — How Repayment Works</a></span></blockquote>
+<p style="margin:8px 0 0"><strong>Who owns the fix:</strong> The loan servicer — they run the debit.</p>
+<p style="margin:6px 0 0">The desk card that carries it: <a href="../balance-payment/#auto-debit">Balance & Payment — auto debit</a></p>
+</article>
+<article class="card">
+<h3>“I paid days ago — why doesn’t it show yet?”</h3>
+<span class="gap">THE SITE DOESN’T SAY — honest gap, stated plainly</span>
+<p style="margin:6px 0 0"><strong>Quick checks, in order:</strong></p><ol class="more"><li>Confirm the payment went to the servicer (the row above) — FSA can’t trace a payment it never holds.</li><li>Ask the servicer, who owns the payment, where it stands.</li></ol>
+<p style="margin:10px 0 0"><strong>What the site says:</strong> THE SITE DOESN’T SAY: the pages state no posting timeframe — no number of days a payment takes to show — and no on-site balance view beyond the billing statement and the servicer. This row will gain a site’s-words line the day a public page states one; until then, no timeframe is invented here.</p><a class="src" href="https://studentaid.gov/manage-loans/repayment">Open the source on StudentAid.gov ↗</a>
+<p style="margin:8px 0 0"><strong>Who owns the fix:</strong> The loan servicer — the payment is theirs to trace.</p>
+<p style="margin:6px 0 0">The desk card that carries it: <a href="../balance-payment/#gaps">Balance & Payment — honest gaps</a></p>
+</article>
+</section>
+<h2 style="color:var(--navy);margin:22px 0 4px">Forms and applications</h2>
+<section class="cards">
+<article class="card">
+<h3>“Exit Counseling kicked me out — my session is gone.”</h3>
+<p style="margin:6px 0 0"><strong>Quick checks, in order:</strong></p><ol class="more"><li>Know the rule before restarting: exit counseling must be finished IN ONE SESSION — an incomplete session cannot be saved and returned to.</li><li>Sessions time out after 15 minutes of inactivity, so set aside the full sitting: about 30 minutes.</li><li>Have ready before logging in: your verified account, your school name(s), and updated contact information.</li></ol>
+<p style="margin:10px 0 0"><strong>What the site says:</strong></p><blockquote>“Exit counseling takes about 30 minutes to complete”<span class="who">— the site’s own words, <a href="https://studentaid.gov/exit-counseling">StudentAid.gov — Loan Exit Counseling</a></span></blockquote>
+<p style="margin:8px 0 0"><strong>Who owns the fix:</strong> The borrower restarts the session. Help completing it: the school’s financial aid office (a school may have alternate requirements), or FSA at 1-800-433-3243.</p>
+<p style="margin:6px 0 0">The desk card that carries it: <a href="../exit-counseling/#do-it">Exit Counseling — complete it</a></p>
+</article>
+<article class="card">
+<h3>“I submitted my FAFSA — did it go through?”</h3>
+<p style="margin:6px 0 0"><strong>Quick checks, in order:</strong></p><ol class="more"><li>Log in to your StudentAid.gov account.</li><li>Open “My Activity” and select the submission — its status stands there.</li><li>Paper filers: the status can be checked roughly 7–10 days after mailing the form.</li></ol>
+<p style="margin:10px 0 0"><strong>What the site says:</strong></p><blockquote>“Check the status of your form by logging in to your StudentAid.gov account”<span class="who">— the site’s own words, <a href="https://studentaid.gov/apply-for-aid/fafsa/review-and-correct">StudentAid.gov — Review and Correct Your FAFSA Form</a></span></blockquote>
+<p style="margin:8px 0 0"><strong>Who owns the fix:</strong> The borrower, in My Activity. Form and process questions: FSA at 1-800-433-3243.</p>
+<p style="margin:6px 0 0">The desk card that carries it: <a href="../fafsa-corrections/#check-status">FAFSA Corrections — check the status</a></p>
+</article>
+<article class="card">
+<h3>“Something’s missing from my TPD application — where does it go?”</h3>
+<p style="margin:6px 0 0"><strong>Quick checks, in order:</strong></p><ol class="more"><li>Upload it through the same doors as the application: log in to StudentAid.gov and go to My Activity (the document upload tool).</li><li>Or mail it: U.S. Department of Education, P.O. Box 300010, Greenville, TX 75403 · or fax: 540-212-2415.</li><li>Honest flag from the card: the TPD pages give no missing-item-specific instruction — no separate notice or deadline is described.</li></ol>
+<p style="margin:10px 0 0"><strong>What the site says:</strong></p><blockquote>“You may upload your application by logging in to StudentAid.gov and going to My Activity.”<span class="who">— the site’s own words, <a href="https://studentaid.gov/manage-loans/forgiveness-cancellation/disability-discharge">StudentAid.gov — Total and Permanent Disability Discharge</a></span></blockquote>
+<p style="margin:8px 0 0"><strong>Who owns the fix:</strong> The borrower sends the document; questions about TPD go to discharge &amp; forgiveness support: 1-888-303-7818.</p>
+<p style="margin:6px 0 0">The desk card that carries it: <a href="../tpd/#missing-doc">TPD — a missing document</a></p>
+</article>
+<article class="card">
+<h3>“My upload won’t take — is it the file?”</h3>
+<span class="gap">THE SITE DOESN’T SAY — honest gap, stated plainly</span>
+<p style="margin:6px 0 0"><strong>Quick checks, in order:</strong></p><ol class="more"><li>Try the doors that exist: the My Activity document upload tool after logging in; failing that, the mail and fax routes on the TPD row above always take paper.</li><li>Don’t quote a file-size or file-type limit at the caller — there isn’t a published one to quote.</li></ol>
+<p style="margin:10px 0 0"><strong>What the site says:</strong> THE SITE DOESN’T SAY: no page this desk has read states upload file-type or size limits, or remedies when an upload fails. The row stays a gap until a public page states them — limits are never invented here.</p><a class="src" href="https://studentaid.gov/manage-loans/forgiveness-cancellation/disability-discharge">Open the source on StudentAid.gov ↗</a>
+<p style="margin:8px 0 0"><strong>Who owns the fix:</strong> For a TPD document: discharge &amp; forgiveness support, 1-888-303-7818. Generally: FSA at 1-800-433-3243.</p>
+<p style="margin:6px 0 0">The desk card that carries it: <a href="../tpd/#missing-doc">TPD — a missing document</a></p>
+</article>
+</section>
+
+<p style="color:var(--soft)">18 symptoms in four groups. When a check on this page and the site disagree, the site is true.</p>
+</main>
+<div class="wrap"><footer>
+<div class="mark"><img src="../dev-mark.png" alt=""><span><strong>Built by Jason Nutt</strong> — FSA agent &amp; developer. A living job aid: when StudentAid.gov changes, this page is re-checked and updated.</span></div>
+<div style="margin-bottom:8px"><strong>Numbers:</strong> General FSA help (the front door — FAFSA, accounts, servicer lookup): <strong>1-800-433-3243</strong> · Discharge &amp; forgiveness support (PSLF, TPD): <strong>1-888-303-7818</strong> · Borrower Defense: <strong>1-855-279-6207</strong> · Defaulted loans: <strong>1-800-621-3115</strong>. The 800 number is the general line; the others ring the program team directly.</div>
+<div>Changelog — v1 · October 23, 2026: first build from the official PSLF, Borrower Defense, and TPD pages. v1.1 · October 23, 2026: Borrower Defense gains group-discharge cards — how group relief works, the Sweet Exhibit C list, and the ten announced school groups — drawn from the Sweet settlement page and the Borrower Defense updates page. v1.2 · October 23, 2026: PSLF gains Reconsideration and Buyback step-by-step cards, drawn from the official Reconsideration and Buyback pages; the Buyback placeholder gap is closed. v1.3 · October 23, 2026: Contacts strip completed — the general 1-800 line and the default line added alongside the program lines, with which-line-when. v1.4 · October 23, 2026: the phone numbers and the general-vs-program difference now ride in the footer of every page, reachable from anywhere in the aid. v1.5 · October 23, 2026: every area gains an ‘all my options for applying’ card — every route the official pages state, with the easiest flagged (and, for Borrower Defense paper forms, an honest marker that the page states no submission address). v1.6 · October 23, 2026: TPD gains a missing-document card (the upload doors, with an honest flag that the pages give no missing-item-specific instruction) and a denied → reevaluation card (new information, within 12 months — from the ‘After You Apply’ page). v1.7 · October 23, 2026: the full TPD scenario run-down — all 12 official TPD pages read; cards added for VA / SSA / medical proof, automatic data-match discharge, the single monitoring reinstatement trigger, borrowing again after discharge, taxes, representatives, signature law, and the Parent PLUS gap (flagged, not filled). v1.8 · October 23, 2026: TPD's apply + send routes consolidated into ONE clear card at the top of the page, and the whole aid reordered actionable-first — the apply cards now lead the PSLF and Borrower Defense pages too. v1.9 · October 23, 2026: the discharge column completed — Closed School Discharge (11 cards, incl. the automatic-discharge rules stated both ways the site states them) and the general Discharge, Cancellation & Forgiveness area (10 cards: the hub map, Teacher Loan Forgiveness, False Certification, Unpaid Refund, Death, Bankruptcy). v1.10 · October 23, 2026: the desk home reorganized into functional-area department cards mirroring the board — Loan Discharge, Cancellation & Forgiveness stands built with its five areas inside; the other five departments (Understanding FSA · Receiving Aid · Loan Management · FAFSA Form · Default & Collections) stand as placeholders in the same shape until each is built. v1.11 · October 23, 2026: redundancy cleanup — the flat row of area buttons at the top of every page is removed; the department cards are the one navigation, and area pages keep a single Desk home link back to them. v1.12 · October 23, 2026: header restyle — the developer-mark emblem moves to the top right, into the space the header text leaves; the title line stands on the left, and on mobile the emblem rises to align with the top of the title. v2.0 · October 23, 2026: the Loan Management department is built — seven areas (Repayment Plans · Income-Driven Repayment · Consolidation · Deferment & Forbearance · Exit Counseling · Balance & Payment · TEACH), 61 cards drawn from the official repayment, IDR, consolidation, temporary-relief, exit-counseling, servicer, and TEACH pages, read the same day; the home's Loan Management card is now a live department, and four placeholders remain. v2.1 · October 23, 2026: brand restyle — gradient header with a gold rule, soft card depth, the site's quoted words set on a gold-tinted plate, gold focus rings, dashed placeholders. v2.2 · October 23, 2026: brand correction at Jason's word — navy was never his brand; the aid now wears his true TruVINE-emblem palette (deep vine greens, gold, cream — the same colors as his portfolio and his mark), and the developer-mark emblem sits flat on the header at its true proportions, never tiled or stretched. v2.3 · October 23, 2026: the Understanding FSA department is built — five areas (Understanding FSA · Aid History · FSA ID · Program Info · Outages & Troubleshooting), 35 cards from the official how-aid-works, types/grants/loans/work-study, eligibility, account-creation, account-access, My Aid, notices, and site-requirements pages, read the same day; its home card is a live department, and three placeholders remain (Receiving Aid · FAFSA Form · Default & Collections). v2.4 · October 23, 2026: the desk is decorated — the home carries a welcome row of student faces from Jason's own Nations cast (cropped from their pack stills, gold-ringed, a gentle entrance that honors reduced-motion settings), and each built department card carries its own situational face; the working cards stay clean. Casting is provisional until Jason crowns it. v2.5 · October 23, 2026: the FAFSA Form department is built — six areas (Getting Started · FAFSA on the Phone · Corrections · Financial Aid Office · Original & Renewal · Code Green), 49 cards drawn from the official FAFSA hub, filling-out, parent-information, deadlines, review-and-correct, resources, each-year, and contact pages, read the same day; two tiles are carded honestly — the site states no phone-filing route, and no public page uses the term ‘Code Green.’ The department's face is the Ethiopian student from the Nations cast (provisional, like the others). Two placeholders remain (Receiving Aid · Default & Collections). v2.6 · October 23, 2026: the desk home gains a front door for a first-time reader — one plain line saying what this aid is, the four beats of how a card works, and one real card (Sunday maintenance) shown whole as the pattern. Nothing here replaces the source: the site is true. v2.7 · October 23, 2026: the Receiving Aid department is built — six areas (Entrance Counseling · Master Promissory Note · Annual Student Loan Acknowledgment · PLUS Loan & Credit Counseling · Endorser Addendum · Credit Appeals), 51 cards drawn from the official entrance-counseling, MPN, acknowledgment, PLUS credit-counseling, PLUS application, endorser, adverse-credit article, extenuating-circumstances, and credit-appeal demo pages, read the same day; the prep's dead PLUS-counseling address is corrected to the live page, and the Endorser Addendum and Credit Appeals stand on real public pages rather than honest-gap cards. One placeholder remains (Default & Collections). v2.8 · October 23, 2026: the Default & Collections department is built — four areas (Delinquency & Default · Avoiding Default · Getting Out of Default · Collections), 41 cards drawn from the official default hub, avoid, get-out, and collections pages, the Defaulted Loans Support Center, the Default and Rehabilitation FAQ articles, and the Default Resolution Group contact article, read the same day; the collections cards carry the site's current status — Treasury offset and wage garnishment are currently paused — and Fresh Start is carded as ended (Oct. 2, 2024), never as a door. With this build, all six departments of the desk stand complete and no placeholders remain. v2.9 · October 28, 2026: Wave 1 of the desk tools — four helper pages join the desk, built the same day and on the same rule. A plain-English glossary (the acronyms in words an agent can read aloud, drawn from the site’s own Financial Aid Dictionary and the program pages it names). A forms finder (which form, what it is for, where it lives, who sends it — including the honest rows where the site names no public form). A “borrower says…” index (start from the caller’s own words; land on the card that answers). And three date calculators that do arithmetic only on rules the cards already state (the 270-day default clock, the rehabilitation 9-payments-in-9–10-months window, the PSLF count-up to 120). Two terms agents still hear, AGI and NSLDS, are honestly absent from the glossary: the site’s dictionary read that day defines neither, so the desk defines neither. The 330 cards are untouched; the tools stand beside them. Sources for the new pages read October 28, 2026. v2.10 · October 28, 2026: Wave 2 of the desk tools — three more pages join the four from Wave 1, on the same rule. A ‘what changed’ page (and a strip on the home): the Monday watch re-read all 53 source pages on October 26, 2026 and found no material change, so the page opens as an honest frame — future changes will be listed there, dated and sourced, as the watch finds them. A ‘myth vs. site’ page: nine things borrowers believe, each answered by the site’s own sentence and linked to the card that carries it — including two beliefs reframed to what the site actually settles (consolidation’s rate and its downside, rather than its payment; the Sweet list’s automatic relief, bounded to the class the settlement defines). A ‘say it this way’ page: spoken lines for the hard moments — a denial, a death call, a disability call, an angry borrower, a long hold, a warm transfer, a closing — drafted in an agent’s voice for Jason’s edit; every fact in a line is a card’s, and each line names its card. The 330 cards are untouched; the Wave 1 tools stand as built. v2.11 · October 28, 2026: layout, at Jason’s pick — a slim row of the seven desk tools now rides directly under the header of every page the desk makes (the home, the 33 areas, and the seven tools alike), one line of small links, so a tool is one tap from anywhere; and the home’s full tools section — the seven described links, with the ‘what changed’ strip beside it — moves below the department cards, leaving the top of the home to the search and the departments, where a call starts. Nothing written changes: every card, line, and page stands as built; only where the tools sit has moved. v2.12 · October 28, 2026: a troubleshooting guide joins the tools — symptom first, in the borrower’s own words, then the quick checks in order, what the site says (quoted short and linked), and who owns the fix. Eighteen entries in four groups (FSA ID and log-in trouble · the site itself — errors and outages · a payment that didn’t post · forms and applications), every one drawn from a card already on this desk and linked back to it. Two entries are honest gaps the site leaves open — how long a payment takes to post, and what file types and sizes an upload accepts: the guide says plainly that the site doesn’t state them and hands the caller to the servicer or the 1-800 line rather than inventing a number. The 330 cards are untouched; the guide stands beside them.</div>
+</footer></div>
+<script>
+const inp=document.getElementById('filter');
+if(inp){inp.addEventListener('input',()=>{const q=inp.value.toLowerCase().trim();
+document.querySelectorAll('.card,.result-static').forEach(el=>{
+const t=el.textContent.toLowerCase();
+el.classList.toggle('hidden', q.length>1 && !t.includes(q));});});}
+</script>
+</body></html>
