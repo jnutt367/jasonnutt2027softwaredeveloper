@@ -150,7 +150,7 @@
     },
     {
       "branch": "code",
-      "display": "822",
+      "display": "825",
       "freshness": "compute",
       "freshness_label": "Computed from the repo",
       "href": "https://github.com/jnutt367/word-of-god-risen",
@@ -158,7 +158,7 @@
       "label": "Commits on the flagship repo",
       "source_label": "github.com/jnutt367/word-of-god-risen",
       "updated_at": "2026-10-28",
-      "value": 822
+      "value": 825
     },
     {
       "branch": "code",
