@@ -66,7 +66,7 @@
     },
     {
       "branch": "channel",
-      "display": "160,300",
+      "display": "160,357",
       "freshness": "daily",
       "freshness_label": "Updated daily",
       "href": "https://www.youtube.com/channel/UC1ryMv3ldYCOgshChVrqZNQ",
@@ -74,7 +74,7 @@
       "label": "YouTube total views",
       "source_label": "TruVINE channel · YouTube",
       "updated_at": "2026-11-01",
-      "value": 160300
+      "value": 160357
     },
     {
       "branch": "channel",
