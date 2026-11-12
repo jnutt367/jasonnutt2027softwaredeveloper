@@ -61,32 +61,32 @@
       "id": "yt_subs",
       "label": "YouTube subscribers",
       "source_label": "TruVINE channel · YouTube",
-      "updated_at": "2026-11-11",
+      "updated_at": "2026-11-12",
       "value": 942
     },
     {
       "branch": "channel",
-      "display": "161,770",
+      "display": "161,832",
       "freshness": "daily",
       "freshness_label": "Updated daily",
       "href": "https://www.youtube.com/channel/UC1ryMv3ldYCOgshChVrqZNQ",
       "id": "yt_views",
       "label": "YouTube total views",
       "source_label": "TruVINE channel · YouTube",
-      "updated_at": "2026-11-11",
-      "value": 161770
+      "updated_at": "2026-11-12",
+      "value": 161832
     },
     {
       "branch": "channel",
-      "display": "401",
+      "display": "402",
       "freshness": "daily",
       "freshness_label": "Updated daily",
       "href": "https://www.youtube.com/channel/UC1ryMv3ldYCOgshChVrqZNQ",
       "id": "yt_videos",
       "label": "YouTube videos",
       "source_label": "TruVINE channel · YouTube",
-      "updated_at": "2026-11-11",
-      "value": 401
+      "updated_at": "2026-11-12",
+      "value": 402
     },
     {
       "branch": "app",
@@ -97,7 +97,7 @@
       "id": "wogr_books",
       "label": "Books in the app",
       "source_label": "Word of God Risen · data/books.ts",
-      "updated_at": "2026-11-11",
+      "updated_at": "2026-11-12",
       "value": 78
     },
     {
@@ -109,7 +109,7 @@
       "id": "wogr_crossrefs",
       "label": "Cross-references",
       "source_label": "Word of God Risen · data/cross-refs.json (10,000 verse keys)",
-      "updated_at": "2026-11-11",
+      "updated_at": "2026-11-12",
       "value": 96177
     },
     {
@@ -133,7 +133,7 @@
       "id": "wogr_covers",
       "label": "Designed book covers",
       "source_label": "Word of God Risen · one Pixar-style cover per book",
-      "updated_at": "2026-11-11",
+      "updated_at": "2026-11-12",
       "value": 78
     },
     {
@@ -157,7 +157,7 @@
       "id": "wogr_commits",
       "label": "Commits on the flagship repo",
       "source_label": "github.com/jnutt367/word-of-god-risen",
-      "updated_at": "2026-11-11",
+      "updated_at": "2026-11-12",
       "value": 1058
     },
     {
@@ -169,7 +169,7 @@
       "id": "gh_repos",
       "label": "Public repositories",
       "source_label": "GitHub · @jnutt367, building since 2020",
-      "updated_at": "2026-11-11",
+      "updated_at": "2026-11-12",
       "value": 277
     },
     {
@@ -181,7 +181,7 @@
       "id": "gh_followers",
       "label": "GitHub followers",
       "source_label": "GitHub · @jnutt367",
-      "updated_at": "2026-11-11",
+      "updated_at": "2026-11-12",
       "value": 22
     },
     {
@@ -253,7 +253,7 @@
       "id": "automations",
       "label": "Automated watchers running",
       "source_label": "Channel spike watch · Shorts thumbnail guard · weekly site check",
-      "updated_at": "2026-11-11",
+      "updated_at": "2026-11-12",
       "value": 3
     },
     {
