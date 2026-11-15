@@ -78,7 +78,7 @@
     },
     {
       "branch": "channel",
-      "display": "404",
+      "display": "405",
       "freshness": "daily",
       "freshness_label": "Updated daily",
       "href": "https://www.youtube.com/channel/UC1ryMv3ldYCOgshChVrqZNQ",
@@ -86,7 +86,7 @@
       "label": "YouTube videos",
       "source_label": "TruVINE channel · YouTube",
       "updated_at": "2026-11-15",
-      "value": 404
+      "value": 405
     },
     {
       "branch": "app",
