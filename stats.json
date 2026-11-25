@@ -66,7 +66,7 @@
     },
     {
       "branch": "channel",
-      "display": "163,160",
+      "display": "163,222",
       "freshness": "daily",
       "freshness_label": "Updated daily",
       "href": "https://www.youtube.com/channel/UC1ryMv3ldYCOgshChVrqZNQ",
@@ -74,11 +74,11 @@
       "label": "YouTube total views",
       "source_label": "TruVINE channel · YouTube",
       "updated_at": "2026-11-25",
-      "value": 163160
+      "value": 163222
     },
     {
       "branch": "channel",
-      "display": "412",
+      "display": "413",
       "freshness": "daily",
       "freshness_label": "Updated daily",
       "href": "https://www.youtube.com/channel/UC1ryMv3ldYCOgshChVrqZNQ",
@@ -86,7 +86,7 @@
       "label": "YouTube videos",
       "source_label": "TruVINE channel · YouTube",
       "updated_at": "2026-11-25",
-      "value": 412
+      "value": 413
     },
     {
       "branch": "app",
@@ -194,7 +194,7 @@
       "label": "Latest code push",
       "source_label": "GitHub · @jnutt367",
       "updated_at": "2026-11-25",
-      "value": "2026-11-24"
+      "value": "2026-11-25"
     },
     {
       "branch": "films",
@@ -258,7 +258,7 @@
     },
     {
       "branch": "code",
-      "display": "Nov 24, 2026",
+      "display": "Nov 25, 2026",
       "freshness": "hourly",
       "freshness_label": "Updated daily",
       "href": "https://github.com/jnutt367/jasonnutt2027softwaredeveloper",
@@ -266,7 +266,7 @@
       "label": "This portfolio last deployed",
       "source_label": "GitHub · this site's repo",
       "updated_at": "2026-11-25",
-      "value": "2026-11-24"
+      "value": "2026-11-25"
     },
     {
       "branch": "code",
