@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Deferment &amp; Forbearance — FSA Desk Reference</title>
+<script>document.documentElement.classList.add('js');window.__rvT=setTimeout(function(){document.documentElement.classList.remove('js')},2500);</script>
 <style>
 :root{--navy:#2d5a3d;--navy2:#0c1f16;--gold:#d9a441;--goldsoft:#f3ecdd;--ink:#1e2a22;--soft:#55665a;--line:#ccd6cc;--bg:#f5f7f2;--card:#fff;--shadow:0 1px 3px rgba(12,31,22,.08),0 4px 14px rgba(12,31,22,.05)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
+*{box-sizing:border-box}@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
 ::selection{background:rgba(217,164,65,.32)}
 body{margin:0;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);font-size:18px;line-height:1.55}
 header{background:linear-gradient(180deg,var(--navy) 0%,var(--navy2) 100%);color:#fff;padding:24px 20px 20px;border-bottom:4px solid var(--gold)}
@@ -75,7 +76,24 @@ footer .mark img{height:28px;width:auto}
 .hidden{display:none}
 @media (min-width:900px){.cards,.depts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.cards .card,.depts .dept{margin:0}}
 @media (min-width:1400px){.wrap{max-width:1460px}.cards,.depts{grid-template-columns:repeat(3,1fr)}}
-@media print{header,.search,nav.areas,nav.tools{display:none}.card,.door,.strip{break-inside:avoid}.cards,.depts{display:block}.cards .card,.depts .dept{margin:14px 0}}
+/* Motion layer (Nov 25, 2026): quiet and professional. Cards, doors and
+   strips fade/slide in on scroll via the .rv class, which the page-end
+   script adds ONLY when it can run the observer; the hidden start state
+   also requires html.js (set by a head script), so no-JS readers and
+   reduced-motion readers always see everything, fully static. Hover
+   motion touches transform/box-shadow only — no layout shift. */
+.rv{transition:opacity .55s ease,transform .55s ease}
+html.js .rv{opacity:0;transform:translateY(14px)}
+html.js .rv.in{opacity:1;transform:none}
+.card{transition:box-shadow .25s ease}
+.card:hover{box-shadow:0 2px 6px rgba(12,31,22,.10),0 10px 26px rgba(12,31,22,.09)}
+.door,.result{transition:transform .25s ease,box-shadow .25s ease,border-color .2s ease}
+.door:hover,.result:hover{transform:translateY(-2px);box-shadow:0 4px 10px rgba(12,31,22,.10),0 14px 30px rgba(12,31,22,.10)}
+.dept .dept-link{transition:transform .25s ease,border-color .15s ease,box-shadow .25s ease}
+.dept .dept-link:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
+nav.areas a{transition:background .2s ease,border-color .2s ease}
+@media (prefers-reduced-motion: reduce){.rv{transition:none}html.js .rv{opacity:1;transform:none}.card,.door,.result,.dept .dept-link,nav.areas a{transition:none}.door:hover,.result:hover,.dept .dept-link:hover{transform:none}}
+@media print{header,.search,nav.areas,nav.tools{display:none}.card,.door,.strip{break-inside:avoid}.cards,.depts{display:block}.cards .card,.depts .dept{margin:14px 0}html.js .rv{opacity:1;transform:none}}
 </style>
 </head>
 <body><header><div class="wrap">
@@ -167,5 +185,12 @@ if(inp){inp.addEventListener('input',()=>{const q=inp.value.toLowerCase().trim()
 document.querySelectorAll('.card,.result-static').forEach(el=>{
 const t=el.textContent.toLowerCase();
 el.classList.toggle('hidden', q.length>1 && !t.includes(q));});});}
+</script>
+<script>
+clearTimeout(window.__rvT);
+(function(){var els=document.querySelectorAll('.card,.door,.dept,.strip,.result');
+if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.remove('js');return;}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08});
+els.forEach(function(el){el.classList.add('rv');io.observe(el);});})();
 </script>
 </body></html>
