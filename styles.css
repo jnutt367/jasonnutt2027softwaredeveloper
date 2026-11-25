@@ -219,9 +219,13 @@ a { color: var(--gold-soft); }
 .footer-verse { font-family: var(--font-display); font-style: italic; color: var(--gold-soft); margin-bottom: 0.5rem; }
 .footer-copy { color: var(--sage); font-size: 0.9rem; margin: 0; }
 
-/* ---------- Reveal on scroll ---------- */
-.reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
-.reveal.visible { opacity: 1; transform: none; }
+/* ---------- Reveal on scroll ----------
+   The hidden start state applies only under html.js — a class the
+   page's own scripts set. With JavaScript off (or the reveal script
+   missing), every .reveal element is simply visible: content never
+   depends on animation to appear. */
+html.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
+html.js .reveal.visible { opacity: 1; transform: none; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 760px) {
@@ -241,7 +245,7 @@ a { color: var(--gold-soft); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal { opacity: 1; transform: none; transition: none; }
+  html.js .reveal, .reveal { opacity: 1; transform: none; transition: none; }
   .card:hover, .btn:hover, .chip:hover { transform: none; }
 }
 

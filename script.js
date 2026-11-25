@@ -367,6 +367,7 @@ function initNav() {
 
 /* ---------- Reveal on scroll ---------- */
 function initReveal() {
+  if (window.__rvT) clearTimeout(window.__rvT);
   const els = document.querySelectorAll(".reveal");
   if (!("IntersectionObserver" in window)) {
     els.forEach((el) => el.classList.add("visible"));
